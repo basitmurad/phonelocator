@@ -3,4 +3,13 @@
     <string name="enter_your_display_name">Enter your display name</string>
     <string name="your_name_makes_it_easier_for_loved_ones_to_find_you">Your name makes it easier for your loved ones to find you</string>
     <string name="start_now">Start Now</string>
+    <string name="permission_setup">Permission Setup!</string>
+    <string name="we_need_your_permission_to_provide_accurate_tracking_and_alerts">We need your permission to provide accurate tracking and alerts.</string>
+    <string name="allow_location_access">Allow Location Access</string>
+    <string name="allow">Allow</string>
+    <string name="start_tracking_child_s_location">Start Tracking Child’s Location</string>
+    <string name="get_alerts_and_stay_connected_enjoy_peace_of_mind_knowing_your_child_is_safe">Get alerts, and stay connected. Enjoy peace of mind knowing your child is safe.</string>
+    <string name="start_tracking">Start Tracking</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

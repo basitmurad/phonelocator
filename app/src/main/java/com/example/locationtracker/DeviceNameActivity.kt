@@ -1,5 +1,6 @@
 package com.example.locationtracker
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
@@ -23,6 +24,14 @@ class DeviceNameActivity : AppCompatActivity() {
     fun backButton(view: View) {
 
         finish()
+
+    }
+
+    fun navigateToNextScreen(view: View) {
+
+
+        val intent = Intent(this, PermissionActivity::class.java)
+        startActivity(intent)
 
     }
 }
