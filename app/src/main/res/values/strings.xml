@@ -25,4 +25,11 @@
     <string name="privacy_policy">Privacy Policy</string>
     <string name="enter_the_invitation_code">Enter the Invitation code</string>
     <string name="enter_the_invitation_code_from_other_to_share_your_location_safely">Enter the Invitation code from \nother to share your location \nsafely</string>
+    <string name="be_located">Be Located</string>
+    <string name="feed_back">Feedback</string>
+    <string name="we_value_your_opinion">We value your opinion!</string>
+    <string name="your_feedback_or_suggestion">Your feedback or suggestion......</string>
+    <string name="icon">Icon</string>
+    <string name="submit">Submit</string>
+    <string name="how_would_you_rate_our_app_experience">How Would You Rate Our App Experience?</string>
 </resources>
