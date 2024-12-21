@@ -7,6 +7,7 @@
     android:orientation="vertical"
     android:layout_gravity="center"
     android:layout_margin="12dp"
+    android:backgroundTint="@color/white"
     android:background="@drawable/dialoge_back"
     android:padding="16dp">
 
