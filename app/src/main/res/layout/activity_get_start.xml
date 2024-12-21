@@ -32,7 +32,7 @@
         android:layout_marginTop="52dp"
         android:fontFamily="@font/psemibold"
         android:gravity="center"
-        android:text="@string/permission_setup"
+        android:text="@string/start_tracking"
 
         android:textAlignment="center"
         android:textSize="24sp"

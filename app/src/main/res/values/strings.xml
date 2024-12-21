@@ -23,4 +23,6 @@
     <string name="feedback">Feedback</string>
     <string name="rate_us">Rate US</string>
     <string name="privacy_policy">Privacy Policy</string>
+    <string name="enter_the_invitation_code">Enter the Invitation code</string>
+    <string name="enter_the_invitation_code_from_other_to_share_your_location_safely">Enter the Invitation code from \nother to share your location \nsafely</string>
 </resources>

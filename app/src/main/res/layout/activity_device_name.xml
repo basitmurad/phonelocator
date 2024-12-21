@@ -16,8 +16,7 @@
 
       android:layout_height="30dp"
 
-
-      android:onClick="backButton"
+android:visibility="invisible"
       android:src="@drawable/baseline_arrow_back_24"
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toTopOf="parent"

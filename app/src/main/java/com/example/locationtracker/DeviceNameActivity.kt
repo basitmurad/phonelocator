@@ -21,11 +21,6 @@ class DeviceNameActivity : AppCompatActivity() {
 
     }
 
-    fun backButton(view: View) {
-
-        finish()
-
-    }
 
     fun navigateToNextScreen(view: View) {
 

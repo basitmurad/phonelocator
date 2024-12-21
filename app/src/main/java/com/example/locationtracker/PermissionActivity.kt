@@ -24,4 +24,9 @@ class PermissionActivity : AppCompatActivity() {
 
         val intent = Intent(this, GetStartActivity::class.java)
         startActivity(intent)    }
+
+    fun backButton(view: View) {
+        finish()
+
+    }
 }

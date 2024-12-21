@@ -21,4 +21,9 @@ class GetStartActivity : AppCompatActivity() {
     fun navigateToNextScreen(view: View) {
         val intent = Intent(this, HomeActivity::class.java)
         startActivity(intent)     }
+
+    fun backButton(view: View) {
+
+        finish()
+    }
 }
