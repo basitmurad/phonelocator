@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
-
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -35,6 +36,9 @@
         <activity
             android:name=".MainActivity"
             android:exported="true" />
+
+        <meta-data android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyC4TqWs-4yH_Wd7ghi4C63iRzEpswPNo-s"/>
     </application>
 
 </manifest>

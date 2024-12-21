@@ -12,4 +12,8 @@
     <string name="start_tracking">Start Tracking</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="invite_others">Invite others</string>
+    <string name="send_your_code_to_start_tracking_others_location">Send your code to start tracking\nothers location.</string>
+    <string name="or">Or</string>
+    <string name="share_through">Share through</string>
 </resources>
