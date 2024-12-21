@@ -3,11 +3,14 @@ package com.example.locationtracker
 import android.annotation.SuppressLint
 import android.app.AlertDialog
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
+import android.widget.ImageView
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
@@ -57,16 +60,22 @@ class HomeFragment : Fragment(), OnMapReadyCallback {
             .setCancelable(true)
 
         val alertDialog = dialogBuilder.create()
+
+        // Ensuring the dialog background is transparent
+        alertDialog.window?.setBackgroundDrawableResource(android.R.color.transparent)
+
+        // Show the dialog
         alertDialog.show()
 
-//        val submitButton = dialogView.findViewById<Button>(R.id.dialog_button)
-//        val inputField = dialogView.findViewById<EditText>(R.id.dialog_input)
+        // Find the close button
+        val closeButton: ImageView = dialogView.findViewById(R.id.btnClose)
 
-//        submitButton.setOnClickListener {
-//            val userInput = inputField.text.toString()
-//            // Handle the input as needed
-//            alertDialog.dismiss()
-//        }
+        // Set click listener to close the dialog
+        closeButton.setOnClickListener {
+            Toast.makeText(requireContext(), "Close button clicked", Toast.LENGTH_SHORT).show()
+            Log.d("Dialog", "Close button clicked")
+            alertDialog.dismiss() // Dismiss the dialog
+        }
     }
 
     override fun onResume() {
