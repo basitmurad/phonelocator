@@ -62,7 +62,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="16dp"
-                        android:text="Notifications"
+                        android:text="@string/notifications"
                         android:fontFamily="@font/psemibold"
 
                         android:textSize="18sp"
@@ -85,7 +85,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="16dp"
-                        android:text="Language"
+                        android:text="@string/language"
                         android:fontFamily="@font/psemibold"
 
                         android:textSize="18sp"
@@ -108,7 +108,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="16dp"
-                        android:text="How to use"
+                        android:text="@string/how_to_use"
                         android:fontFamily="@font/psemibold"
 
                         android:textSize="18sp"
@@ -131,7 +131,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="16dp"
-                        android:text="Share"
+                        android:text="@string/share"
                         android:fontFamily="@font/psemibold"
 
                         android:textSize="18sp"
@@ -154,7 +154,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="16dp"
-                        android:text="Feetback"
+                        android:text="@string/feedback"
                         android:fontFamily="@font/psemibold"
 
                         android:textSize="18sp"
@@ -177,7 +177,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="16dp"
-                        android:text="Rate US"
+                        android:text="@string/rate_us"
                         android:fontFamily="@font/psemibold"
 
                         android:textSize="18sp"
@@ -200,7 +200,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="16dp"
-                        android:text="Privacy Policy"
+                        android:text="@string/privacy_policy"
                         android:fontFamily="@font/psemibold"
 
                         android:textSize="18sp"
