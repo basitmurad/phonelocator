@@ -53,15 +53,17 @@ class ProfileFragment : Fragment() {
 
     private fun showRatingDialog() {
         val dialogView = LayoutInflater.from(requireContext()).inflate(R.layout.dialog_rating, null)
-
-        val ratingBar = dialogView.findViewById<RatingBar>(R.id.ratingBar)
-
-
-        val dialog = AlertDialog.Builder(requireContext())
+        val dialogBuilder = AlertDialog.Builder(requireContext())
             .setView(dialogView)
-            .create()
+            .setCancelable(true)
 
+        val alertDialog = dialogBuilder.create()
 
-        dialog.show()
+        // Ensuring the dialog background is transparent
+        alertDialog.window?.setBackgroundDrawableResource(android.R.color.transparent)
+
+        // Show the dialog
+        alertDialog.show()
+
     }
 }

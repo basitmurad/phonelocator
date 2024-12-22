@@ -32,4 +32,16 @@
     <string name="icon">Icon</string>
     <string name="submit">Submit</string>
     <string name="how_would_you_rate_our_app_experience">How Would You Rate Our App Experience?</string>
+    <string name="cancel">Cancel</string>
+    <string name="enter_code_here">Enter code here</string>
+    <string name="join">Join</string>
+    <string name="home">Home</string>
+    <string name="devices">Devices</string>
+    <string name="connect">Connect</string>
+    <string name="profile">Profile</string>
+    <string name="all_devices">All devices</string>
+    <string name="n">N</string>
+    <string name="i_phone_x">I phone X</string>
+    <string name="connected_now">Connected now</string>
+    <string name="fri_13_dec_2024">Fri, 13 Dec, 2024</string>
 </resources>

@@ -11,7 +11,7 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:padding="16dp"
-       >
+        >
 
         <TextView
             android:id="@+id/textView11"
@@ -21,6 +21,7 @@
             android:layout_marginEnd="16dp"
             android:fontFamily="@font/pbold"
             android:text="@string/be_located"
+            android:gravity="center"
             android:textAlignment="textStart"
             android:textColor="#000000"
             android:textSize="24sp"
@@ -61,7 +62,7 @@
 
             android:background="@drawable/back_buttom"
             android:fontFamily="@font/psemibold"
-            android:hint="Enter text here"
+            android:hint="@string/enter_code_here"
             android:inputType="text"
             android:padding="12dp"
             android:textAlignment="center"
@@ -91,7 +92,7 @@
             android:layout_marginTop="52dp"
             android:background="@drawable/back_buttom"
             android:fontFamily="@font/pmedium"
-            android:text="Join"
+            android:text="@string/join"
             android:textAllCaps="false"
             android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="@+id/textView14"

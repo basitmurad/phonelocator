@@ -28,11 +28,11 @@ class HomeActivity : AppCompatActivity() {
                     loadFragment(ProfileFragment())
                     true
                 }
-                R.id.nav_search -> {
-                    loadFragment(ConnectFragment())
+                R.id.nav_devices -> {
+                    loadFragment(DeviceFragment())
                     true
-                }  R.id.nav_notifications -> {
-                loadFragment(DeviceFragment())
+                }  R.id.nav_connect -> {
+                loadFragment(ConnectFragment())
                 true
             }
                 else -> false
