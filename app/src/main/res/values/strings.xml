@@ -44,4 +44,9 @@
     <string name="i_phone_x">I phone X</string>
     <string name="connected_now">Connected now</string>
     <string name="fri_13_dec_2024">Fri, 13 Dec, 2024</string>
+    <string name="last_map">Last Map</string>
+    <string name="jutial_gilgit">Jutial Gilgit</string>
+    <string name="live_location">Live location</string>
+    <string name="change_display_name">Change Display name</string>
+    <string name="done">Done</string>
 </resources>
