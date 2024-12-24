@@ -3,4 +3,10 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="primary">#10E80C</color>
+    <color name="orange">#FFA500</color>
+
+    <color name="nav_item_color">#FF4081</color>  <!-- Replace with your desired color -->
+    <color name="nav_item_unselected_color">#808080</color>  <!-- Replace with your desired unselected color -->
+    <color name="transparent">#00000000</color>
+
 </resources>

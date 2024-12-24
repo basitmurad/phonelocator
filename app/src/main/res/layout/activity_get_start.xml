@@ -33,6 +33,7 @@
         android:fontFamily="@font/psemibold"
         android:gravity="center"
         android:text="@string/start_tracking"
+        android:textColor="@color/black"
 
         android:textAlignment="center"
         android:textSize="24sp"
@@ -79,6 +80,7 @@
         android:layout_marginTop="16dp"
         android:fontFamily="@font/pregular"
         android:text="@string/get_alerts_and_stay_connected_enjoy_peace_of_mind_knowing_your_child_is_safe"
+        android:textColor="@color/black"
 
         android:textAlignment="center"
         android:textSize="16sp"

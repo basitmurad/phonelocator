@@ -34,6 +34,7 @@
         android:gravity="center"
         android:text="@string/permission_setup"
 
+        android:textColor="@color/black"
         android:textAlignment="center"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -80,6 +81,7 @@
         android:fontFamily="@font/pregular"
         android:text="@string/we_need_your_permission_to_provide_accurate_tracking_and_alerts"
 
+        android:textColor="@color/black"
         android:textAlignment="center"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="@+id/textView4"
@@ -103,7 +105,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/pmedium"
-            android:text="Back"
+            android:text="@string/back"
             android:textColor="@color/primary"
             android:textSize="18sp"
             app:layout_constraintBottom_toBottomOf="parent"

@@ -16,6 +16,7 @@ class DeviceNameActivity : AppCompatActivity() {
     private lateinit var binding: ActivityDeviceNameBinding
 
     private lateinit var editext:EditText
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -49,4 +50,6 @@ class DeviceNameActivity : AppCompatActivity() {
         val intent = Intent(this, PermissionActivity::class.java)
         startActivity(intent)
     }
+
+
 }
