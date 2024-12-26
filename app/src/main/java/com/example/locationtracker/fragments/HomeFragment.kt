@@ -1,12 +1,14 @@
 
 package com.example.locationtracker
 
+import android.Manifest
 import android.annotation.SuppressLint
 import android.app.AlertDialog
 import android.content.ClipData
 import android.content.ClipboardManager
 import android.content.Context
 import android.content.Intent
+import android.content.pm.PackageManager
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -17,6 +19,7 @@ import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
 import android.widget.Toast
+import androidx.core.app.ActivityCompat
 import androidx.fragment.app.Fragment
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
@@ -24,6 +27,8 @@ import com.google.android.gms.maps.MapView
 import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
+import com.google.android.gms.location.FusedLocationProviderClient
+import com.google.android.gms.location.LocationServices
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.DatabaseReference
@@ -39,6 +44,7 @@ class HomeFragment : Fragment(), OnMapReadyCallback {
     private lateinit var deviceReference: DatabaseReference
     private lateinit var androidId: String
     private lateinit var uniqueCode: String
+    private lateinit var fusedLocationClient: FusedLocationProviderClient
 
     @SuppressLint("MissingInflatedId")
     override fun onCreateView(
@@ -52,11 +58,14 @@ class HomeFragment : Fragment(), OnMapReadyCallback {
         database = FirebaseDatabase.getInstance()
         deviceReference = database.getReference("devices")
 
+        fusedLocationClient = LocationServices.getFusedLocationProviderClient(requireContext())
+
         // Get Android ID
         androidId = getAndroidId()
 
         // Fetch device information
         fetchDeviceInformation()
+
         mapView.onCreate(savedInstanceState)
         mapView.getMapAsync(this)
 
@@ -70,10 +79,38 @@ class HomeFragment : Fragment(), OnMapReadyCallback {
     override fun onMapReady(map: GoogleMap) {
         googleMap = map
 
-        // Set initial location
-        val initialLocation = LatLng(37.7749, -122.4194) // San Francisco
-        googleMap.addMarker(MarkerOptions().position(initialLocation).title("San Francisco"))
-        googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(initialLocation, 12f))
+        // Request current location
+        getCurrentLocation()
+    }
+
+    private fun getCurrentLocation() {
+        // Check if permission is granted (you need to handle permissions properly)
+        if (ActivityCompat.checkSelfPermission(
+                requireContext(),
+                Manifest.permission.ACCESS_FINE_LOCATION
+            ) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(
+                requireContext(),
+                Manifest.permission.ACCESS_COARSE_LOCATION
+            ) != PackageManager.PERMISSION_GRANTED
+        ) {
+            // TODO: Consider calling
+            //    ActivityCompat#requestPermissions
+            // here to request the missing permissions, and then overriding
+            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
+            //                                          int[] grantResults)
+            // to handle the case where the user grants the permission. See the documentation
+            // for ActivityCompat#requestPermissions for more details.
+            return
+        }
+        fusedLocationClient.lastLocation.addOnSuccessListener { location ->
+            if (location != null) {
+                val currentLatLng = LatLng(location.latitude, location.longitude)
+                googleMap.addMarker(MarkerOptions().position(currentLatLng).title("Current Location"))
+                googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(currentLatLng, 12f))
+            } else {
+                Toast.makeText(requireContext(), "Unable to get current location", Toast.LENGTH_SHORT).show()
+            }
+        }
     }
 
     @SuppressLint("MissingInflatedId")
@@ -116,6 +153,19 @@ class HomeFragment : Fragment(), OnMapReadyCallback {
             Toast.makeText(requireContext(), "Close button clicked", Toast.LENGTH_SHORT).show()
             Log.d("Dialog", "Close button clicked")
             alertDialog.dismiss() // Dismiss the dialog
+        }
+
+        val window = alertDialog.window
+        if (window != null) {
+            val layoutParams = window.attributes
+            val margin = 50 // Set margin in pixels (e.g., 50px)
+            layoutParams.width = ViewGroup.LayoutParams.MATCH_PARENT
+            layoutParams.height = ViewGroup.LayoutParams.WRAP_CONTENT
+            window.setLayout(
+                (resources.displayMetrics.widthPixels - 2 * margin),
+                ViewGroup.LayoutParams.WRAP_CONTENT
+            )
+            window.attributes = layoutParams
         }
     }
 

@@ -55,4 +55,10 @@
     <string name="back">Back</string>
     <string name="_234d4e5">234d4e5</string>
     <string name="copy">Copy</string>
+    <string name="your_name">Your Name</string>
+    <string name="d" />
+    <string name="view_in_map">view in map</string>
+    <string name="would_you_like_to_confirm_vivo_y20s_s_invitation">Would you like to confirm Vivo Y20S’s\ninvitation?</string>
+    <string name="confirm">Confirm</string>
+    <string name="no">No</string>
 </resources>

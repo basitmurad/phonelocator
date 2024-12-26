@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="horizontal"
-    android:weightSum="7">
+    android:weightSum="7"
+    android:layout_margin="8dp"
+    android:padding="8dp"
+    android:background="@drawable/back_buttom"
+    android:backgroundTint="#F6F4F4"
+    >
 
     <!-- First Child with weight 2 -->
     <LinearLayout
@@ -11,11 +17,16 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="2"
+
+
+
+
         android:orientation="vertical">
 
         <TextView
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/circleText"
             android:layout_gravity="center"
             android:background="@drawable/circle_background"
             android:gravity="center"
@@ -31,16 +42,20 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/baseline_arrow_back_24" />
+                android:src="@drawable/baseline_battery_std_24" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ellipsize="end"
+                android:id="@+id/mobileName"
                 android:gravity="center"
                 android:maxLines="2"
+                android:textAlignment="textStart"
+                android:layout_margin="3dp"
                 android:text="@string/i_phone_x"
-                android:textSize="16sp" />
+                android:textSize="10sp"
+                tools:ignore="RtlCompat" />
         </LinearLayout>
     </LinearLayout>
 
@@ -61,50 +76,60 @@
             android:text="@string/connected_now"
             android:textAlignment="center"
             android:textColor="#000000"
-            android:textSize="16sp" />
+            android:textSize="14sp" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/pregular"
+            android:id="@+id/date"
             android:text="@string/fri_13_dec_2024"
             android:textAlignment="center"
             android:textColor="#000000"
-            android:textSize="14sp" />
+            android:textSize="12sp" />
     </LinearLayout>
 
     <!-- Last Child with weight 2 -->
     <LinearLayout
         android:id="@+id/linearLayout4"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_weight="2"
         android:layout_gravity="center_vertical"
         android:orientation="vertical">
 
-        <androidx.appcompat.widget.AppCompatButton
+        <TextView
             android:id="@+id/button"
-            android:layout_width="wrap_content"
-            android:layout_height="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:background="@drawable/back_buttom"
-            android:drawableRight="@drawable/baseline_arrow_back_24"
-            android:text="check"
-            android:textAllCaps="false" />
+            android:textAlignment="center"
+            android:background="@drawable/stroke_back"
+            android:gravity="center"
+            android:drawableRight="@drawable/baseline_arrow_forward_ios_24"
+            android:text="map"
+            android:paddingEnd="12dp"
+            android:backgroundTint="#E0DDDD"
+            android:textSize="14sp"
+            android:fontFamily="@font/psemibold"
+            android:textColor="@color/black"
+            android:textAllCaps="false"
+            tools:ignore="RtlSymmetry" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/psemibold"
             android:text="@string/last_map"
+            android:layout_marginTop="6dp"
             android:textAlignment="center"
-            android:textColor="#000000"
-            android:textSize="16sp" />
+            android:textSize="12sp" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/pregular"
+            android:id="@+id/locationName"
             android:text="@string/jutial_gilgit"
             android:textAlignment="center"
             android:textColor="#000000"

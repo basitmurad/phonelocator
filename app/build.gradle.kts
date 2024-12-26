@@ -48,6 +48,7 @@ dependencies {
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
     implementation(libs.play.services.maps)
+    implementation(libs.play.services.location)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -57,6 +58,6 @@ dependencies {
     implementation("com.google.firebase:firebase-analytics")
     implementation ("com.google.firebase:firebase-database:21.0.0") // Firebase Realtime Database
     implementation ("com.google.firebase:firebase-auth:23.1.0") // Firebase Authentication
-
+    implementation ("com.google.firebase:firebase-dynamic-links:20.1.0")
 }
 
