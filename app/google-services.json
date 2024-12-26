@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "1050022980313",
+    "firebase_url": "https://location-tracker-7b4d0-default-rtdb.firebaseio.com",
+    "project_id": "location-tracker-7b4d0",
+    "storage_bucket": "location-tracker-7b4d0.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1050022980313:android:0f2c5c34ec09f3a53c6cc8",
+        "android_client_info": {
+          "package_name": "com.example.locationtracker"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDymEhCiSUXIFPPH1s9vXfid5_738ujo9Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
