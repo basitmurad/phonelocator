@@ -60,6 +60,7 @@
             android:layout_height="64dp"
             android:layout_marginTop="40dp"
 
+            android:textAllCaps="false"
             android:background="@drawable/back_buttom"
             android:fontFamily="@font/psemibold"
             android:hint="@string/enter_code_here"

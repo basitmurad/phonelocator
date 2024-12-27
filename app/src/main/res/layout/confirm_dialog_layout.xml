@@ -23,8 +23,7 @@
             android:id="@+id/logoImageView"
             android:layout_width="120dp"
             android:layout_height="120dp"
-            android:src="@drawable/logo"
-            android:contentDescription="Logo"
+            android:src="@drawable/logo2"
             android:layout_gravity="center"/>
 
         <!-- Text Below the Logo -->
@@ -34,6 +33,17 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:text="@string/would_you_like_to_confirm_vivo_y20s_s_invitation"
+            android:textSize="14sp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/psemibold"
+            android:gravity="center"
+            android:layout_gravity="center"/>
+        <TextView
+            android:id="@+id/descriptionTextView122"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/device_name"
             android:textSize="14sp"
             android:textColor="@color/black"
             android:fontFamily="@font/psemibold"

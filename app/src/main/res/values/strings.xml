@@ -58,7 +58,13 @@
     <string name="your_name">Your Name</string>
     <string name="d" />
     <string name="view_in_map">view in map</string>
-    <string name="would_you_like_to_confirm_vivo_y20s_s_invitation">Would you like to confirm Vivo Y20S’s\ninvitation?</string>
+    <string name="would_you_like_to_confirm_vivo_y20s_s_invitation">Would you like to confirm the invitation with ?</string>
     <string name="confirm">Confirm</string>
     <string name="no">No</string>
+    <string name="device_name">Device name</string>
+    <string name="please_grant_the_following_permissions">Please grant the following permissions:</string>
+    <string name="auto_start">Auto Start</string>
+    <string name="protected_app">Protected App</string>
+    <string name="motion_tracking">Motion Tracking</string>
+    <string name="allow_permissions">Allow Permissions</string>
 </resources>
