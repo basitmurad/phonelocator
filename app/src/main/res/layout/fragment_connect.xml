@@ -60,12 +60,12 @@
             android:layout_height="64dp"
             android:layout_marginTop="40dp"
 
-            android:textAllCaps="false"
+
+            android:textAllCaps="true"
             android:background="@drawable/back_buttom"
             android:fontFamily="@font/psemibold"
             android:hint="@string/enter_code_here"
-            android:inputType="text"
-            android:padding="12dp"
+            android:inputType="text|textCapCharacters"            android:padding="12dp"
             android:textColor="@color/black"
             android:textAlignment="center"
             app:layout_constraintEnd_toEndOf="@+id/textView13"

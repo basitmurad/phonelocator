@@ -67,4 +67,11 @@
     <string name="protected_app">Protected App</string>
     <string name="motion_tracking">Motion Tracking</string>
     <string name="allow_permissions">Allow Permissions</string>
+    <string name="dialog_icon">d</string>
+    <string name="go_to_settings">Go to Settings</string>
+    <string name="cancel2">Cancel</string>
+    <string name="internet_disabled">Internet Disabled</string>
+    <string name="internet_connection_is_required_for_this_app_to_function_properly_please_enable_internet_connectivity">Internet connection is required for this app to function properly. Please enable internet connectivity.</string>
+    <string name="motion_tracking_permission">Motion Tracking Permission</string>
+    <string name="to_track_your_movements_the_app_requires_permission_to_access_motion_sensors_please_enable_motion_tracking_in_your_device_settings">To track your movements, the app requires permission to access motion sensors. Please enable Motion Tracking in your device settings.</string>
 </resources>

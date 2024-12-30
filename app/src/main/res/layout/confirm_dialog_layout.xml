@@ -45,6 +45,7 @@
             android:layout_marginTop="16dp"
             android:text="@string/device_name"
             android:textSize="14sp"
+            android:textAllCaps="true"
             android:textColor="@color/black"
             android:fontFamily="@font/psemibold"
             android:gravity="center"

@@ -1,15 +1,12 @@
-
-package com.example.locationtracker
-
-import android.Manifest
 import android.annotation.SuppressLint
-import android.app.AlertDialog
 import android.content.ClipData
 import android.content.ClipboardManager
 import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
+import android.location.LocationManager
 import android.os.Bundle
+import android.provider.Settings
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
@@ -19,21 +16,24 @@ import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.core.app.ActivityCompat
 import androidx.fragment.app.Fragment
+import com.example.locationtracker.R
+import com.google.android.gms.location.FusedLocationProviderClient
+import com.google.android.gms.location.LocationServices
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.MapView
 import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
-import com.google.android.gms.location.FusedLocationProviderClient
-import com.google.android.gms.location.LocationServices
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
+import android.Manifest
 
 class HomeFragment : Fragment(), OnMapReadyCallback {
 
@@ -73,6 +73,9 @@ class HomeFragment : Fragment(), OnMapReadyCallback {
             showCustomDialog()
         }
 
+        // Check if location is enabled
+        checkLocationEnabled()
+
         return view
     }
 
@@ -83,7 +86,34 @@ class HomeFragment : Fragment(), OnMapReadyCallback {
         getCurrentLocation()
     }
 
+    private fun checkLocationEnabled() {
+        val locationManager = requireContext().getSystemService(Context.LOCATION_SERVICE) as LocationManager
+
+        // Check if GPS or network provider is enabled
+        val isGpsEnabled = locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER)
+        val isNetworkEnabled = locationManager.isProviderEnabled(LocationManager.NETWORK_PROVIDER)
+
+        if (!isGpsEnabled && !isNetworkEnabled) {
+            // Location is disabled, prompt the user to enable it
+            AlertDialog.Builder(requireContext())
+                .setMessage("Location is disabled. Please enable it to continue.")
+                .setCancelable(false)
+                .setPositiveButton("Enable") { _, _ ->
+                    val intent = Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS)
+                    startActivity(intent)
+                }
+                .setNegativeButton("Cancel") { dialog, _ ->
+                    dialog.dismiss()
+                    Toast.makeText(requireContext(), "Location is required for this app", Toast.LENGTH_SHORT).show()
+                }
+                .create()
+                .show()
+        }
+    }
+
     private fun getCurrentLocation() {
+        if (!isAdded) return // Ensure the fragment is attached before proceeding
+
         // Check if permission is granted (you need to handle permissions properly)
         if (ActivityCompat.checkSelfPermission(
                 requireContext(),
@@ -93,13 +123,6 @@ class HomeFragment : Fragment(), OnMapReadyCallback {
                 Manifest.permission.ACCESS_COARSE_LOCATION
             ) != PackageManager.PERMISSION_GRANTED
         ) {
-            // TODO: Consider calling
-            //    ActivityCompat#requestPermissions
-            // here to request the missing permissions, and then overriding
-            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
-            //                                          int[] grantResults)
-            // to handle the case where the user grants the permission. See the documentation
-            // for ActivityCompat#requestPermissions for more details.
             return
         }
         fusedLocationClient.lastLocation.addOnSuccessListener { location ->
@@ -108,13 +131,17 @@ class HomeFragment : Fragment(), OnMapReadyCallback {
                 googleMap.addMarker(MarkerOptions().position(currentLatLng).title("Current Location"))
                 googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(currentLatLng, 12f))
             } else {
-                Toast.makeText(requireContext(), "Unable to get current location", Toast.LENGTH_SHORT).show()
+                Toast.makeText(requireContext().applicationContext, "Unable to get current location", Toast.LENGTH_SHORT).show()
             }
         }
     }
 
-    @SuppressLint("MissingInflatedId")
     private fun showCustomDialog() {
+        if (!::uniqueCode.isInitialized || uniqueCode.isBlank()) {
+            Toast.makeText(requireContext(), "Unique code is not available yet. Please try again later.", Toast.LENGTH_SHORT).show()
+            return
+        }
+
         val dialogView = LayoutInflater.from(requireContext()).inflate(R.layout.dialog_custom, null)
         val dialogBuilder = AlertDialog.Builder(requireContext())
             .setView(dialogView)
@@ -169,6 +196,8 @@ class HomeFragment : Fragment(), OnMapReadyCallback {
         }
     }
 
+
+    @SuppressLint("ServiceCast")
     private fun copyToClipboard(uniqueCode: String) {
         val clipboard = requireContext().getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
         val clip = ClipData.newPlainText("Unique Code", uniqueCode)
