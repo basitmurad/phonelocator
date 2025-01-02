@@ -60,5 +60,8 @@ dependencies {
     implementation ("com.google.firebase:firebase-database:21.0.0") // Firebase Realtime Database
     implementation ("com.google.firebase:firebase-auth:23.1.0") // Firebase Authentication
     implementation ("com.google.firebase:firebase-dynamic-links:20.1.0")
+
+    implementation ("com.google.android.gms:play-services-location:18.0.0")
+    implementation ("androidx.preference:preference:1.1.1")
 }
 

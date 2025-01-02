@@ -1,3 +1,4 @@
+//
 //package com.example.locationtracker
 //
 //import android.content.Intent
@@ -20,7 +21,7 @@
 //                navigateToNextScreen()
 //            } else {
 //                // If permission is denied, show a toast message
-//                Toast.makeText(this, "Permission denied, please grant location permission", Toast.LENGTH_SHORT).show()
+//                Toast.makeText(this, "Permission denied, please go to app info and grant location permission", Toast.LENGTH_SHORT).show()
 //            }
 //        }
 //
@@ -48,10 +49,8 @@
 //    }
 //
 //    private fun navigateToNextScreen() {
-//        // If permission is granted, proceed to the next screen
-//
-//       println("permission clicked")
-//        Toast.makeText(this, "Permission denied, please grant location permission", Toast.LENGTH_SHORT).show()
+//        // Navigate to the next screen after permission is granted
+//        println("Permission granted, navigating to next screen")
 //        val intent = Intent(this, GetStartActivity::class.java)
 //        startActivity(intent)
 //    }
@@ -64,11 +63,13 @@ package com.example.locationtracker
 
 import android.content.Intent
 import android.os.Bundle
+import android.provider.Settings
 import android.view.View
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
+import androidx.core.app.ActivityCompat
 import com.example.locationtracker.databinding.ActivityPermissionBinding
 
 class PermissionActivity : AppCompatActivity() {
@@ -81,8 +82,19 @@ class PermissionActivity : AppCompatActivity() {
                 // If permission is granted, navigate to the next screen
                 navigateToNextScreen()
             } else {
-                // If permission is denied, show a toast message
-                Toast.makeText(this, "Permission denied, please grant location permission", Toast.LENGTH_SHORT).show()
+                // If permission is denied, check if the user has permanently denied it
+                if (ActivityCompat.shouldShowRequestPermissionRationale(
+                        this,
+                        android.Manifest.permission.ACCESS_FINE_LOCATION
+                    )
+                ) {
+                    // If the user can still be prompted, show a toast
+                    Toast.makeText(this, "Permission denied, please grant location permission", Toast.LENGTH_SHORT).show()
+                } else {
+                    // If the user has denied the permission with "Don't ask again", redirect to settings
+                    Toast.makeText(this, "Permission denied permanently, go to settings to grant location permission", Toast.LENGTH_LONG).show()
+                    openAppSettings()
+                }
             }
         }
 
@@ -113,6 +125,14 @@ class PermissionActivity : AppCompatActivity() {
         // Navigate to the next screen after permission is granted
         println("Permission granted, navigating to next screen")
         val intent = Intent(this, GetStartActivity::class.java)
+        startActivity(intent)
+    }
+
+    private fun openAppSettings() {
+        // Redirect to the app settings page for the user to manually enable the permission
+        val intent = Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS)
+        val uri = android.net.Uri.fromParts("package", packageName, null)
+        intent.data = uri
         startActivity(intent)
     }
 

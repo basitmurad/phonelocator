@@ -45,6 +45,7 @@ class HomeFragment : Fragment(), OnMapReadyCallback {
     private lateinit var androidId: String
     private lateinit var uniqueCode: String
     private lateinit var fusedLocationClient: FusedLocationProviderClient
+    private lateinit var checker: Checker
 
     @SuppressLint("MissingInflatedId")
     override fun onCreateView(
@@ -54,6 +55,7 @@ class HomeFragment : Fragment(), OnMapReadyCallback {
         val view = inflater.inflate(R.layout.fragment_home, container, false)
         mapView = view.findViewById(R.id.mapView)
         buttonOpen = view.findViewById(R.id.btnOpenDialoge)
+        checker = Checker(requireContext().applicationContext)
 
         database = FirebaseDatabase.getInstance()
         deviceReference = database.getReference("devices")
@@ -73,9 +75,6 @@ class HomeFragment : Fragment(), OnMapReadyCallback {
             showCustomDialog()
         }
 
-        // Check if location is enabled
-        checkLocationEnabled()
-
         return view
     }
 
@@ -86,35 +85,9 @@ class HomeFragment : Fragment(), OnMapReadyCallback {
         getCurrentLocation()
     }
 
-    private fun checkLocationEnabled() {
-        val locationManager = requireContext().getSystemService(Context.LOCATION_SERVICE) as LocationManager
-
-        // Check if GPS or network provider is enabled
-        val isGpsEnabled = locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER)
-        val isNetworkEnabled = locationManager.isProviderEnabled(LocationManager.NETWORK_PROVIDER)
-
-        if (!isGpsEnabled && !isNetworkEnabled) {
-            // Location is disabled, prompt the user to enable it
-            AlertDialog.Builder(requireContext())
-                .setMessage("Location is disabled. Please enable it to continue.")
-                .setCancelable(false)
-                .setPositiveButton("Enable") { _, _ ->
-                    val intent = Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS)
-                    startActivity(intent)
-                }
-                .setNegativeButton("Cancel") { dialog, _ ->
-                    dialog.dismiss()
-                    Toast.makeText(requireContext(), "Location is required for this app", Toast.LENGTH_SHORT).show()
-                }
-                .create()
-                .show()
-        }
-    }
-
     private fun getCurrentLocation() {
-        if (!isAdded) return // Ensure the fragment is attached before proceeding
+        if (!isAdded) return
 
-        // Check if permission is granted (you need to handle permissions properly)
         if (ActivityCompat.checkSelfPermission(
                 requireContext(),
                 Manifest.permission.ACCESS_FINE_LOCATION
@@ -131,7 +104,7 @@ class HomeFragment : Fragment(), OnMapReadyCallback {
                 googleMap.addMarker(MarkerOptions().position(currentLatLng).title("Current Location"))
                 googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(currentLatLng, 12f))
             } else {
-                Toast.makeText(requireContext().applicationContext, "Unable to get current location", Toast.LENGTH_SHORT).show()
+                Toast.makeText(requireContext(), "Unable to get current location", Toast.LENGTH_SHORT).show()
             }
         }
     }
@@ -149,53 +122,29 @@ class HomeFragment : Fragment(), OnMapReadyCallback {
 
         val alertDialog = dialogBuilder.create()
 
-        // Ensuring the dialog background is transparent
         alertDialog.window?.setBackgroundDrawableResource(android.R.color.transparent)
-
-        // Show the dialog
         alertDialog.show()
 
-        // Find the close button
         val closeButton: ImageView = dialogView.findViewById(R.id.btnClose)
         val code: TextView = dialogView.findViewById(R.id.textView6)
         val btnCopy: TextView = dialogView.findViewById(R.id.textView10)
         val btnShare: LinearLayout = dialogView.findViewById(R.id.btnShare)
 
-        // Set the unique code text
-        code.text = uniqueCode
+        code.text = uniqueCode.uppercase()
 
-        // Share button click listener
         btnShare.setOnClickListener {
             shareCode(uniqueCode)
         }
 
-        // Copy button click listener
         btnCopy.setOnClickListener {
             copyToClipboard(uniqueCode)
             Toast.makeText(requireContext(), "Code copied to clipboard!", Toast.LENGTH_SHORT).show()
         }
 
-        // Close button click listener
         closeButton.setOnClickListener {
-            Toast.makeText(requireContext(), "Close button clicked", Toast.LENGTH_SHORT).show()
-            Log.d("Dialog", "Close button clicked")
-            alertDialog.dismiss() // Dismiss the dialog
-        }
-
-        val window = alertDialog.window
-        if (window != null) {
-            val layoutParams = window.attributes
-            val margin = 50 // Set margin in pixels (e.g., 50px)
-            layoutParams.width = ViewGroup.LayoutParams.MATCH_PARENT
-            layoutParams.height = ViewGroup.LayoutParams.WRAP_CONTENT
-            window.setLayout(
-                (resources.displayMetrics.widthPixels - 2 * margin),
-                ViewGroup.LayoutParams.WRAP_CONTENT
-            )
-            window.attributes = layoutParams
+            alertDialog.dismiss()
         }
     }
-
 
     @SuppressLint("ServiceCast")
     private fun copyToClipboard(uniqueCode: String) {
@@ -209,8 +158,6 @@ class HomeFragment : Fragment(), OnMapReadyCallback {
             type = "text/plain"
             putExtra(Intent.EXTRA_TEXT, "Here is my unique code: $uniqueCode")
         }
-
-        // Show the chooser dialog for sharing options
         startActivity(Intent.createChooser(shareIntent, "Share via"))
     }
 
@@ -238,29 +185,16 @@ class HomeFragment : Fragment(), OnMapReadyCallback {
     @SuppressLint("HardwareIds")
     private fun getAndroidId(): String {
         return requireContext().contentResolver.let {
-            android.provider.Settings.Secure.getString(it, android.provider.Settings.Secure.ANDROID_ID)
+            Settings.Secure.getString(it, Settings.Secure.ANDROID_ID)
         }
     }
 
     private fun fetchDeviceInformation() {
-        // Show a loading message or progress bar if required
-
-        // Fetch device information from Firebase
         deviceReference.child(androidId).addListenerForSingleValueEvent(object :
             ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
-
                 if (snapshot.exists()) {
-                    val deviceName = snapshot.child("deviceName").getValue(String::class.java) ?: "N/A"
-                    val manufacturer = snapshot.child("manufacturer").getValue(String::class.java) ?: "N/A"
-                    val model = snapshot.child("model").getValue(String::class.java) ?: "N/A"
-                    val androidVersion = snapshot.child("androidVersion").getValue(String::class.java) ?: "N/A"
-                    val sdkVersion = snapshot.child("sdkVersion").getValue(Int::class.java) ?: -1
                     uniqueCode = snapshot.child("uniqueCode").getValue(String::class.java) ?: "N/A"
-
-                    // Display the information in the UI or log it
-                    Log.d("Device Info", "Device Name: $deviceName, Unique Code: $uniqueCode")
-
                 } else {
                     Toast.makeText(requireContext(), "No device information found!", Toast.LENGTH_SHORT).show()
                 }
@@ -271,4 +205,5 @@ class HomeFragment : Fragment(), OnMapReadyCallback {
             }
         })
     }
+
 }

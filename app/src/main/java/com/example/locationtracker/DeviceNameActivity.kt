@@ -1,6 +1,7 @@
 
 package com.example.locationtracker
 
+import android.annotation.SuppressLint
 import android.app.ProgressDialog
 import android.content.Intent
 import android.os.Build
@@ -12,6 +13,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.locationtracker.databinding.ActivityDeviceNameBinding
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
+import java.security.MessageDigest
 import kotlin.random.Random
 
 class DeviceNameActivity : AppCompatActivity() {
@@ -59,6 +61,7 @@ class DeviceNameActivity : AppCompatActivity() {
         }
     }
 
+    @SuppressLint("HardwareIds")
     private fun fetchDeviceDetails() {
         manufacturer = Build.MANUFACTURER
         model = Build.MODEL
@@ -69,7 +72,7 @@ class DeviceNameActivity : AppCompatActivity() {
             contentResolver,
             Settings.Secure.ANDROID_ID
         )
-        uniqueCode = generateUniqueCode() // Generate the unique code
+        uniqueCode = generateUniqueId() // Generate the unique code
     }
 
     private fun updateDeviceNameInFirebase() {
@@ -86,7 +89,8 @@ class DeviceNameActivity : AppCompatActivity() {
             "model" to model,
             "androidVersion" to androidVersion,
             "sdkVersion" to sdkVersion,
-            "uniqueCode" to uniqueCode // Include the unique code
+            "uniqueCode" to uniqueCode, // Include the unique code
+            "androidId" to androidId, // Include the unique code
         )
 
         // Save data under the unique device ID in Firebase
@@ -105,10 +109,25 @@ class DeviceNameActivity : AppCompatActivity() {
             }
     }
 
-    private fun generateUniqueCode(): String {
-        val characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ123456789"
-        return (1..6)
-            .map { characters[Random.nextInt(characters.length)] }
-            .joinToString("")
+    @SuppressLint("HardwareIds")
+    private fun generateUniqueId(): String {
+        // Fetch the first 4 digits from androidId
+        val firstFourDigits = androidId.take(4)
+
+        // Fetch the last 4 characters from the model and remove any spaces
+        val lastFourChars = model.take(4).replace(" ", "")
+
+        // Combine both parts to generate the unique code
+        val combinedString = firstFourDigits + lastFourChars
+
+        // Convert the combined string into a mutable list of characters
+        val shuffledList = combinedString.toList().shuffled(Random)
+
+        // Convert the shuffled list back to a string
+        val uniqueCode = shuffledList.joinToString("").toUpperCase()
+
+        return uniqueCode
     }
+
+
 }

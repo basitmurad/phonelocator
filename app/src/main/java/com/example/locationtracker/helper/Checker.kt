@@ -1,6 +1,7 @@
 import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
+import android.content.pm.PackageManager
 import android.location.LocationManager
 import android.net.ConnectivityManager
 import android.net.NetworkCapabilities
@@ -8,6 +9,14 @@ import android.os.Build
 import android.os.PowerManager
 import android.provider.Settings
 import android.util.Log
+import androidx.core.content.ContextCompat
+import android.Manifest
+import android.app.AlertDialog
+import android.content.IntentFilter
+import android.net.Uri
+import android.view.LayoutInflater
+import android.widget.Button
+import com.example.locationtracker.R
 
 class Checker(private val context: Context) {
 
@@ -24,26 +33,11 @@ class Checker(private val context: Context) {
         }
     }
 
+
     fun isLocationEnabled(): Boolean {
         val locationManager = context.getSystemService(Context.LOCATION_SERVICE) as LocationManager
-        return locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER) || locationManager.isProviderEnabled(LocationManager.NETWORK_PROVIDER)
+        return locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER) ||
+                locationManager.isProviderEnabled(LocationManager.NETWORK_PROVIDER)
     }
 
-    @SuppressLint("ObsoleteSdkInt")
-    fun isBatteryOptimizationUnrestricted(): Boolean {
-        val powerManager = context.getSystemService(Context.POWER_SERVICE) as PowerManager
-        return if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            powerManager.isIgnoringBatteryOptimizations(context.packageName)
-        } else {
-            true
-        }
-    }
-
-    @SuppressLint("ObsoleteSdkInt")
-    fun requestDisableBatteryOptimization() {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            val intent = Intent(Settings.ACTION_IGNORE_BATTERY_OPTIMIZATION_SETTINGS)
-            context.startActivity(intent)
-        }
-    }
 }
