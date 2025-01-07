@@ -23,7 +23,6 @@ class DeviceNameActivity : AppCompatActivity() {
     private lateinit var deviceReference: DatabaseReference
     private lateinit var progressDialog: ProgressDialog
 
-    // Separate variables for device details
     private lateinit var manufacturer: String
     private lateinit var model: String
     private lateinit var androidVersion: String
@@ -43,19 +42,15 @@ class DeviceNameActivity : AppCompatActivity() {
         database = FirebaseDatabase.getInstance()
         deviceReference = database.getReference("devices")
 
-        // Initialize ProgressDialog
         progressDialog = ProgressDialog(this)
         progressDialog.setTitle("Updating Device Details")
         progressDialog.setMessage("Please wait...")
         progressDialog.setCancelable(false)
 
-        // Fetch device details and store them in separate variables
         fetchDeviceDetails()
 
-        // Set default device name in the EditText
         binding.textView.text = Editable.Factory.getInstance().newEditable(deviceName)
 
-        // Set button click listener to update data
         binding.appCompatButton.setOnClickListener {
             updateDeviceNameInFirebase()
         }
@@ -93,7 +88,6 @@ class DeviceNameActivity : AppCompatActivity() {
             "androidId" to androidId, // Include the unique code
         )
 
-        // Save data under the unique device ID in Firebase
         deviceReference.child(androidId).setValue(deviceDetails)
             .addOnCompleteListener { task ->
                 // Dismiss the progress dialog

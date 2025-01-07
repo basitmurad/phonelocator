@@ -134,7 +134,7 @@ class ConnectFragment : Fragment() {
                                         for (child in snapshot.children) {
                                             val androidVersion = child.child("androidVersion").value?.toString() ?: "N/A"
                                             val deviceName = child.child("deviceName").value?.toString() ?: "N/A"
-                                            val deviceID = child.child("deviceId").value?.toString() ?: "N/A"
+                                            val deviceID = child.child("androidId").value?.toString() ?: "N/A"
                                             val manufacturer = child.child("manufacturer").value?.toString() ?: "N/A"
                                             val model = child.child("model").value?.toString() ?: "N/A"
                                             val sdkVersion = child.child("sdkVersion").value?.toString() ?: "N/A"
@@ -192,10 +192,9 @@ class ConnectFragment : Fragment() {
 
             println("Data us $currentUserDeviceId and $matchDeviceID")
 
-            saveDeviceData(currentUserDeviceId, currentLatLng, batteryPercentage, currentTime, currentDate)
 
             val databaseReference = FirebaseDatabase.getInstance().getReference("Connection")
-            val deviceData = saveDeviceData(currentUserDeviceId, currentLatLng, batteryPercentage, currentTime, currentDate)
+            val deviceData = saveDeviceData(currentUserDeviceId, matchDeviceID,currentLatLng, batteryPercentage, currentTime, currentDate)
 
             databaseReference.child(matchDeviceID).child(currentUserDeviceId)
                 .setValue(deviceData)
@@ -239,9 +238,10 @@ class ConnectFragment : Fragment() {
         }
     }
 
-    private fun saveDeviceData(deviceId: String, latLng: LatLng?, battery: String, time: String, date: String): Map<String, Any> {
+    private fun saveDeviceData(deviceId: String,matchDeviceId: String,  latLng: LatLng?, battery: String, time: String, date: String): Map<String, Any> {
         return mapOf(
-            "deviceId" to deviceId,
+            "childID" to deviceId,
+            "parentID" to matchDeviceId,
             "latitude" to (latLng?.latitude ?: 0.0),
             "longitude" to (latLng?.longitude ?: 0.0),
             "battery" to battery,
