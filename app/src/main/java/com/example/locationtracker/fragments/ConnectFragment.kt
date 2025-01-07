@@ -196,7 +196,7 @@ class ConnectFragment : Fragment() {
             val databaseReference = FirebaseDatabase.getInstance().getReference("Connection")
             val deviceData = saveDeviceData(currentUserDeviceId, matchDeviceID,currentLatLng, batteryPercentage, currentTime, currentDate)
 
-            databaseReference.child(matchDeviceID).child(currentUserDeviceId)
+            databaseReference.child(matchDeviceID).child(currentUserDeviceId).push()
                 .setValue(deviceData)
                 .addOnCompleteListener { task ->
                     if (task.isSuccessful) {
@@ -206,16 +206,7 @@ class ConnectFragment : Fragment() {
                     }
                 }
 
-//            val databaseReference = FirebaseDatabase.getInstance().getReference("Connection")
-//            databaseReference.child(matchDeviceID).child(currentUserDeviceId)
-//                .setValue(saveDeviceData(currentUserDeviceId, currentLatLng, batteryPercentage, currentTime, currentDate))
-//                .addOnCompleteListener { task ->
-//                    if (task.isSuccessful) {
-//                        Toast.makeText(requireContext(), "Data saved successfully!", Toast.LENGTH_SHORT).show()
-//                    } else {
-//                        Toast.makeText(requireContext(), "Failed to save data: ${task.exception?.message}", Toast.LENGTH_SHORT).show()
-//                    }
-//                }
+//
 
             alertDialog.dismiss()
         }
