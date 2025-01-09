@@ -81,4 +81,5 @@
     </string>
     <string name="to_track_your_movements_the_app_requires_permission_to_access_motion_sensors_please_enable_motion_tracking_in_your_device_settings">To track your movements, the app requires permission to access motion sensors. Please enable Motion Tracking in your device settings.</string>
     <string name="congratulations_you_have_successfully_connected_with_the_device">Congratulations, you have successfully connected with the device.</string>
+    <string name="enter_text_here">Enter text here</string>
 </resources>

@@ -5,28 +5,33 @@ import DeviceAdapter
 import android.annotation.SuppressLint
 import android.app.AlertDialog
 import android.content.Context
+import android.location.Geocoder
 import android.provider.Settings
 import android.os.Bundle
 import android.util.Log
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.locationtracker.R
-import com.google.android.gms.maps.model.LatLng
+import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.GenericTypeIndicator
+import com.google.android.gms.maps.model.LatLng
 import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale
+import android.widget.ProgressBar
 
 class DeviceFragment : Fragment() {
 
     private lateinit var recyclerView: RecyclerView
     private lateinit var deviceAdapter: DeviceAdapter
     private lateinit var database: DatabaseReference
+    private lateinit var progressBar: ProgressBar
 
     @SuppressLint("MissingInflatedId", "HardwareIds")
     override fun onCreateView(
@@ -43,8 +48,14 @@ class DeviceFragment : Fragment() {
         // Initialize Firebase database reference
         database = FirebaseDatabase.getInstance().reference
 
+        // Set up progress bar for loading indication
+        progressBar = view.findViewById(R.id.progress_bar)  // Ensure the progress bar exists in your layout XML
+
         // Get the Android device ID
         val androidId = Settings.Secure.getString(requireContext().contentResolver, Settings.Secure.ANDROID_ID)
+
+        // Show progress bar before data fetch
+        progressBar.visibility = View.VISIBLE
 
         // Fetch data from Firebase based on the Android ID
         fetchDeviceData(androidId)
@@ -52,70 +63,80 @@ class DeviceFragment : Fragment() {
         return view
     }
 
-
-
     private fun fetchDeviceData(androidId: String) {
-        // Database reference to "Connections" node and the specific Android ID child
         val connectionRef = database.child("Connection").child(androidId)
 
-        // Retrieve the data from Firebase
         connectionRef.get().addOnSuccessListener { snapshot ->
+            progressBar.visibility = View.GONE // Hide progress bar after fetching data
+
             if (snapshot.exists()) {
-                // List to store device data
-                val deviceList = mutableListOf<DeviceAdapter.ItemData>()
+                Log.d("DeviceFragment", "Snapshot exists: $snapshot")
 
-                // Iterate through the second-level children of the node
-                snapshot.children.forEach { childSnapshot ->
-                    val battery = childSnapshot.child("battery").getValue(String::class.java) ?: "Unknown"
-                    val childID = childSnapshot.child("childID").getValue(String::class.java) ?: "N/A"
-                    val date = childSnapshot.child("date").getValue(String::class.java) ?: "Unknown"
-                    val latitude = childSnapshot.child("latitude").getValue(Double::class.java) ?: 0.0
-                    val longitude = childSnapshot.child("longitude").getValue(Double::class.java) ?: 0.0
-                    val parentID = childSnapshot.child("parentID").getValue(String::class.java) ?: "N/A"
-                    val time = childSnapshot.child("time").getValue(String::class.java) ?: "Unknown"
+                val itemList = mutableListOf<DeviceAdapter.ItemData>()
 
-                    // Convert latitude and longitude to a string
-                    val coordinates = "$latitude, $longitude"
+                // Create a GenericTypeIndicator for a Map
+                val deviceDataType = object : GenericTypeIndicator<Map<String, Any>>() {}
 
-                    // Log the fetched data for debugging
-                    Log.d("DeviceFragment", "Battery: $battery")
-                    Log.d("DeviceFragment", "ChildID: $childID")
-                    Log.d("DeviceFragment", "ParentID: $parentID")
+                // Loop through each child at the parent level
+                for (parentSnapshot in snapshot.children) {
+                    // Get the first child snapshot of the parent (childID)
+                    val firstChildSnapshot = parentSnapshot.children.firstOrNull()
 
-                    Log.d("DeviceFragment", "Date: $date")
-                    Log.d("DeviceFragment", "Coordinates: $coordinates")
-                    Log.d("DeviceFragment", "Time: $time")
+                    // If the first child exists, fetch its data
+                    if (firstChildSnapshot != null) {
+                        // Using GenericTypeIndicator to safely retrieve Map data
+                        val deviceData = firstChildSnapshot.getValue(deviceDataType)
 
-                    // Add the data to the list
-                    deviceList.add(
-                        DeviceAdapter.ItemData(
-                            circleText = parentID.firstOrNull()?.toString() ?: "", // First char of parentID
-                            title = "No", // Use childID as the title
-                            connectedNow = "", // Show battery info as connected status
-                            date = time, // Combine date and time
-                            lastMap = "Gilgit", // Use combined latitude and longitude string
-                            battery = battery,
-                            latLong = LatLng(latitude,longitude),
-                            childId = childID,
-                            parentId = parentID
+                        if (deviceData != null) {
+                            val battery = deviceData["battery"] as? String ?: "Unknown"
+                            val childID = deviceData["childID"] as? String ?: "Unknown"
+                            val date = deviceData["date"] as? String ?: "Unknown"
+                            val time = deviceData["time"] as? String ?: "Unknown"
+                            val latitude = deviceData["latitude"] as? Double ?: 0.0
+                            val longitude = deviceData["longitude"] as? Double ?: 0.0
+                            val parentID = deviceData["parentID"] as? String ?: "Unknown"
 
-                        )
-                    )
+                            // Fetch location name from latitude and longitude
+                            val locationName = getPlaceNameFromLatLong(latitude, longitude)
+
+                            // Fetch child name
+                            fetchChildName(childID) { childName ->
+
+
+
+
+                                val itemData = DeviceAdapter.ItemData(
+                                    circleText = childName.take(1),  // You can set the text accordingly
+                                    battery = battery,
+                                    title = childName,     // Set the title dynamically if needed
+                                    connectedNow = "Yes",       // Set based on your data
+                                    date = date,
+                                    lastMap = locationName,  // Set the location name dynamically
+                                    latLong = LatLng(latitude,longitude),
+                                    childId = childID,
+                                    parentId = parentID
+                                )
+                                itemList.add(itemData)
+
+                                deviceAdapter = DeviceAdapter(itemList)
+                                recyclerView.adapter = deviceAdapter
+                                Log.d("data" ,"$itemData")
+                            }
+                        }
+                    }
+                    // If you only want the first child, break the loop here
+                    break
                 }
-
-                // Set the data to the adapter
-                deviceAdapter = DeviceAdapter(deviceList)
-                recyclerView.adapter = deviceAdapter
             } else {
-                showNoDataDialog()
+                Log.d("DeviceFragment", "No data available for this device.")
+                showNoDataDialog()  // Show no data dialog
             }
         }.addOnFailureListener { exception ->
-            // Handle error
-            exception.printStackTrace()
+            progressBar.visibility = View.GONE  // Hide progress bar in case of failure
+            Log.e("DeviceFragment", "Failed to fetch device data", exception)
+            showNoDataDialog()  // Show no data dialog on failure
         }
     }
-
-
 
     private fun convertTimestampToDate(timestamp: Long): String {
         val dateFormat = SimpleDateFormat("dd/MM/yyyy HH:mm:ss", Locale.getDefault())
@@ -139,4 +160,36 @@ class DeviceFragment : Fragment() {
         alertDialog.show()
     }
 
+    private fun getPlaceNameFromLatLong(latitude: Double, longitude: Double): String {
+        return try {
+            val geocoder = Geocoder(requireContext(), Locale.getDefault())
+            val addresses = geocoder.getFromLocation(latitude, longitude, 1) // Fetch 1 result
+            if (addresses?.isNotEmpty() == true) {
+                val address = addresses[0]
+                "${address.locality}, ${address.countryName}" // Example: "San Francisco, United States"
+            } else {
+                "Unknown Location"
+            }
+        } catch (e: Exception) {
+            e.printStackTrace()
+            "Error fetching location"
+        }
+    }
+
+    private fun fetchChildName(childID: String, callback: (String) -> Unit) {
+        val childRef = database.child("devices").child(childID)
+
+        childRef.get().addOnSuccessListener { snapshot ->
+            if (snapshot.exists()) {
+                // Get child name or default to "Unknown"
+                val childName = snapshot.child("deviceName").getValue(String::class.java) ?: "Unknown"
+                callback(childName)
+            } else {
+                callback("Unknown")
+            }
+        }.addOnFailureListener { exception ->
+            exception.printStackTrace()
+            callback("Error fetching name")
+        }
+    }
 }

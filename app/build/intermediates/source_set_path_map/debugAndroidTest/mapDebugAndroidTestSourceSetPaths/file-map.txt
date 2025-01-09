@@ -1,0 +1,6 @@
+com.example.locationtracker.test.app-tracing-1.2.0-0 C:\Users\swp\.gradle\caches\transforms-4\78c34aad280cbe7f6d51476199d773ce\transformed\tracing-1.2.0\res
+com.example.locationtracker.test.app-core-1.6.1-1 C:\Users\swp\.gradle\caches\transforms-4\d6a3af4e7b64e342e5ea809ed35a9a8a\transformed\core-1.6.1\res
+com.example.locationtracker.test.app-androidTest-2 C:\Users\swp\StudioProjects\LocationTracker\app\build\generated\res\resValues\androidTest\debug
+com.example.locationtracker.test.app-mergeDebugAndroidTestResources-3 C:\Users\swp\StudioProjects\LocationTracker\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\merged.dir
+com.example.locationtracker.test.app-mergeDebugAndroidTestResources-4 C:\Users\swp\StudioProjects\LocationTracker\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\stripped.dir
+com.example.locationtracker.test.app-debugAndroidTest-5 C:\Users\swp\StudioProjects\LocationTracker\app\build\intermediates\merged_res\debugAndroidTest\mergeDebugAndroidTestResources

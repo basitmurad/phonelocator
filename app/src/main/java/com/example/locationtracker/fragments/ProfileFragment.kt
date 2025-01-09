@@ -83,7 +83,7 @@ class ProfileFragment : Fragment() {
             shareCode()
         }
         buttonChangeName.setOnClickListener {
-            showDeviceName()
+            showDeviceName(deviceName)
         }
 
         // Set the click listener to show the rating dialog
@@ -115,7 +115,9 @@ class ProfileFragment : Fragment() {
         alertDialog.show()
 
     }
-    private fun showDeviceName() {
+
+    @SuppressLint("MissingInflatedId")
+    private fun showDeviceName(deviceName: String) {
         val dialogView = LayoutInflater.from(requireContext()).inflate(R.layout.device_name_layout, null)
         val dialogBuilder = AlertDialog.Builder(requireContext())
             .setView(dialogView)
@@ -129,6 +131,28 @@ class ProfileFragment : Fragment() {
         // Show the dialog
         alertDialog.show()
 
+        val displayNameDi: TextView = dialogView.findViewById(R.id.displayNameDi)
+        val displayNameEdit: EditText = dialogView.findViewById(R.id.displayNameEdit)
+        val displayNameButton: Button = dialogView.findViewById(R.id.displayNameButton)
+        val displayNameCancel: Button = dialogView.findViewById(R.id.displayNameCancel)
+
+        // Set initial device name
+        displayNameDi.text = deviceName
+
+        // Set button listeners
+        displayNameButton.setOnClickListener {
+            val newDeviceName = displayNameEdit.text.toString().trim()
+            if (newDeviceName.isNotEmpty()) {
+                updateDeviceNameInDatabase(newDeviceName)
+                alertDialog.dismiss()
+            } else {
+                Toast.makeText(requireContext(), "Name cannot be empty!", Toast.LENGTH_SHORT).show()
+            }
+        }
+
+        displayNameCancel.setOnClickListener {
+            alertDialog.dismiss()
+        }
 
         val window = alertDialog.window
         if (window != null) {
@@ -142,8 +166,57 @@ class ProfileFragment : Fragment() {
             )
             window.attributes = layoutParams
         }
-
     }
+
+    private fun updateDeviceNameInDatabase(newName: String) {
+        deviceReference.child(androidId).child("deviceName").setValue(newName)
+            .addOnSuccessListener {
+                Toast.makeText(requireContext(), "Device name updated successfully!", Toast.LENGTH_SHORT).show()
+                buttonChangeName.text = newName // Update the UI
+                textname.text = newName.firstOrNull()?.toString() ?: ""
+            }
+            .addOnFailureListener { error ->
+                Toast.makeText(requireContext(), "Failed to update device name: ${error.message}", Toast.LENGTH_SHORT).show()
+            }
+    }
+
+//    @SuppressLint("MissingInflatedId")
+//    private fun showDeviceName(deviceName: String) {
+//        val dialogView = LayoutInflater.from(requireContext()).inflate(R.layout.device_name_layout, null)
+//        val dialogBuilder = AlertDialog.Builder(requireContext())
+//            .setView(dialogView)
+//            .setCancelable(true)
+//
+//
+//
+//        val alertDialog = dialogBuilder.create()
+//
+//        // Ensuring the dialog background is transparent
+//        alertDialog.window?.setBackgroundDrawableResource(android.R.color.transparent)
+//
+//        // Show the dialog
+//        alertDialog.show()
+//        val displayNameDi: TextView = dialogView.findViewById(R.id.displayNameDi)
+//        val displayNameEdit: TextView = dialogView.findViewById(R.id.displayNameEdit)
+//        val displayNameButton: TextView = dialogView.findViewById(R.id.displayNameButton)
+//        val displayNameCancel: TextView = dialogView.findViewById(R.id.displayNameCancel)
+//        displayNameDi.text = deviceName
+//
+//
+//        val window = alertDialog.window
+//        if (window != null) {
+//            val layoutParams = window.attributes
+//            val margin = 50 // Set margin in pixels (e.g., 50px)
+//            layoutParams.width = ViewGroup.LayoutParams.MATCH_PARENT
+//            layoutParams.height = ViewGroup.LayoutParams.WRAP_CONTENT
+//            window.setLayout(
+//                (resources.displayMetrics.widthPixels - 2 * margin),
+//                ViewGroup.LayoutParams.WRAP_CONTENT
+//            )
+//            window.attributes = layoutParams
+//        }
+//
+//    }
 
     private fun shareCode() {
         val shareIntent = Intent(Intent.ACTION_SEND).apply {

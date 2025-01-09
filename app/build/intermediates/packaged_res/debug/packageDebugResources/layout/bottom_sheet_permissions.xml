@@ -1,0 +1,44 @@
+<!-- res/layout/fragment_permissions_bottom_sheet.xml -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/permissionDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/please_grant_the_following_permissions"
+        android:textSize="16sp"/>
+
+    <CheckBox
+        android:id="@+id/autoStartCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/auto_start"/>
+
+    <CheckBox
+        android:id="@+id/protectedAppCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/protected_app"/>
+
+    <CheckBox
+        android:id="@+id/motionTrackingCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/motion_tracking"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnAllowPermissions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/back_buttom"
+        android:textAllCaps="false"
+        android:fontFamily="@font/pbold"
+        android:textSize="16dp"
+        android:text="@string/allow_permissions"/>
+
+</LinearLayout>

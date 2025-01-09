@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@drawable/baseline_home_24"
+        android:title="@string/home" />
+    <item
+        android:id="@+id/nav_devices"
+        android:icon="@drawable/baseline_perm_device_information_24"
+        android:title="@string/devices" />
+    <item
+        android:id="@+id/nav_connect"
+        android:icon="@drawable/baseline_cast_connected_24"
+        android:title="@string/connect" />
+    <item
+        android:id="@+id/nav_profile"
+        android:icon="@drawable/baseline_person_24"
+        android:title="@string/profile" />
+</menu>

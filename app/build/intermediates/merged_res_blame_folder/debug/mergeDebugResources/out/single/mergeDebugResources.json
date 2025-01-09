@@ -1,0 +1,342 @@
+[
+    {
+        "merged": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-debug-71:\\drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
+        "source": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-pngs-66:\\drawable-anydpi-v24\\ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-debug-71:\\drawable_baseline_add_24.xml.flat",
+        "source": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-main-73:\\drawable\\baseline_add_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-debug-71:\\drawable_baseline_cast_connected_24.xml.flat",
+        "source": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-main-73:\\drawable\\baseline_cast_connected_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-debug-71:\\layout_bottom_sheet_permissions.xml.flat",
+        "source": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-main-73:\\layout\\bottom_sheet_permissions.xml"
+    },
+    {
+        "merged": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-debug-71:\\drawable_color_selector.xml.flat",
+        "source": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-main-73:\\drawable\\color_selector.xml"
+    },
+    {
+        "merged": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-debug-71:\\mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-main-73:\\mipmap-hdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-debug-71:\\drawable_logo2.png.flat",
+        "source": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-main-73:\\drawable\\logo2.png"
+    },
+    {
+        "merged": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-debug-71:\\xml_backup_rules.xml.flat",
+        "source": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-main-73:\\xml\\backup_rules.xml"
+    },
+    {
+        "merged": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-debug-71:\\drawable_lock.png.flat",
+        "source": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-main-73:\\drawable\\lock.png"
+    },
+    {
+        "merged": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-debug-71:\\drawable_share.png.flat",
+        "source": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-main-73:\\drawable\\share.png"
+    },
+    {
+        "merged": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-debug-71:\\drawable_baseline_battery_6_bar_24.xml.flat",
+        "source": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-main-73:\\drawable\\baseline_battery_6_bar_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-debug-71:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-main-73:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+    },
+    {
+        "merged": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-debug-71:\\drawable_baseline_battery_5_bar_24.xml.flat",
+        "source": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-main-73:\\drawable\\baseline_battery_5_bar_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-debug-71:\\layout_activity_splash.xml.flat",
+        "source": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-main-73:\\layout\\activity_splash.xml"
+    },
+    {
+        "merged": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-debug-71:\\font_psemibold.ttf.flat",
+        "source": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-main-73:\\font\\psemibold.ttf"
+    },
+    {
+        "merged": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-debug-71:\\layout_dialog_generic_disabled.xml.flat",
+        "source": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-main-73:\\layout\\dialog_generic_disabled.xml"
+    },
+    {
+        "merged": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-debug-71:\\layout_activity_show_device_detail.xml.flat",
+        "source": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-main-73:\\layout\\activity_show_device_detail.xml"
+    },
+    {
+        "merged": "com.example.locationtracker.app-debug-71:/layout_activity_show_detail.xml.flat",
+        "source": "com.example.locationtracker.app-main-73:/layout/activity_show_detail.xml"
+    },
+    {
+        "merged": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-debug-71:\\drawable_back_editext.xml.flat",
+        "source": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-main-73:\\drawable\\back_editext.xml"
+    },
+    {
+        "merged": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-debug-71:\\mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-main-73:\\mipmap-hdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-debug-71:\\drawable_baseline_battery_charging_full_24.xml.flat",
+        "source": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-main-73:\\drawable\\baseline_battery_charging_full_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-debug-71:\\drawable_language.png.flat",
+        "source": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-main-73:\\drawable\\language.png"
+    },
+    {
+        "merged": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-debug-71:\\drawable_stroke_back.xml.flat",
+        "source": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-main-73:\\drawable\\stroke_back.xml"
+    },
+    {
+        "merged": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-debug-71:\\drawable_instagram.png.flat",
+        "source": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-main-73:\\drawable\\instagram.png"
+    },
+    {
+        "merged": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-debug-71:\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-main-73:\\mipmap-xxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-debug-71:\\font_pregular.ttf.flat",
+        "source": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-main-73:\\font\\pregular.ttf"
+    },
+    {
+        "merged": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-debug-71:\\mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-main-73:\\mipmap-xxhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-debug-71:\\drawable_back_buttom.xml.flat",
+        "source": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-main-73:\\drawable\\back_buttom.xml"
+    },
+    {
+        "merged": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-debug-71:\\font_pblack.ttf.flat",
+        "source": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-main-73:\\font\\pblack.ttf"
+    },
+    {
+        "merged": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-debug-71:\\drawable_rateus.png.flat",
+        "source": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-main-73:\\drawable\\rateus.png"
+    },
+    {
+        "merged": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-debug-71:\\drawable_baseline_battery_4_bar_24.xml.flat",
+        "source": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-main-73:\\drawable\\baseline_battery_4_bar_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-debug-71:\\drawable_baseline_edit_24.xml.flat",
+        "source": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-main-73:\\drawable\\baseline_edit_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-debug-71:\\layout_dialog_success.xml.flat",
+        "source": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-main-73:\\layout\\dialog_success.xml"
+    },
+    {
+        "merged": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-debug-71:\\layout_connect_device_layout.xml.flat",
+        "source": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-main-73:\\layout\\connect_device_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-debug-71:\\layout_activity_show_detail.xml.flat",
+        "source": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-main-73:\\layout\\activity_show_detail.xml"
+    },
+    {
+        "merged": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-debug-71:\\drawable_startimage.png.flat",
+        "source": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-main-73:\\drawable\\startimage.png"
+    },
+    {
+        "merged": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-debug-71:\\layout_dialog_custom.xml.flat",
+        "source": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-main-73:\\layout\\dialog_custom.xml"
+    },
+    {
+        "merged": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-debug-71:\\mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-main-73:\\mipmap-xxxhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-debug-71:\\layout_activity_home.xml.flat",
+        "source": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-main-73:\\layout\\activity_home.xml"
+    },
+    {
+        "merged": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-debug-71:\\layout_fragment_profile.xml.flat",
+        "source": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-main-73:\\layout\\fragment_profile.xml"
+    },
+    {
+        "merged": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-debug-71:\\drawable_iconoir_message.png.flat",
+        "source": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-main-73:\\drawable\\iconoir_message.png"
+    },
+    {
+        "merged": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-debug-71:\\layout_activity_device_name.xml.flat",
+        "source": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-main-73:\\layout\\activity_device_name.xml"
+    },
+    {
+        "merged": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-debug-71:\\drawable_bi_facebook.png.flat",
+        "source": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-main-73:\\drawable\\bi_facebook.png"
+    },
+    {
+        "merged": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-debug-71:\\menu_bottom_nav_menu.xml.flat",
+        "source": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-main-73:\\menu\\bottom_nav_menu.xml"
+    },
+    {
+        "merged": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-debug-71:\\drawable_baseline_battery_1_bar_24.xml.flat",
+        "source": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-main-73:\\drawable\\baseline_battery_1_bar_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-debug-71:\\layout_custom_motion_tracking_dialog.xml.flat",
+        "source": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-main-73:\\layout\\custom_motion_tracking_dialog.xml"
+    },
+    {
+        "merged": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-debug-71:\\drawable_dialoge_back.xml.flat",
+        "source": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-main-73:\\drawable\\dialoge_back.xml"
+    },
+    {
+        "merged": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-debug-71:\\font_pmedium.ttf.flat",
+        "source": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-main-73:\\font\\pmedium.ttf"
+    },
+    {
+        "merged": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-debug-71:\\mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-main-73:\\mipmap-mdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-debug-71:\\drawable_baseline_battery_2_bar_24.xml.flat",
+        "source": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-main-73:\\drawable\\baseline_battery_2_bar_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-debug-71:\\drawable_baseline_arrow_forward_ios_24.xml.flat",
+        "source": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-main-73:\\drawable\\baseline_arrow_forward_ios_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-debug-71:\\mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-main-73:\\mipmap-xhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-debug-71:\\layout_device_list_layout.xml.flat",
+        "source": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-main-73:\\layout\\device_list_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-debug-71:\\layout_fragment_connect.xml.flat",
+        "source": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-main-73:\\layout\\fragment_connect.xml"
+    },
+    {
+        "merged": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-debug-71:\\drawable_baseline_battery_0_bar_24.xml.flat",
+        "source": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-main-73:\\drawable\\baseline_battery_0_bar_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-debug-71:\\drawable_linkdln.png.flat",
+        "source": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-main-73:\\drawable\\linkdln.png"
+    },
+    {
+        "merged": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-debug-71:\\layout_activity_get_start.xml.flat",
+        "source": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-main-73:\\layout\\activity_get_start.xml"
+    },
+    {
+        "merged": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-debug-71:\\drawable_baseline_home_24.xml.flat",
+        "source": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-main-73:\\drawable\\baseline_home_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-debug-71:\\drawable_baseline_arrow_back_24.xml.flat",
+        "source": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-main-73:\\drawable\\baseline_arrow_back_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-debug-71:\\drawable_baseline_person_24.xml.flat",
+        "source": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-main-73:\\drawable\\baseline_person_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-debug-71:\\drawable_cross.png.flat",
+        "source": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-main-73:\\drawable\\cross.png"
+    },
+    {
+        "merged": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-debug-71:\\drawable_baseline_battery_std_24.xml.flat",
+        "source": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-main-73:\\drawable\\baseline_battery_std_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-debug-71:\\font_pbold.ttf.flat",
+        "source": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-main-73:\\font\\pbold.ttf"
+    },
+    {
+        "merged": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-debug-71:\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-main-73:\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-debug-71:\\layout_device_name_layout.xml.flat",
+        "source": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-main-73:\\layout\\device_name_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-debug-71:\\drawable_logo.png.flat",
+        "source": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-main-73:\\drawable\\logo.png"
+    },
+    {
+        "merged": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-debug-71:\\drawable_howuse.png.flat",
+        "source": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-main-73:\\drawable\\howuse.png"
+    },
+    {
+        "merged": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-debug-71:\\drawable_ic_launcher_background.xml.flat",
+        "source": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-main-73:\\drawable\\ic_launcher_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-debug-71:\\layout_confirm_dialog_layout.xml.flat",
+        "source": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-main-73:\\layout\\confirm_dialog_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-debug-71:\\layout_activity_permission.xml.flat",
+        "source": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-main-73:\\layout\\activity_permission.xml"
+    },
+    {
+        "merged": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-debug-71:\\drawable_whatsapp.png.flat",
+        "source": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-main-73:\\drawable\\whatsapp.png"
+    },
+    {
+        "merged": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-debug-71:\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-main-73:\\mipmap-xxxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-debug-71:\\mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-main-73:\\mipmap-xhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-debug-71:\\drawable_circle_background.xml.flat",
+        "source": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-main-73:\\drawable\\circle_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-debug-71:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-main-73:\\mipmap-anydpi-v26\\ic_launcher.xml"
+    },
+    {
+        "merged": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-debug-71:\\drawable_notifications.png.flat",
+        "source": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-main-73:\\drawable\\notifications.png"
+    },
+    {
+        "merged": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-debug-71:\\layout_fragment_device.xml.flat",
+        "source": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-main-73:\\layout\\fragment_device.xml"
+    },
+    {
+        "merged": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-debug-71:\\font_pextrabold.ttf.flat",
+        "source": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-main-73:\\font\\pextrabold.ttf"
+    },
+    {
+        "merged": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-debug-71:\\layout_dialog_rating.xml.flat",
+        "source": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-main-73:\\layout\\dialog_rating.xml"
+    },
+    {
+        "merged": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-debug-71:\\drawable_baseline_perm_device_information_24.xml.flat",
+        "source": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-main-73:\\drawable\\baseline_perm_device_information_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-debug-71:\\layout_activity_privacy_policy.xml.flat",
+        "source": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-main-73:\\layout\\activity_privacy_policy.xml"
+    },
+    {
+        "merged": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-debug-71:\\drawable_baseline_battery_3_bar_24.xml.flat",
+        "source": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-main-73:\\drawable\\baseline_battery_3_bar_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-debug-71:\\layout_fragment_home.xml.flat",
+        "source": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-main-73:\\layout\\fragment_home.xml"
+    },
+    {
+        "merged": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-debug-71:\\xml_data_extraction_rules.xml.flat",
+        "source": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-main-73:\\xml\\data_extraction_rules.xml"
+    },
+    {
+        "merged": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-debug-71:\\mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-main-73:\\mipmap-mdpi\\ic_launcher.webp"
+    }
+]

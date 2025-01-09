@@ -1,4 +1,6 @@
+import android.annotation.SuppressLint
 import android.content.Intent
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -18,13 +20,17 @@ class DeviceAdapter(private val itemList: List<ItemData>) : RecyclerView.Adapter
         return ViewHolder(itemView)
     }
 
+    @SuppressLint("SetTextI18n")
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val currentItem = itemList[position]
 
+        Log.d("Data is" ,"$currentItem");
         // Bind data to the views
         holder.circleText.text = currentItem.circleText
         holder.title.text = currentItem.title
         holder.date.text = currentItem.date
+        holder.location.text= currentItem.lastMap
+        holder.charge.text= currentItem.battery +"%"
         val childId = currentItem.childId
         val parentId = currentItem.parentId
         val latLongObj = currentItem.latLong
@@ -34,6 +40,9 @@ class DeviceAdapter(private val itemList: List<ItemData>) : RecyclerView.Adapter
 
         println("Your battery is $battery")
         println("Your childId is $childId")
+        println("Your parentId is $parentId")
+        println("Your parentId is $parentId")
+        println("Your parentId is $parentId")
         println("Your parentId is $parentId")
 
         holder.checkButton.setOnClickListener {
@@ -59,6 +68,7 @@ class DeviceAdapter(private val itemList: List<ItemData>) : RecyclerView.Adapter
         val circleText: TextView = view.findViewById(R.id.circleText)
         val title: TextView = view.findViewById(R.id.mobileName)
         val date: TextView = view.findViewById(R.id.date)
+        val charge: TextView = view.findViewById(R.id.batteryCharge)
         val location: TextView = view.findViewById(R.id.locationName)
         val checkButton: TextView = view.findViewById(R.id.button)
         val batteryImage: ImageView = view.findViewById(R.id.batteryImage)
