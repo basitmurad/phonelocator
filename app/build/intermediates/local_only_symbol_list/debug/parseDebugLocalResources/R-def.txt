@@ -68,6 +68,7 @@ id btnClose
 id btnDismiss
 id btnFeedback
 id btnGoToSettings
+id btnLanguage
 id btnOpenDialoge
 id btnPrivacy
 id btnRateUs
@@ -99,6 +100,8 @@ id fragmentContainer
 id imageView
 id imageView2
 id imageView3
+id languageName
+id languageRecyclerView
 id language_spinner
 id linearLayout
 id linearLayout2
@@ -144,6 +147,7 @@ id view
 layout activity_device_name
 layout activity_get_start
 layout activity_home
+layout activity_language
 layout activity_main
 layout activity_permission
 layout activity_privacy_policy
@@ -164,6 +168,7 @@ layout fragment_connect
 layout fragment_device
 layout fragment_home
 layout fragment_profile
+layout item_language
 menu bottom_nav_menu
 mipmap ic_launcher
 mipmap ic_launcher_round
@@ -220,6 +225,7 @@ string invite_others
 string join
 string jutial_gilgit
 string language
+string language1
 string last_map
 string live_location
 string location_is_required_for_this_app_to_function_properly_please_enable_location_services
@@ -227,6 +233,8 @@ string motion_tracking
 string motion_tracking_permission
 string n
 string no
+string no_data_available
+string no_device_connection
 string notifications
 string or
 string permission_setup
