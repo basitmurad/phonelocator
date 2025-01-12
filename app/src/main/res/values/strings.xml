@@ -1,85 +1,88 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">Location Tracker</string>
-    <string name="enter_your_display_name">Enter your display name</string>
-    <string name="your_name_makes_it_easier_for_loved_ones_to_find_you">Your name makes it easier for your loved ones to find you</string>
-    <string name="start_now">Start Now</string>
-    <string name="permission_setup">Permission Setup!</string>
-    <string name="we_need_your_permission_to_provide_accurate_tracking_and_alerts">We need your permission to provide accurate tracking and alerts.</string>
-    <string name="allow_location_access">Allow Location Access</string>
-    <string name="allow">Allow</string>
-    <string name="start_tracking_child_s_location">Start Tracking Child’s Location</string>
-    <string name="get_alerts_and_stay_connected_enjoy_peace_of_mind_knowing_your_child_is_safe">Get alerts, and stay connected. Enjoy peace of mind knowing your child is safe.</string>
-    <string name="start_tracking">Start Tracking</string>
+    <string name="enter_your_display_name" tools:ignore="MissingTranslation">Enter your display name</string>
+    <string name="your_name_makes_it_easier_for_loved_ones_to_find_you" tools:ignore="MissingTranslation">Your name makes it easier for your loved ones to find you</string>
+    <string name="start_now" tools:ignore="MissingTranslation">Start Now</string>
+    <string name="permission_setup" tools:ignore="MissingTranslation">Permission Setup!</string>
+    <string name="we_need_your_permission_to_provide_accurate_tracking_and_alerts" tools:ignore="MissingTranslation">We need your permission to provide accurate tracking and alerts.</string>
+    <string name="allow_location_access" tools:ignore="MissingTranslation">Allow Location Access</string>
+    <string name="allow" tools:ignore="MissingTranslation">Allow</string>
+    <string name="start_tracking_child_s_location" tools:ignore="MissingTranslation">Start Tracking Child’s Location</string>
+    <string name="get_alerts_and_stay_connected_enjoy_peace_of_mind_knowing_your_child_is_safe" tools:ignore="MissingTranslation">Get alerts, and stay connected. Enjoy peace of mind knowing your child is safe.</string>
+    <string name="start_tracking" tools:ignore="MissingTranslation">Start Tracking</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="invite_others">Invite others</string>
-    <string name="send_your_code_to_start_tracking_others_location">Send your code to start tracking\nothers location.</string>
-    <string name="or">Or</string>
-    <string name="share_through">Share through</string>
-    <string name="notifications">Notifications</string>
-    <string name="language">Language</string>
-    <string name="how_to_use">How to use</string>
-    <string name="share">Share</string>
-    <string name="feedback">Feedback</string>
-    <string name="rate_us">Rate US</string>
-    <string name="privacy_policy">Privacy Policy</string>
-    <string name="enter_the_invitation_code">Enter the Invitation code</string>
-    <string name="enter_the_invitation_code_from_other_to_share_your_location_safely">Enter the Invitation code from \nother to share your location \nsafely</string>
-    <string name="be_located">Be Located</string>
-    <string name="feed_back">Feedback</string>
-    <string name="we_value_your_opinion">We value your opinion!</string>
-    <string name="your_feedback_or_suggestion">Your feedback or suggestion......</string>
-    <string name="icon">Icon</string>
-    <string name="submit">Submit</string>
-    <string name="how_would_you_rate_our_app_experience">How Would You Rate Our App Experience?</string>
-    <string name="cancel">Cancel</string>
-    <string name="enter_code_here">Enter code here</string>
-    <string name="join">Join</string>
-    <string name="home">Home</string>
-    <string name="devices">Devices</string>
-    <string name="connect">Connect</string>
-    <string name="profile">Profile</string>
-    <string name="all_devices">All devices</string>
-    <string name="n">N</string>
-    <string name="i_phone_x">I phone X</string>
-    <string name="connected_now">Connected now</string>
-    <string name="fri_13_dec_2024">Fri, 13 Dec, 2024</string>
-    <string name="last_map">Last Map</string>
-    <string name="jutial_gilgit">Jutial Gilgit</string>
-    <string name="live_location">Live location</string>
-    <string name="change_display_name">Change Display name</string>
-    <string name="done">Done</string>
-    <string name="todo">TODO</string>
-    <string name="tap_here_to_locate_your_family">Tap here to locate your family</string>
-    <string name="add">Add</string>
-    <string name="back">Back</string>
-    <string name="_234d4e5">234d4e5</string>
-    <string name="copy">Copy</string>
-    <string name="your_name">Your Name</string>
-    <string name="d" />
-    <string name="view_in_map">view in map</string>
-    <string name="would_you_like_to_confirm_vivo_y20s_s_invitation">Would you like to confirm the invitation with ?</string>
-    <string name="confirm">Confirm</string>
-    <string name="no">No</string>
-    <string name="device_name">Device name</string>
-    <string name="please_grant_the_following_permissions">Please grant the following permissions:</string>
-    <string name="auto_start">Auto Start</string>
-    <string name="protected_app">Protected App</string>
-    <string name="motion_tracking">Motion Tracking</string>
-    <string name="allow_permissions">Allow Permissions</string>
-    <string name="dialog_icon">d</string>
-    <string name="go_to_settings">Go to Settings</string>
-    <string name="cancel2">Cancel</string>
-    <string name="great">Great!</string>
-    <string name="done1">Done</string>
-    <string name="start_safe_location_sharing_with">Start safe location sharing with!</string>
+    <string name="hello_blank_fragment" tools:ignore="MissingTranslation">Hello blank fragment</string>
+    <string name="invite_others" tools:ignore="MissingTranslation">Invite others</string>
+    <string name="send_your_code_to_start_tracking_others_location" tools:ignore="MissingTranslation">Send your code to start tracking\nothers location.</string>
+    <string name="or" tools:ignore="MissingTranslation">Or</string>
+    <string name="share_through" tools:ignore="MissingTranslation">Share through</string>
+    <string name="notifications" tools:ignore="MissingTranslation">Notifications</string>
+    <string name="language" tools:ignore="MissingTranslation">Language</string>
+    <string name="how_to_use" tools:ignore="MissingTranslation">How to use</string>
+    <string name="share" tools:ignore="MissingTranslation">Share</string>
+    <string name="feedback" tools:ignore="MissingTranslation">Feedback</string>
+    <string name="rate_us" tools:ignore="MissingTranslation">Rate US</string>
+    <string name="privacy_policy" tools:ignore="MissingTranslation">Privacy Policy</string>
+    <string name="enter_the_invitation_code" tools:ignore="MissingTranslation">Enter the Invitation code</string>
+    <string name="enter_the_invitation_code_from_other_to_share_your_location_safely" tools:ignore="MissingTranslation">Enter the Invitation code from \nother to share your location \nsafely</string>
+    <string name="be_located" tools:ignore="MissingTranslation">Be Located</string>
+    <string name="feed_back" tools:ignore="MissingTranslation">Feedback</string>
+    <string name="we_value_your_opinion" tools:ignore="MissingTranslation">We value your opinion!</string>
+    <string name="your_feedback_or_suggestion" tools:ignore="MissingTranslation">Your feedback or suggestion......</string>
+    <string name="icon" tools:ignore="MissingTranslation">Icon</string>
+    <string name="submit" tools:ignore="MissingTranslation">Submit</string>
+    <string name="how_would_you_rate_our_app_experience" tools:ignore="MissingTranslation">How Would You Rate Our App Experience?</string>
+    <string name="cancel" tools:ignore="MissingTranslation">Cancel</string>
+    <string name="enter_code_here" tools:ignore="MissingTranslation">Enter code here</string>
+    <string name="join" tools:ignore="MissingTranslation">Join</string>
+    <string name="home" tools:ignore="MissingTranslation">Home</string>
+    <string name="devices" translatable="false">Devices</string>
+    <string name="connect" translatable="false">Connect</string>
+    <string name="profile" translatable="false">Profile</string>
+    <string name="all_devices" translatable="false">All devices</string>
+    <string name="n" translatable="false">N</string>
+    <string name="i_phone_x" translatable="false">I phone X</string>
+    <string name="connected_now" tools:ignore="MissingTranslation">Connected now</string>
+    <string name="fri_13_dec_2024" tools:ignore="MissingTranslation">Fri, 13 Dec, 2024</string>
+    <string name="last_map" tools:ignore="MissingTranslation">Last Map</string>
+    <string name="jutial_gilgit" tools:ignore="MissingTranslation">Jutial Gilgit</string>
+    <string name="live_location" tools:ignore="MissingTranslation">Live location</string>
+    <string name="change_display_name" tools:ignore="MissingTranslation">Change Display name</string>
+    <string name="done" tools:ignore="MissingTranslation">Done</string>
+    <string name="todo" tools:ignore="MissingTranslation">TODO</string>
+    <string name="tap_here_to_locate_your_family" tools:ignore="MissingTranslation">Tap here to locate your family</string>
+    <string name="add" tools:ignore="MissingTranslation">Add</string>
+    <string name="back" tools:ignore="MissingTranslation">Back</string>
+    <string name="_234d4e5" tools:ignore="MissingTranslation">234d4e5</string>
+    <string name="copy" tools:ignore="MissingTranslation">Copy</string>
+    <string name="your_name" tools:ignore="MissingTranslation">Your Name</string>
+    <string name="d" tools:ignore="MissingTranslation" />
+    <string name="view_in_map" tools:ignore="MissingTranslation">view in map</string>
+    <string name="would_you_like_to_confirm_vivo_y20s_s_invitation" tools:ignore="MissingTranslation">Would you like to confirm the invitation with ?</string>
+    <string name="confirm" tools:ignore="MissingTranslation">Confirm</string>
+    <string name="no" tools:ignore="MissingTranslation">No</string>
+    <string name="device_name" tools:ignore="MissingTranslation">Device name</string>
+    <string name="please_grant_the_following_permissions" tools:ignore="MissingTranslation">Please grant the following permissions:</string>
+    <string name="auto_start" tools:ignore="MissingTranslation">Auto Start</string>
+    <string name="protected_app" tools:ignore="MissingTranslation">Protected App</string>
+    <string name="motion_tracking" tools:ignore="MissingTranslation">Motion Tracking</string>
+    <string name="allow_permissions" tools:ignore="MissingTranslation">Allow Permissions</string>
+    <string name="dialog_icon" tools:ignore="MissingTranslation">d</string>
+    <string name="go_to_settings" tools:ignore="MissingTranslation">Go to Settings</string>
+    <string name="cancel2" tools:ignore="MissingTranslation">Cancel</string>
+    <string name="great" tools:ignore="MissingTranslation">Great!</string>
+    <string name="done1" tools:ignore="MissingTranslation">Done</string>
+    <string name="start_safe_location_sharing_with" tools:ignore="MissingTranslation">Start safe location sharing with!</string>
     <string name="internet_disabled">Internet Disabled</string>
     <string name="internet_connection_is_required_for_this_app_to_function_properly_please_enable_internet_connectivity">Internet connection is required for this app to function properly. Please enable internet connectivity.</string>
-    <string name="motion_tracking_permission">Motion Tracking Permission</string>
-    <string name="location_is_required_for_this_app_to_function_properly_please_enable_location_services">
+    <string name="motion_tracking_permission" tools:ignore="MissingTranslation">Motion Tracking Permission</string>
+    <string name="location_is_required_for_this_app_to_function_properly_please_enable_location_services" tools:ignore="MissingTranslation">
         Location is required for this app to function properly. Please enable location services.
     </string>
-    <string name="to_track_your_movements_the_app_requires_permission_to_access_motion_sensors_please_enable_motion_tracking_in_your_device_settings">To track your movements, the app requires permission to access motion sensors. Please enable Motion Tracking in your device settings.</string>
-    <string name="congratulations_you_have_successfully_connected_with_the_device">Congratulations, you have successfully connected with the device.</string>
-    <string name="enter_text_here">Enter text here</string>
+    <string name="to_track_your_movements_the_app_requires_permission_to_access_motion_sensors_please_enable_motion_tracking_in_your_device_settings" tools:ignore="MissingTranslation">To track your movements, the app requires permission to access motion sensors. Please enable Motion Tracking in your device settings.</string>
+    <string name="congratulations_you_have_successfully_connected_with_the_device" tools:ignore="MissingTranslation">Congratulations, you have successfully connected with the device.</string>
+    <string name="enter_text_here" tools:ignore="MissingTranslation">Enter text here</string>
+    <string name="language1" tools:ignore="MissingTranslation">Language</string>
+    <string name="no_data_available" tools:ignore="MissingTranslation">No Data Available</string>
+    <string name="no_device_connection" tools:ignore="MissingTranslation">No device connections found. Please check your connection or try again later.</string>
 </resources>

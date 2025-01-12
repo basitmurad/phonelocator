@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.locationtracker.app-mergeDebugResources-69:/values-port/values-port.xml",
+            "outputFile": "com.example.locationtracker.app-mergeDebugResources-72:/values-port/values-port.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\swp\\.gradle\\caches\\transforms-4\\0e513fa5baefe0151e39d55593b31083\\transformed\\appcompat-1.7.0\\res\\values-port\\values-port.xml",
+                    "source": "C:\\Users\\swp\\.gradle\\caches\\transforms-4\\3e5eada27719c212287a911cff34c6b5\\transformed\\appcompat-1.7.0\\res\\values-port\\values-port.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

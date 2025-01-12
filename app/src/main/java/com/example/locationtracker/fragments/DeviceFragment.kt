@@ -26,6 +26,8 @@ import java.util.Date
 import java.util.Locale
 import android.widget.ProgressBar
 
+private const val s = "No Data Available"
+
 class DeviceFragment : Fragment() {
 
     private lateinit var recyclerView: RecyclerView
@@ -150,7 +152,7 @@ class DeviceFragment : Fragment() {
             return
         }
         val dialogBuilder = AlertDialog.Builder(requireContext())
-        dialogBuilder.setTitle("No Data Available")
+        dialogBuilder.setTitle(R.string.no_data_available)
         dialogBuilder.setMessage("No device connections found. Please check your connection or try again later.")
         dialogBuilder.setPositiveButton("OK") { dialog, _ ->
             dialog.dismiss()

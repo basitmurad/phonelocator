@@ -1,0 +1,82 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">लोकेशन ट्रैकर</string>
+    <string name="enter_your_display_name" tools:ignore="MissingTranslation">अपना डिस्प्ले नाम दर्ज करें</string>
+    <string name="your_name_makes_it_easier_for_loved_ones_to_find_you" tools:ignore="MissingTranslation">आपका नाम आपके प्रियजनों को आपको ढूंढने में मदद करता है</string>
+    <string name="start_now" tools:ignore="MissingTranslation">अब शुरू करें</string>
+    <string name="permission_setup" tools:ignore="MissingTranslation">अनुमति सेटअप!</string>
+    <string name="we_need_your_permission_to_provide_accurate_tracking_and_alerts" tools:ignore="MissingTranslation">हमें सही ट्रैकिंग और अलर्ट प्रदान करने के लिए आपकी अनुमति चाहिए।</string>
+    <string name="allow_location_access" tools:ignore="MissingTranslation">लोकेशन एक्सेस की अनुमति दें</string>
+    <string name="allow" tools:ignore="MissingTranslation">अनुमति दें</string>
+    <string name="start_tracking_child_s_location" tools:ignore="MissingTranslation">बच्चे का लोकेशन ट्रैकिंग शुरू करें</string>
+    <string name="get_alerts_and_stay_connected_enjoy_peace_of_mind_knowing_your_child_is_safe" tools:ignore="MissingTranslation">अलर्ट प्राप्त करें, और जुड़े रहें। यह जानकर शांति का अनुभव करें कि आपका बच्चा सुरक्षित है।</string>
+    <string name="start_tracking" tools:ignore="MissingTranslation">ट्रैकिंग शुरू करें</string>
+    <string name="hello_blank_fragment" tools:ignore="MissingTranslation">नमस्ते, रिक्त फ्रैगमेंट</string>
+    <string name="invite_others" tools:ignore="MissingTranslation">दूसरों को आमंत्रित करें</string>
+    <string name="send_your_code_to_start_tracking_others_location" tools:ignore="MissingTranslation">अन्य के लोकेशन को ट्रैक करने के लिए अपना कोड भेजें</string>
+    <string name="or" tools:ignore="MissingTranslation">या</string>
+    <string name="share_through" tools:ignore="MissingTranslation">के माध्यम से साझा करें</string>
+    <string name="notifications" tools:ignore="MissingTranslation">सूचनाएँ</string>
+    <string name="language" tools:ignore="MissingTranslation">भाषा</string>
+    <string name="how_to_use" tools:ignore="MissingTranslation">कैसे उपयोग करें</string>
+    <string name="share" tools:ignore="MissingTranslation">साझा करें</string>
+    <string name="feedback" tools:ignore="MissingTranslation">प्रतिक्रिया</string>
+    <string name="rate_us" tools:ignore="MissingTranslation">हमें रेट करें</string>
+    <string name="privacy_policy" tools:ignore="MissingTranslation">गोपनीयता नीति</string>
+    <string name="enter_the_invitation_code" tools:ignore="MissingTranslation">आमंत्रण कोड दर्ज करें</string>
+    <string name="enter_the_invitation_code_from_other_to_share_your_location_safely" tools:ignore="MissingTranslation">अन्य से आपका लोकेशन सुरक्षित रूप से साझा करने के लिए आमंत्रण कोड दर्ज करें</string>
+    <string name="be_located" tools:ignore="MissingTranslation">स्थान पता करें</string>
+    <string name="feed_back" tools:ignore="MissingTranslation">प्रतिक्रिया</string>
+    <string name="we_value_your_opinion" tools:ignore="MissingTranslation">हम आपकी राय की कद्र करते हैं!</string>
+    <string name="your_feedback_or_suggestion" tools:ignore="MissingTranslation">आपकी प्रतिक्रिया या सुझाव......</string>
+    <string name="icon" tools:ignore="MissingTranslation">आइकन</string>
+    <string name="submit" tools:ignore="MissingTranslation">सबमिट करें</string>
+    <string name="how_would_you_rate_our_app_experience" tools:ignore="MissingTranslation">आप हमारे ऐप अनुभव को कैसे रेट करेंगे?</string>
+    <string name="cancel" tools:ignore="MissingTranslation">रद्द करें</string>
+    <string name="enter_code_here" tools:ignore="MissingTranslation">यहां कोड दर्ज करें</string>
+    <string name="join" tools:ignore="MissingTranslation">जॉइन करें</string>
+    <string name="home" tools:ignore="MissingTranslation">मुख्य पृष्ठ</string>
+    <string name="devices" translatable="false">उपकरण</string>
+    <string name="connect" translatable="false">जोड़ें</string>
+    <string name="profile" translatable="false">प्रोफ़ाइल</string>
+    <string name="all_devices" translatable="false">सभी उपकरण</string>
+    <string name="n" translatable="false">एन</string>
+    <string name="i_phone_x" translatable="false">आई फोन X</string>
+    <string name="connected_now" tools:ignore="MissingTranslation">अब जुड़ा हुआ</string>
+    <string name="fri_13_dec_2024" tools:ignore="MissingTranslation">शुक्रवार, 13 दिसंबर 2024</string>
+    <string name="last_map" tools:ignore="MissingTranslation">अंतिम मानचित्र</string>
+    <string name="jutial_gilgit" tools:ignore="MissingTranslation">जुटियाल, गिलगित</string>
+    <string name="live_location" tools:ignore="MissingTranslation">लाइव लोकेशन</string>
+    <string name="change_display_name" tools:ignore="MissingTranslation">डिस्प्ले नाम बदलें</string>
+    <string name="done" tools:ignore="MissingTranslation">हो गया</string>
+    <string name="todo" tools:ignore="MissingTranslation">करने के लिए</string>
+    <string name="tap_here_to_locate_your_family" tools:ignore="MissingTranslation">अपनी परिवार को स्थानित करने के लिए यहां टैप करें</string>
+    <string name="add" tools:ignore="MissingTranslation">जोड़ें</string>
+    <string name="back" tools:ignore="MissingTranslation">वापस</string>
+    <string name="_234d4e5" tools:ignore="MissingTranslation">234d4e5</string>
+    <string name="copy" tools:ignore="MissingTranslation">कॉपी करें</string>
+    <string name="your_name" tools:ignore="MissingTranslation">आपका नाम</string>
+    <string name="d" tools:ignore="MissingTranslation" />
+    <string name="view_in_map" tools:ignore="MissingTranslation">मानचित्र में देखें</string>
+    <string name="would_you_like_to_confirm_vivo_y20s_s_invitation" tools:ignore="MissingTranslation">क्या आप वीवो Y20s का आमंत्रण स्वीकार करना चाहेंगे?</string>
+    <string name="confirm" tools:ignore="MissingTranslation">पुष्टि करें</string>
+    <string name="no" tools:ignore="MissingTranslation">नहीं</string>
+    <string name="device_name" tools:ignore="MissingTranslation">उपकरण का नाम</string>
+    <string name="please_grant_the_following_permissions" tools:ignore="MissingTranslation">कृपया निम्नलिखित अनुमतियां दें:</string>
+    <string name="auto_start" tools:ignore="MissingTranslation">ऑटो स्टार्ट</string>
+    <string name="protected_app" tools:ignore="MissingTranslation">संरक्षित ऐप</string>
+    <string name="motion_tracking" tools:ignore="MissingTranslation">मशन ट्रैकिंग</string>
+    <string name="allow_permissions" tools:ignore="MissingTranslation">अनुमतियाँ दें</string>
+    <string name="dialog_icon" tools:ignore="MissingTranslation">आइकन</string>
+    <string name="go_to_settings" tools:ignore="MissingTranslation">सेटिंग्स पर जाएं</string>
+    <string name="cancel2" tools:ignore="MissingTranslation">रद्द करें</string>
+    <string name="great" tools:ignore="MissingTranslation">उत्तम!</string>
+    <string name="done1" tools:ignore="MissingTranslation">हो गया</string>
+    <string name="start_safe_location_sharing_with" tools:ignore="MissingTranslation">सुरक्षित लोकेशन शेयरिंग शुरू करें!</string>
+    <string name="internet_disabled">इंटरनेट अक्षम</string>
+    <string name="internet_connection_is_required_for_this_app_to_function_properly_please_enable_internet_connectivity">इस ऐप को ठीक से कार्य करने के लिए इंटरनेट कनेक्शन की आवश्यकता है। कृपया इंटरनेट कनेक्टिविटी सक्षम करें।</string>
+    <string name="motion_tracking_permission" tools:ignore="MissingTranslation">मशन ट्रैकिंग अनुमति</string>
+    <string name="location_is_required_for_this_app_to_function_properly_please_enable_location_services" tools:ignore="MissingTranslation">इस ऐप को ठीक से कार्य करने के लिए लोकेशन सेवा की आवश्यकता है। कृपया लोकेशन सेवाएं सक्षम करें।</string>
+    <string name="to_track_your_movements_the_app_requires_permission_to_access_motion_sensors_please_enable_motion_tracking_in_your_device_settings" tools:ignore="MissingTranslation">आपकी गति को ट्रैक करने के लिए, ऐप को मशन सेंसर तक पहुंच की अनुमति चाहिए। कृपया अपने डिवाइस सेटिंग्स में मशन ट्रैकिंग सक्षम करें।</string>
+    <string name="congratulations_you_have_successfully_connected_with_the_device" tools:ignore="MissingTranslation">बधाई हो, आप सफलतापूर्वक डिवाइस से जुड़ गए हैं।</string>
+    <string name="enter_text_here" tools:ignore="MissingTranslation">यहां पाठ दर्ज करें</string>
+</resources>

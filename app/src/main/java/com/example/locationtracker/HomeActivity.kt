@@ -1,4 +1,5 @@
 package com.example.locationtracker
+
 import Checker
 import HomeFragment
 import PermissionHelper
@@ -8,12 +9,15 @@ import android.content.Intent
 import android.content.IntentFilter
 import android.location.LocationManager
 import android.net.ConnectivityManager
+import android.os.Build
 import android.os.Bundle
 import android.provider.Settings
 import android.util.Base64
 import android.util.Log
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
+import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
@@ -23,6 +27,11 @@ import com.example.locationtracker.databinding.ActivityHomeBinding
 import com.example.locationtracker.fragments.ConnectFragment
 import com.example.locationtracker.fragments.DeviceFragment
 import com.example.locationtracker.fragments.ProfileFragment
+import com.example.permissionmanager.PermissionsManager
+import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.DatabaseError
+import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.ValueEventListener
 import java.security.MessageDigest
 import java.util.Collections
 
@@ -35,12 +44,14 @@ class HomeActivity : AppCompatActivity(), ConnectivityReceiver.ConnectivityRecei
     private var internetDialog: AlertDialog? = null
     private var gpsDialog: AlertDialog? = null
     private lateinit var connectivityReceiver: ConnectivityReceiver
+    private lateinit var permissionsManager: PermissionsManager
 
     companion object {
         private const val REQUEST_CODE_INTERNET_SETTINGS = 1001
         private const val REQUEST_CODE_GPS_SETTINGS = 1002
     }
 
+    @RequiresApi(Build.VERSION_CODES.Q)
     @SuppressLint("HardwareIds")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -52,7 +63,16 @@ class HomeActivity : AppCompatActivity(), ConnectivityReceiver.ConnectivityRecei
         checker = Checker(this)
         permissionHelper = PermissionHelper(this)
         connectivityReceiver = ConnectivityReceiver(this)
+        permissionsManager = PermissionsManager(this)
 
+//        // Request Motion Permissions
+//        permissionsManager.requestMotionPermissions()
+//
+//        // Open Protected App Settings
+//        permissionsManager.openProtectedAppSettings()
+//
+//        // Open Auto-Start Settings
+//        permissionsManager.openAutoStartSettings()
         // Set up BottomNavigationView listener
         binding.bottomNavigationView.itemRippleColor = null
 
@@ -62,18 +82,22 @@ class HomeActivity : AppCompatActivity(), ConnectivityReceiver.ConnectivityRecei
                     loadFragment(HomeFragment())
                     true
                 }
+
                 R.id.nav_profile -> {
                     loadFragment(ProfileFragment())
                     true
                 }
+
                 R.id.nav_devices -> {
                     loadFragment(DeviceFragment())
                     true
                 }
+
                 R.id.nav_connect -> {
                     loadFragment(ConnectFragment())
                     true
                 }
+
                 else -> false
             }
         }
@@ -83,11 +107,26 @@ class HomeActivity : AppCompatActivity(), ConnectivityReceiver.ConnectivityRecei
         loadFragment(HomeFragment())
     }
 
+    @SuppressLint("HardwareIds")
     override fun onResume() {
         super.onResume()
-        registerReceiver(connectivityReceiver, IntentFilter(ConnectivityManager.CONNECTIVITY_ACTION))
+
+
+
+
+        registerReceiver(
+            connectivityReceiver,
+            IntentFilter(ConnectivityManager.CONNECTIVITY_ACTION)
+        )
         checkAndRequestPermissions()
         checkAndRequestGPS()
+
+        val androidId = Settings.Secure.getString(contentResolver, Settings.Secure.ANDROID_ID)
+
+
+//        fetchDeviceInformation(androidId)
+
+
     }
 
     override fun onPause() {
@@ -135,12 +174,17 @@ class HomeActivity : AppCompatActivity(), ConnectivityReceiver.ConnectivityRecei
 
         // Set up dialog views
         dialogView.findViewById<ImageView>(R.id.dialog_icon).setImageResource(R.drawable.logo2)
-        dialogView.findViewById<TextView>(R.id.dialog_title).text = getString(R.string.internet_disabled)
-        dialogView.findViewById<TextView>(R.id.dialog_message).text = getString(R.string.internet_connection_is_required_for_this_app_to_function_properly_please_enable_internet_connectivity)
+        dialogView.findViewById<TextView>(R.id.dialog_title).text =
+            getString(R.string.internet_disabled)
+        dialogView.findViewById<TextView>(R.id.dialog_message).text =
+            getString(R.string.internet_connection_is_required_for_this_app_to_function_properly_please_enable_internet_connectivity)
 
         // Handle button clicks
         dialogView.findViewById<AppCompatButton>(R.id.btn_settings).setOnClickListener {
-            startActivityForResult(Intent(Settings.ACTION_WIRELESS_SETTINGS), REQUEST_CODE_INTERNET_SETTINGS)
+            startActivityForResult(
+                Intent(Settings.ACTION_WIRELESS_SETTINGS),
+                REQUEST_CODE_INTERNET_SETTINGS
+            )
             internetDialog?.dismiss()
         }
         dialogView.findViewById<AppCompatButton>(R.id.btn_cancel).setOnClickListener {
@@ -164,12 +208,17 @@ class HomeActivity : AppCompatActivity(), ConnectivityReceiver.ConnectivityRecei
 
         // Set up dialog views for GPS
         dialogView.findViewById<ImageView>(R.id.dialog_icon).setImageResource(R.drawable.logo2)
-        dialogView.findViewById<TextView>(R.id.dialog_title).text = getString(R.string.allow_location_access)
-        dialogView.findViewById<TextView>(R.id.dialog_message).text = getString(R.string.location_is_required_for_this_app_to_function_properly_please_enable_location_services)
+        dialogView.findViewById<TextView>(R.id.dialog_title).text =
+            getString(R.string.allow_location_access)
+        dialogView.findViewById<TextView>(R.id.dialog_message).text =
+            getString(R.string.location_is_required_for_this_app_to_function_properly_please_enable_location_services)
 
         // Handle button clicks
         dialogView.findViewById<AppCompatButton>(R.id.btn_settings).setOnClickListener {
-            startActivityForResult(Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS), REQUEST_CODE_GPS_SETTINGS)
+            startActivityForResult(
+                Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS),
+                REQUEST_CODE_GPS_SETTINGS
+            )
             gpsDialog?.dismiss()
         }
         dialogView.findViewById<AppCompatButton>(R.id.btn_cancel).setOnClickListener {
@@ -203,6 +252,45 @@ class HomeActivity : AppCompatActivity(), ConnectivityReceiver.ConnectivityRecei
         if (requestCode == REQUEST_CODE_GPS_SETTINGS) {
             checkAndRequestGPS()  // Recheck GPS status after returning from settings
         }
+    }
+
+    private fun fetchDeviceInformation(android: String) {
+        val databaseReference = FirebaseDatabase.getInstance().getReference("Connection")
+
+        // Query the "Connection" node
+        databaseReference.addListenerForSingleValueEvent(object : ValueEventListener {
+            override fun onDataChange(snapshot: DataSnapshot) {
+                if (snapshot.exists()) {
+                    // Print the entire snapshot to the log
+                    Log.d("SnapshotData", "Full Snapshot: ${snapshot.value}")
+
+                } else {
+                    Log.d("SnapshotData", "Connection node does not exist")
+                    Toast.makeText(
+                        this@HomeActivity,
+                        "Connection node does not exist",
+                        Toast.LENGTH_SHORT
+                    ).show()
+                }
+            }
+
+            override fun onCancelled(error: DatabaseError) {
+                Toast.makeText(
+                    this@HomeActivity,
+                    "Failed to fetch device information: ${error.message}",
+                    Toast.LENGTH_SHORT
+                ).show()
+            }
+        })
+    }
+
+    override fun onRequestPermissionsResult(
+        requestCode: Int,
+        permissions: Array<out String>,
+        grantResults: IntArray
+    ) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
+        permissionsManager.handleMotionPermissionResult(requestCode, grantResults)
     }
 
 

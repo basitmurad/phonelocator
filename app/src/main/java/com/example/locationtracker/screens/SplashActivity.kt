@@ -5,6 +5,7 @@ import PermissionHelper
 import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
+import android.content.res.Configuration
 import android.os.Bundle
 import android.provider.Settings
 import android.util.Log
@@ -19,6 +20,7 @@ import com.example.locationtracker.R
 import com.example.locationtracker.databinding.ActivitySplashBinding
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
+import java.util.Locale
 
 @SuppressLint("CustomSplashScreen")
 class SplashActivity : AppCompatActivity() {
@@ -40,6 +42,8 @@ class SplashActivity : AppCompatActivity() {
 
         binding = ActivitySplashBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+
 
         checker = Checker(this)
         permissionHelper = PermissionHelper(this)
@@ -164,5 +168,19 @@ class SplashActivity : AppCompatActivity() {
         val intent = Intent(this, DeviceNameActivity::class.java)
         startActivity(intent)
         finish()
+    }
+
+    private fun setAppLocale() {
+        // Retrieve saved language code from SharedPreferences
+        val sharedPreferences = getSharedPreferences("AppPreferences", MODE_PRIVATE)
+        val savedLanguageCode = sharedPreferences.getString("LanguageCode", "en") // Default to English
+
+        // Apply the locale
+        val locale = Locale(savedLanguageCode ?: "en")
+        Locale.setDefault(locale)
+
+        val configuration = Configuration(resources.configuration)
+        configuration.setLocale(locale)
+        resources.updateConfiguration(configuration, resources.displayMetrics)
     }
 }

@@ -18,6 +18,7 @@ import android.widget.RatingBar
 import android.widget.TextView
 import android.widget.Toast
 import com.example.locationtracker.R
+import com.example.locationtracker.screens.LanguageActivity
 import com.example.locationtracker.screens.PrivacyPolicyActivity
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
@@ -30,6 +31,7 @@ class ProfileFragment : Fragment() {
 
     private lateinit var buttonOpen: LinearLayout
     private lateinit var buttonRateUs: LinearLayout
+    private lateinit var btnLanguage: LinearLayout
     private lateinit var btnFeedback: LinearLayout
     private lateinit var btnShare: LinearLayout
     private lateinit var buttonChangeName: TextView
@@ -55,6 +57,7 @@ class ProfileFragment : Fragment() {
         btnShare = view.findViewById(R.id.btnShareApp)
         textname = view.findViewById(R.id.textname)
         btnFeedback = view.findViewById(R.id.btnFeedback)
+        btnLanguage = view.findViewById(R.id.btnLanguage)
         database = FirebaseDatabase.getInstance()
         deviceReference = database.getReference("devices")
 
@@ -68,6 +71,11 @@ class ProfileFragment : Fragment() {
             goNextScreen()
 
         }
+        btnLanguage.setOnClickListener {
+            // Navigate to PrivacyPolicyActivity
+            val intent = Intent(requireContext(), LanguageActivity::class.java)
+            startActivity(intent)
+        }
         btnShare.setOnClickListener {
             val apkFile = File(requireContext().filesDir, "Location Tracker.apk")
 
@@ -79,9 +87,9 @@ class ProfileFragment : Fragment() {
             // Show share options
             startActivity(Intent.createChooser(intent, "Share app via"))
         }
-        btnShare.setOnClickListener {
-            shareCode()
-        }
+//        btnShare.setOnClickListener {
+//            shareCode()
+//        }
         buttonChangeName.setOnClickListener {
             showDeviceName(deviceName)
         }

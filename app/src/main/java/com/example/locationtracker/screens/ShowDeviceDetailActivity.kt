@@ -94,26 +94,7 @@ class ShowDeviceDetailActivity : AppCompatActivity(), OnMapReadyCallback {
         return BitmapDescriptorFactory.fromBitmap(scaledBitmap)
     }
 
-//    override fun onMapReady(map: GoogleMap) {
-//        mMap = map
-//
-//        // Retrieve latitude and longitude from the Intent
-//        val customMarker = BitmapDescriptorFactory.fromResource(R.drawable.logo2)
-//        val latitude = intent.getDoubleExtra("latitude", 0.0)
-//        val longitude = intent.getDoubleExtra("longitude", 0.0)
-//        val latLng = LatLng(latitude, longitude)
-//
-//        // Add a marker at the retrieved location
-//        currentMarker = mMap.addMarker(
-//            MarkerOptions()
-//                .position(latLng)
-//                .title("Device Location") // Title for the marker
-//                .snippet("Latitude: $latitude, Longitude: $longitude") // Optional snippet
-//        ).setIcon(customMarker)
-//
-//        // Move the camera to the marker position
-//        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng, 10f)) // Zoom level is adjustable
-//    }
+
 
     private fun fetchDeviceData(parentID: String, childID: String) {
         // Fetch the device name first
