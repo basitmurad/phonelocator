@@ -3,6 +3,8 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
+    android:layoutDirection="ltr"
+
     android:background="@drawable/dialoge_back"
     android:layout_margin="26dp"
     android:padding="16dp">

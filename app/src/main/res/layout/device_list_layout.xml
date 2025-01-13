@@ -7,6 +7,8 @@
     android:weightSum="7"
     android:layout_margin="8dp"
     android:padding="8dp"
+    android:layoutDirection="ltr"
+
     android:background="@drawable/back_buttom"
     android:backgroundTint="#F6F4F4"
     >

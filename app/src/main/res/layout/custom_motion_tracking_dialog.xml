@@ -5,6 +5,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:padding="16dp"
+    android:layoutDirection="ltr"
+
     android:background="@drawable/dialoge_back">
 
     <ImageView

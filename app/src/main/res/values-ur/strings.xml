@@ -79,4 +79,9 @@
     <string name="to_track_your_movements_the_app_requires_permission_to_access_motion_sensors_please_enable_motion_tracking_in_your_device_settings" tools:ignore="MissingTranslation">آپ کی حرکتوں کو ٹریک کرنے کے لئے ایپ کو موشن سینسر تک رسائی کی اجازت چاہیے۔ براہ کرم اپنے ڈیوائس سیٹنگز میں موشن ٹریکنگ کو فعال کریں۔</string>
     <string name="congratulations_you_have_successfully_connected_with_the_device" tools:ignore="MissingTranslation">مبارک ہو، آپ کامیابی کے ساتھ ڈیوائس سے جڑ گئے ہیں۔</string>
     <string name="enter_text_here" tools:ignore="MissingTranslation">یہاں متن درج کریں</string>
+
+    <string name="language1" tools:ignore="MissingTranslation">زبان</string>
+    <string name="no_data_available" tools:ignore="MissingTranslation">کوئی ڈیٹا دستیاب نہیں ہے</string>
+    <string name="no_device_connection" tools:ignore="MissingTranslation">کوئی ڈیوائس کنکشن نہیں ملا۔ براہ کرم اپنے کنکشن کی جانچ کریں یا بعد میں دوبارہ کوشش کریں۔</string>
+
 </resources>

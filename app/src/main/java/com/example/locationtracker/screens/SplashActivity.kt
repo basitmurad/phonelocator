@@ -39,6 +39,7 @@ class SplashActivity : AppCompatActivity() {
     @SuppressLint("HardwareIds")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        applySavedLanguage()
 
         binding = ActivitySplashBinding.inflate(layoutInflater)
         setContentView(binding.root)
@@ -170,17 +171,19 @@ class SplashActivity : AppCompatActivity() {
         finish()
     }
 
-    private fun setAppLocale() {
-        // Retrieve saved language code from SharedPreferences
-        val sharedPreferences = getSharedPreferences("AppPreferences", MODE_PRIVATE)
-        val savedLanguageCode = sharedPreferences.getString("LanguageCode", "en") // Default to English
-
-        // Apply the locale
-        val locale = Locale(savedLanguageCode ?: "en")
+    private fun applySavedLanguage() {
+        val savedLanguageCode = getSavedLanguagePreference() ?: return
+        val locale = Locale(savedLanguageCode)
         Locale.setDefault(locale)
 
         val configuration = Configuration(resources.configuration)
         configuration.setLocale(locale)
+
         resources.updateConfiguration(configuration, resources.displayMetrics)
+    }
+
+    private fun getSavedLanguagePreference(): String? {
+        val sharedPreferences = getSharedPreferences("AppPreferences", MODE_PRIVATE)
+        return sharedPreferences.getString("LanguageCode", "en") // Default to English ("en")
     }
 }

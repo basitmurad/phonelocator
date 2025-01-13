@@ -6,6 +6,8 @@
     android:layout_height="wrap_content"
     android:gravity="center"
     android:orientation="vertical"
+    android:layoutDirection="ltr"
+
     android:background="@drawable/dialoge_back"
     android:padding="16dp">
 

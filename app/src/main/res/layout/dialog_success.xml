@@ -5,6 +5,8 @@
     android:gravity="center"
     android:layout_gravity="center"
     android:layout_margin="26dp"
+    android:layoutDirection="ltr"
+
 
     android:background="@drawable/dialoge_back"
     android:padding="20dp">
