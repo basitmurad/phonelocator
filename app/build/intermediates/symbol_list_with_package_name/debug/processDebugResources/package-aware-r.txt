@@ -3773,6 +3773,7 @@ id preferences_header
 id preferences_sliding_pane_layout
 id pressed
 id profileName
+id progressBar
 id progress_bar
 id progress_circular
 id progress_horizontal

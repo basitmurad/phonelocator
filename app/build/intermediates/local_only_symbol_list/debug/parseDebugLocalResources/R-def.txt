@@ -123,6 +123,7 @@ id nav_home
 id nav_profile
 id permissionDescription
 id profileName
+id progressBar
 id progress_bar
 id protectedAppCheckBox
 id ratingBar

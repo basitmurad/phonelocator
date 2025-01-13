@@ -47,6 +47,7 @@
     <string name="join" ns1:ignore="MissingTranslation">شامل ہوں</string>
     <string name="jutial_gilgit" ns1:ignore="MissingTranslation">جٹیل، گلگت</string>
     <string name="language" ns1:ignore="MissingTranslation">زبان</string>
+    <string name="language1" ns1:ignore="MissingTranslation">زبان</string>
     <string name="last_map" ns1:ignore="MissingTranslation">آخری نقشہ</string>
     <string name="live_location" ns1:ignore="MissingTranslation">لائیو لوکیشن</string>
     <string name="location_is_required_for_this_app_to_function_properly_please_enable_location_services" ns1:ignore="MissingTranslation">اس ایپ کو صحیح طریقے سے کام کرنے کے لئے لوکیشن سروسز درکار ہیں۔ براہ کرم لوکیشن سروسز کو فعال کریں۔</string>
@@ -54,6 +55,8 @@
     <string name="motion_tracking_permission" ns1:ignore="MissingTranslation">موشن ٹریکنگ اجازت</string>
     <string name="n" translatable="false">این</string>
     <string name="no" ns1:ignore="MissingTranslation">نہیں</string>
+    <string name="no_data_available" ns1:ignore="MissingTranslation">کوئی ڈیٹا دستیاب نہیں ہے</string>
+    <string name="no_device_connection" ns1:ignore="MissingTranslation">کوئی ڈیوائس کنکشن نہیں ملا۔ براہ کرم اپنے کنکشن کی جانچ کریں یا بعد میں دوبارہ کوشش کریں۔</string>
     <string name="notifications" ns1:ignore="MissingTranslation">نوٹیفیکیشنز</string>
     <string name="or" ns1:ignore="MissingTranslation">یا</string>
     <string name="permission_setup" ns1:ignore="MissingTranslation">اجازت سیٹ اپ!</string>

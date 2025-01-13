@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.ProgressBar;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.RecyclerView;
@@ -26,11 +27,15 @@ public final class ActivityLanguageBinding implements ViewBinding {
   @NonNull
   public final RecyclerView languageRecyclerView;
 
+  @NonNull
+  public final ProgressBar progressBar;
+
   private ActivityLanguageBinding(@NonNull LinearLayout rootView, @NonNull ImageView btnBack,
-      @NonNull RecyclerView languageRecyclerView) {
+      @NonNull RecyclerView languageRecyclerView, @NonNull ProgressBar progressBar) {
     this.rootView = rootView;
     this.btnBack = btnBack;
     this.languageRecyclerView = languageRecyclerView;
+    this.progressBar = progressBar;
   }
 
   @Override
@@ -72,7 +77,14 @@ public final class ActivityLanguageBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityLanguageBinding((LinearLayout) rootView, btnBack, languageRecyclerView);
+      id = R.id.progressBar;
+      ProgressBar progressBar = ViewBindings.findChildViewById(rootView, id);
+      if (progressBar == null) {
+        break missingId;
+      }
+
+      return new ActivityLanguageBinding((LinearLayout) rootView, btnBack, languageRecyclerView,
+          progressBar);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

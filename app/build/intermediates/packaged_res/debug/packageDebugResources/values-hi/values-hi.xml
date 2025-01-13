@@ -47,6 +47,7 @@
     <string name="join" ns1:ignore="MissingTranslation">जॉइन करें</string>
     <string name="jutial_gilgit" ns1:ignore="MissingTranslation">जुटियाल, गिलगित</string>
     <string name="language" ns1:ignore="MissingTranslation">भाषा</string>
+    <string name="language1" ns1:ignore="MissingTranslation">भाषा</string>
     <string name="last_map" ns1:ignore="MissingTranslation">अंतिम मानचित्र</string>
     <string name="live_location" ns1:ignore="MissingTranslation">लाइव लोकेशन</string>
     <string name="location_is_required_for_this_app_to_function_properly_please_enable_location_services" ns1:ignore="MissingTranslation">इस ऐप को ठीक से कार्य करने के लिए लोकेशन सेवा की आवश्यकता है। कृपया लोकेशन सेवाएं सक्षम करें।</string>
@@ -54,6 +55,8 @@
     <string name="motion_tracking_permission" ns1:ignore="MissingTranslation">मशन ट्रैकिंग अनुमति</string>
     <string name="n" translatable="false">एन</string>
     <string name="no" ns1:ignore="MissingTranslation">नहीं</string>
+    <string name="no_data_available" ns1:ignore="MissingTranslation">कोई डेटा उपलब्ध नहीं है</string>
+    <string name="no_device_connection" ns1:ignore="MissingTranslation">कोई डिवाइस कनेक्शन नहीं मिला। कृपया अपने कनेक्शन की जांच करें या बाद में फिर से प्रयास करें।</string>
     <string name="notifications" ns1:ignore="MissingTranslation">सूचनाएँ</string>
     <string name="or" ns1:ignore="MissingTranslation">या</string>
     <string name="permission_setup" ns1:ignore="MissingTranslation">अनुमति सेटअप!</string>

@@ -18,6 +18,7 @@ import com.example.locationtracker.DeviceNameActivity
 import com.example.locationtracker.HomeActivity
 import com.example.locationtracker.R
 import com.example.locationtracker.databinding.ActivitySplashBinding
+import com.google.firebase.FirebaseApp
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import java.util.Locale
@@ -43,7 +44,7 @@ class SplashActivity : AppCompatActivity() {
 
         binding = ActivitySplashBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
+        FirebaseApp.initializeApp(this)
 
 
         checker = Checker(this)
