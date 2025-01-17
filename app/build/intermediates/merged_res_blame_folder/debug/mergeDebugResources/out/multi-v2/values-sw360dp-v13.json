@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.locationtracker.app-mergeDebugResources-72:/values-sw360dp-v13/values-sw360dp-v13.xml",
+            "outputFile": "com.example.locationtracker.app-mergeDebugResources-75:/values-sw360dp-v13/values-sw360dp-v13.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\swp\\.gradle\\caches\\transforms-4\\1cdabbf0929a3e3e7aace814f57c7858\\transformed\\preference-1.2.1\\res\\values-sw360dp-v13\\values-sw360dp-v13.xml",
+                    "source": "C:\\Users\\swp\\.gradle\\caches\\transforms-4\\c9c68572645eb0326d1bc892c8480519\\transformed\\preference-1.2.1\\res\\values-sw360dp-v13\\values-sw360dp-v13.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

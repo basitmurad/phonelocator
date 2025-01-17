@@ -97,6 +97,7 @@ id displayNameDi
 id displayNameEdit
 id editText
 id fragmentContainer
+id getLocation
 id imageView
 id imageView2
 id imageView3

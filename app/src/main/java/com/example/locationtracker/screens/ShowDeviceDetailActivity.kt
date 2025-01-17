@@ -2,10 +2,12 @@
 package com.example.locationtracker.screens
 
 import DeviceDetailAdapter
+import FirebaseHelper
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.os.Bundle
 import android.util.Log
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.locationtracker.R
@@ -18,8 +20,20 @@ import com.google.android.gms.maps.model.BitmapDescriptorFactory
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.Marker
 import com.google.android.gms.maps.model.MarkerOptions
+import com.google.firebase.Firebase
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.functions.FirebaseFunctions
+import com.google.firebase.functions.functions
+import okhttp3.Call
+import okhttp3.Callback
+import okhttp3.MediaType
+import okhttp3.OkHttpClient
+import okhttp3.Request
+import okhttp3.RequestBody
+import okhttp3.Response
+import org.json.JSONObject
+import java.io.IOException
 
 class ShowDeviceDetailActivity : AppCompatActivity(), OnMapReadyCallback {
 
@@ -28,12 +42,16 @@ class ShowDeviceDetailActivity : AppCompatActivity(), OnMapReadyCallback {
     private lateinit var database: DatabaseReference
     private lateinit var adapter: DeviceDetailAdapter
     private var currentMarker: Marker? = null // Variable to store the current marker
+    private lateinit var functions: FirebaseFunctions
+    private lateinit var firebaseHelper: FirebaseHelper
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityShowDetailBinding.inflate(layoutInflater)
         setContentView(binding.root)
         database = FirebaseDatabase.getInstance().reference
+        functions = Firebase.functions
+        firebaseHelper = FirebaseHelper()
 
         binding.btnBack.setOnClickListener{finish()}
         // Retrieve latitude and longitude from the Intent
@@ -50,6 +68,11 @@ class ShowDeviceDetailActivity : AppCompatActivity(), OnMapReadyCallback {
 
         binding.mapView444.onCreate(savedInstanceState)
         binding.mapView444.getMapAsync(this)
+
+
+        binding.getLocation.setOnClickListener {
+            firebaseHelper.getChildDetails("9347080e93f705da", "b29db941246f0f51")
+        }
 
         // Fetch device data and pass the IDs
         childId?.let {
@@ -196,4 +219,153 @@ class ShowDeviceDetailActivity : AppCompatActivity(), OnMapReadyCallback {
         super.onDestroy()
         binding.mapView444.onDestroy()
     }
+
+
+
+
+
+//    private fun fetchLatestLocation(parentID: String, childID: String) {
+//        val functions = Firebase.functions
+//
+//        // Prepare the data to be sent
+//        val data = hashMapOf(
+//            "parentID" to parentID,
+//            "childID" to childID
+//        )
+//
+//        // Call the Firebase function
+//        functions.getHttpsCallable("getChildLatestLocation")
+//            .call(data)
+//            .addOnSuccessListener { result ->
+//                // Handle the successful response
+//                val response = result.getData() as? Map<*, *>
+//                val message = response?.get("message") as? String
+//                message?.let {
+//                    // Show the success message to the user
+//                    Toast.makeText(this, it, Toast.LENGTH_SHORT).show()
+//                }
+//
+//                Log.d("message","$message");
+//            }
+//            .addOnFailureListener { exception ->
+//                // Handle the error
+//                Toast.makeText(this, "Error fetching location: ${exception.message}", Toast.LENGTH_SHORT).show()
+//            }
+//    }
+
+
+    private fun fetchLatestLocation(parentID: String, childID: String) {
+        val functions = Firebase.functions
+
+        // Prepare the data to be sent
+        val data = hashMapOf(
+            "parentID" to parentID,
+            "childID" to childID
+        )
+
+        // Call the Firebase function
+        functions.getHttpsCallable("getChildLatestLocation")
+            .call(data)
+            .addOnSuccessListener { result ->
+                // Handle the successful response
+                val response = result.getData() as? Map<*, *>
+                val message = response?.get("message") as? String
+                message?.let {
+                    // Show the success message to the user
+                    Toast.makeText(this, it, Toast.LENGTH_SHORT).show()
+                }
+
+                Log.d("message", "$message")
+            }
+            .addOnFailureListener { exception ->
+                // Handle the error
+                Toast.makeText(this, "Error fetching location: ${exception.message}", Toast.LENGTH_SHORT).show()
+                Log.e("Error", exception.message.orEmpty())
+            }
+    }
+
+
+    private fun invokeCloudFunction(parentID: String, childID: String) {
+        // Create the data to send to the cloud function
+        val data = mapOf(
+            "parentID" to parentID,
+            "childID" to childID
+        )
+
+        // Call the cloud function
+        functions
+            .getHttpsCallable("getChildDetailsWithPing")
+            .call(data)
+            .addOnSuccessListener { result ->
+                // Handle successful response
+                val response = result.getData() as HashMap<*, *>
+                val success = response["success"] as? Boolean ?: false
+
+                if (success) {
+                    val details = response["data"] as? HashMap<*, *>
+                    val message = response["message"] as? String
+                    Log.d("CloudFunction", "Response: $details")
+                    Toast.makeText(this, message, Toast.LENGTH_LONG).show()
+                } else {
+                    val error = response["message"] as? String
+                    Toast.makeText(this, error, Toast.LENGTH_LONG).show()
+                }
+            }
+            .addOnFailureListener { e ->
+                // Handle failure
+                Log.e("CloudFunction", "Error: ${e.message}", e)
+                Toast.makeText(this, "Error: ${e.message}", Toast.LENGTH_LONG).show()
+            }
+    }
+
+
+
+    fun invokeFunction(parentID: String, childID: String) {
+        val client = OkHttpClient()
+
+        // Construct the JSON body
+        val jsonBody = JSONObject()
+        try {
+            jsonBody.put("parentID", parentID)
+            jsonBody.put("childID", childID)
+        } catch (e: Exception) {
+            e.printStackTrace()
+            return
+        }
+
+        val body = RequestBody.create(MediaType.parse("application/json"), jsonBody.toString())
+
+        // Create the request
+        val request = Request.Builder()
+            .url("https://getchilddetailswithping-jikax2s2fa-uc.a.run.app")
+            .post(body)
+            .build()
+
+        // Execute the request asynchronously
+        client.newCall(request).enqueue(object : Callback {
+            override fun onResponse(call: Call, response: Response) {
+                if (response.isSuccessful) {
+                    Log.d("CloudFunction", "Response: $response")
+
+                    val responseData = response.body()?.string()
+                    println("Response: $responseData")
+                    Log.d("CloudFunction", "Response: $responseData")
+
+                } else {
+                    println("Error: ${response.code()} ${response.message()}")
+                    Log.d("CloudFunction", "Response: $response")
+
+                }
+            }
+
+            override fun onFailure(call: Call, e: IOException) {
+                e.printStackTrace()
+                Log.d("CloudFunction", "Response: $e")
+
+            }
+        })
+    }
+
+
+
 }

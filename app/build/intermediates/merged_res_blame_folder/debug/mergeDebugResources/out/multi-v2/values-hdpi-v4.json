@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.locationtracker.app-mergeDebugResources-72:/values-hdpi-v4/values-hdpi-v4.xml",
+            "outputFile": "com.example.locationtracker.app-mergeDebugResources-75:/values-hdpi-v4/values-hdpi-v4.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\swp\\.gradle\\caches\\transforms-4\\080a9819cfe626d8a5ba7d82a6ee776f\\transformed\\appcompat-1.7.0\\res\\values-hdpi-v4\\values-hdpi-v4.xml",
+                    "source": "C:\\Users\\swp\\.gradle\\caches\\transforms-4\\4b854c16ba3414d2263156a8e334f78f\\transformed\\appcompat-1.7.0\\res\\values-hdpi-v4\\values-hdpi-v4.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

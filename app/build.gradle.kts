@@ -65,9 +65,21 @@ dependencies {
     implementation (libs.play.services.location.v1800)
     implementation (libs.androidx.preference.ktx)
 
-    implementation (libs.firebase.bom)
+    implementation (platform(libs.firebase.bom))
     implementation (libs.google.firebase.functions.ktx)
     implementation (libs.firebase.analytics.ktx)
+    implementation(libs.firebase.dynamic.links.ktx)
+    implementation(libs.com.google.firebase.firebase.functions.ktx)
+    implementation (libs.firebase.functions.ktx.v2010) // Add this dependency
+    implementation (libs.firebase.auth.ktx)
+    implementation (libs.gson)
+    implementation (libs.androidx.work.runtime.ktx)
+    implementation (libs.retrofit)
+    implementation (libs.converter.gson)
+
+    implementation (libs.play.services.location) // Example for Location
+
+
 
 }
 

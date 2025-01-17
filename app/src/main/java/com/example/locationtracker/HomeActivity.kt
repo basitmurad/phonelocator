@@ -17,26 +17,32 @@ import android.util.Log
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
+import androidx.annotation.NonNull
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.appcompat.widget.AppCompatButton
 import androidx.fragment.app.Fragment
+import androidx.work.PeriodicWorkRequestBuilder
+import androidx.work.WorkManager
 import com.example.locationtracker.databinding.ActivityHomeBinding
 import com.example.locationtracker.fragments.ConnectFragment
 import com.example.locationtracker.fragments.DeviceFragment
 import com.example.locationtracker.fragments.ProfileFragment
 import com.example.permissionmanager.PermissionsManager
+import com.google.android.gms.tasks.Task
 import com.google.firebase.Firebase
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 import com.google.firebase.functions.FirebaseFunctions
+import com.google.firebase.functions.HttpsCallableResult
 import com.google.firebase.functions.functions
 import java.security.MessageDigest
 import java.util.Collections
+import java.util.concurrent.TimeUnit
 
 
 class HomeActivity : AppCompatActivity(), ConnectivityReceiver.ConnectivityReceiverListener {
@@ -48,7 +54,6 @@ class HomeActivity : AppCompatActivity(), ConnectivityReceiver.ConnectivityRecei
     private var gpsDialog: AlertDialog? = null
     private lateinit var connectivityReceiver: ConnectivityReceiver
     private lateinit var permissionsManager: PermissionsManager
-    private val functions = FirebaseFunctions.getInstance()
 
     companion object {
         private const val REQUEST_CODE_INTERNET_SETTINGS = 1001
@@ -68,7 +73,7 @@ class HomeActivity : AppCompatActivity(), ConnectivityReceiver.ConnectivityRecei
         permissionHelper = PermissionHelper(this)
         connectivityReceiver = ConnectivityReceiver(this)
         permissionsManager = PermissionsManager(this)
-        callHelloWorldFunction()
+
 
 //        // Request Motion Permissions
 //        permissionsManager.requestMotionPermissions()
@@ -79,6 +84,9 @@ class HomeActivity : AppCompatActivity(), ConnectivityReceiver.ConnectivityRecei
 //        // Open Auto-Start Settings
 //        permissionsManager.openAutoStartSettings()
         // Set up BottomNavigationView listener
+
+
+
         binding.bottomNavigationView.itemRippleColor = null
 
         binding.bottomNavigationView.setOnItemSelectedListener { item ->
@@ -298,28 +306,10 @@ class HomeActivity : AppCompatActivity(), ConnectivityReceiver.ConnectivityRecei
         permissionsManager.handleMotionPermissionResult(requestCode, grantResults)
     }
 
-    private fun callHelloWorldFunction() {
-        // Calling the helloWorld function deployed in Firebase
-        Firebase.functions
-            .getHttpsCallable("helloWorld")
-            .call()
-            .addOnCompleteListener { task ->
-                if (task.isSuccessful) {
-                    // Function was called successfully
-                    val result = task.result // Use getData() method to access the result
 
-                    // Check if result is not null and handle it
-                    if (result != null) {
-                        Log.d("FirebaseFunction", "Response: $result")
-                    } else {
-                        Log.e("FirebaseFunction", "No data in response")
-                    }
-                } else {
-                    // Handle error
-                    Log.e("FirebaseFunction", "Error calling function", task.exception)
-                }
-            }
-    }
 
 
 }
+
+
+

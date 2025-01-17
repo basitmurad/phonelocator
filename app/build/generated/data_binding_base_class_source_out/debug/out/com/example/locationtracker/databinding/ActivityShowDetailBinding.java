@@ -8,6 +8,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.widget.AppCompatButton;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
@@ -29,6 +30,9 @@ public final class ActivityShowDetailBinding implements ViewBinding {
   public final RecyclerView deviceREcycler;
 
   @NonNull
+  public final AppCompatButton getLocation;
+
+  @NonNull
   public final LinearLayout linearLayout5;
 
   @NonNull
@@ -38,11 +42,13 @@ public final class ActivityShowDetailBinding implements ViewBinding {
   public final MapView mapView444;
 
   private ActivityShowDetailBinding(@NonNull ConstraintLayout rootView, @NonNull ImageView btnBack,
-      @NonNull RecyclerView deviceREcycler, @NonNull LinearLayout linearLayout5,
-      @NonNull ConstraintLayout main, @NonNull MapView mapView444) {
+      @NonNull RecyclerView deviceREcycler, @NonNull AppCompatButton getLocation,
+      @NonNull LinearLayout linearLayout5, @NonNull ConstraintLayout main,
+      @NonNull MapView mapView444) {
     this.rootView = rootView;
     this.btnBack = btnBack;
     this.deviceREcycler = deviceREcycler;
+    this.getLocation = getLocation;
     this.linearLayout5 = linearLayout5;
     this.main = main;
     this.mapView444 = mapView444;
@@ -87,6 +93,12 @@ public final class ActivityShowDetailBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.getLocation;
+      AppCompatButton getLocation = ViewBindings.findChildViewById(rootView, id);
+      if (getLocation == null) {
+        break missingId;
+      }
+
       id = R.id.linearLayout5;
       LinearLayout linearLayout5 = ViewBindings.findChildViewById(rootView, id);
       if (linearLayout5 == null) {
@@ -102,7 +114,7 @@ public final class ActivityShowDetailBinding implements ViewBinding {
       }
 
       return new ActivityShowDetailBinding((ConstraintLayout) rootView, btnBack, deviceREcycler,
-          linearLayout5, main, mapView444);
+          getLocation, linearLayout5, main, mapView444);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
