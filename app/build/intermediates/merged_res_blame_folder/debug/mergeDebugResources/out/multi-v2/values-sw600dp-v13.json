@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.locationtracker.app-mergeDebugResources-75:/values-sw600dp-v13/values-sw600dp-v13.xml",
+            "outputFile": "com.example.locationtracker.app-mergeDebugResources-70:/values-sw600dp-v13/values-sw600dp-v13.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\swp\\.gradle\\caches\\transforms-4\\4b854c16ba3414d2263156a8e334f78f\\transformed\\appcompat-1.7.0\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
+                    "source": "C:\\Users\\swp\\.gradle\\caches\\transforms-4\\9136da9e1516fb5e05ef18f088acca24\\transformed\\appcompat-1.7.0\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9",
                         "startColumns": "4,4,4,4,4,4,4,4",
@@ -14,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\swp\\.gradle\\caches\\transforms-4\\fb4cb3e0828fa774b270cc39bc6fd70f\\transformed\\material-1.12.0\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
+                    "source": "C:\\Users\\swp\\.gradle\\caches\\transforms-4\\7d220971b4920f5d72f5d6a769b18d60\\transformed\\material-1.12.0\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,10,11,12,13,14",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4",

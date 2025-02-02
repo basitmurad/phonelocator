@@ -28,11 +28,7 @@ import com.google.android.gms.maps.MapView
 import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
-import com.google.firebase.database.DataSnapshot
-import com.google.firebase.database.DatabaseError
-import com.google.firebase.database.DatabaseReference
-import com.google.firebase.database.FirebaseDatabase
-import com.google.firebase.database.ValueEventListener
+
 import android.Manifest
 
 class HomeFragment : Fragment(), OnMapReadyCallback {
@@ -40,8 +36,7 @@ class HomeFragment : Fragment(), OnMapReadyCallback {
     private lateinit var mapView: MapView
     private lateinit var googleMap: GoogleMap
     private lateinit var buttonOpen: Button
-    private lateinit var database: FirebaseDatabase
-    private lateinit var deviceReference: DatabaseReference
+
     private lateinit var androidId: String
     private lateinit var uniqueCode: String
     private lateinit var fusedLocationClient: FusedLocationProviderClient
@@ -57,16 +52,13 @@ class HomeFragment : Fragment(), OnMapReadyCallback {
         buttonOpen = view.findViewById(R.id.btnOpenDialoge)
         checker = Checker(requireContext().applicationContext)
 
-        database = FirebaseDatabase.getInstance()
-        deviceReference = database.getReference("devices")
+
 
         fusedLocationClient = LocationServices.getFusedLocationProviderClient(requireContext())
 
         // Get Android ID
         androidId = getAndroidId()
 
-        // Fetch device information
-        fetchDeviceInformation()
 
         mapView.onCreate(savedInstanceState)
         mapView.getMapAsync(this)
@@ -189,21 +181,5 @@ class HomeFragment : Fragment(), OnMapReadyCallback {
         }
     }
 
-    private fun fetchDeviceInformation() {
-        deviceReference.child(androidId).addListenerForSingleValueEvent(object :
-            ValueEventListener {
-            override fun onDataChange(snapshot: DataSnapshot) {
-                if (snapshot.exists()) {
-                    uniqueCode = snapshot.child("uniqueCode").getValue(String::class.java) ?: "N/A"
-                } else {
-                    Toast.makeText(requireContext(), "No device information found!", Toast.LENGTH_SHORT).show()
-                }
-            }
-
-            override fun onCancelled(error: DatabaseError) {
-                Toast.makeText(requireContext(), "Failed to fetch device information: ${error.message}", Toast.LENGTH_SHORT).show()
-            }
-        })
-    }
 
 }

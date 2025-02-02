@@ -41,7 +41,6 @@ android {
 }
 
 dependencies {
-
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
@@ -50,35 +49,48 @@ dependencies {
     implementation(libs.play.services.maps)
     implementation(libs.play.services.location)
     implementation(libs.androidx.material3.android)
-    implementation(libs.firebase.functions.ktx)
+
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 
-    implementation (libs.circleimageview)
-    implementation(platform(libs.firebase.bom))
-    implementation(libs.firebase.analytics)
-    implementation (libs.firebase.database) // Firebase Realtime Database
-    implementation (libs.firebase.auth) // Firebase Authentication
-    implementation (libs.firebase.dynamic.links)
+    implementation(libs.circleimageview)
+    implementation(platform(libs.firebase.bom)) // Firebase BOM removed
+    // implementation(libs.firebase.analytics) // Firebase Analytics removed
+    // implementation(libs.firebase.database) // Firebase Realtime Database removed
+    // implementation(libs.firebase.auth) // Firebase Authentication removed
+    // implementation(libs.firebase.dynamic.links) // Firebase Dynamic Links removed
 
-    implementation (libs.play.services.location.v1800)
-    implementation (libs.androidx.preference.ktx)
+    implementation(libs.play.services.location.v1800)
+    implementation(libs.androidx.preference.ktx)
 
-    implementation (platform(libs.firebase.bom))
-    implementation (libs.google.firebase.functions.ktx)
-    implementation (libs.firebase.analytics.ktx)
-    implementation(libs.firebase.dynamic.links.ktx)
-    implementation(libs.com.google.firebase.firebase.functions.ktx)
-    implementation (libs.firebase.functions.ktx.v2010) // Add this dependency
-    implementation (libs.firebase.auth.ktx)
-    implementation (libs.gson)
-    implementation (libs.androidx.work.runtime.ktx)
-    implementation (libs.retrofit)
-    implementation (libs.converter.gson)
+    // Firebase Functions and related dependencies removed
+    // implementation(libs.google.firebase.functions.ktx)
+    // implementation(libs.firebase.analytics.ktx)
+    // implementation(libs.firebase.dynamic.links.ktx)
+    // implementation(libs.com.google.firebase.firebase.functions.ktx)
+    // implementation(libs.firebase.functions.ktx.v2010)
 
-    implementation (libs.play.services.location) // Example for Location
+    implementation(libs.gson)
+    implementation(libs.androidx.work.runtime.ktx)
+    implementation(libs.retrofit)
+    implementation(libs.converter.gson)
 
+    implementation(libs.play.services.location) // Example for Location
+    implementation(libs.androidx.work.runtime.ktx.v281)
+
+    implementation(libs.okhttp)
+
+    implementation(libs.kotlinx.coroutines.android)
+
+    implementation(libs.logging.interceptor)
+
+    implementation(libs.kotlinx.serialization.json)
+
+    implementation (libs.okhttp.v490)
+
+    implementation (libs.glide)
+    annotationProcessor (libs.compiler)
 
 
 }

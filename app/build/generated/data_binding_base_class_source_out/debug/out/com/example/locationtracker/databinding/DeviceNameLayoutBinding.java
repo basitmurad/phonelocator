@@ -38,19 +38,19 @@ public final class DeviceNameLayoutBinding implements ViewBinding {
   public final EditText displayNameEdit;
 
   @NonNull
-  public final ImageView imageView;
+  public final ImageView imageView11;
 
   private DeviceNameLayoutBinding(@NonNull LinearLayout rootView,
       @NonNull ImageView changeImageIcon, @NonNull AppCompatButton displayNameButton,
       @NonNull AppCompatButton displayNameCancel, @NonNull TextView displayNameDi,
-      @NonNull EditText displayNameEdit, @NonNull ImageView imageView) {
+      @NonNull EditText displayNameEdit, @NonNull ImageView imageView11) {
     this.rootView = rootView;
     this.changeImageIcon = changeImageIcon;
     this.displayNameButton = displayNameButton;
     this.displayNameCancel = displayNameCancel;
     this.displayNameDi = displayNameDi;
     this.displayNameEdit = displayNameEdit;
-    this.imageView = imageView;
+    this.imageView11 = imageView11;
   }
 
   @Override
@@ -110,14 +110,14 @@ public final class DeviceNameLayoutBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.imageView;
-      ImageView imageView = ViewBindings.findChildViewById(rootView, id);
-      if (imageView == null) {
+      id = R.id.imageView11;
+      ImageView imageView11 = ViewBindings.findChildViewById(rootView, id);
+      if (imageView11 == null) {
         break missingId;
       }
 
       return new DeviceNameLayoutBinding((LinearLayout) rootView, changeImageIcon,
-          displayNameButton, displayNameCancel, displayNameDi, displayNameEdit, imageView);
+          displayNameButton, displayNameCancel, displayNameDi, displayNameEdit, imageView11);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

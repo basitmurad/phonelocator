@@ -17,17 +17,18 @@ import androidx.appcompat.widget.AppCompatButton
 import com.example.locationtracker.DeviceNameActivity
 import com.example.locationtracker.HomeActivity
 import com.example.locationtracker.R
+import com.example.locationtracker.api.RetrofitClient
 import com.example.locationtracker.databinding.ActivitySplashBinding
-import com.google.firebase.FirebaseApp
-import com.google.firebase.database.DatabaseReference
-import com.google.firebase.database.FirebaseDatabase
+import com.example.locationtracker.models.DeviceProfileResponse
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
+
 import java.util.Locale
 
 @SuppressLint("CustomSplashScreen")
 class SplashActivity : AppCompatActivity() {
     private lateinit var binding: ActivitySplashBinding
-    private lateinit var database: FirebaseDatabase
-    private lateinit var deviceReference: DatabaseReference
     private lateinit var androidId: String
     private lateinit var checker: Checker
     private lateinit var permissionHelper: PermissionHelper
@@ -44,27 +45,52 @@ class SplashActivity : AppCompatActivity() {
 
         binding = ActivitySplashBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        FirebaseApp.initializeApp(this)
-
-
         checker = Checker(this)
-        permissionHelper = PermissionHelper(this)
 
-        // Initialize Firebase
-        database = FirebaseDatabase.getInstance()
-        deviceReference = database.getReference("devices")
-
-        // Get the device's unique ID
         androidId = Settings.Secure.getString(contentResolver, Settings.Secure.ANDROID_ID)
 
-        checkAndRequestPermissions()
+        if (checker.isInternetEnabled()) {
+            fetchDeviceProfile(androidId)
+        } else {
+            showInternetDisabledDialog()
+        }
+
+
     }
 
-    override fun onResume() {
-        super.onResume()
-        // Check and request necessary permissions
-        checkAndRequestPermissions()
+    private fun fetchDeviceProfile(deviceId: String) {
+        // Log the initiation of the API call for debugging
+        Log.d("DeviceProfile", "Fetching device profile for device ID: $deviceId")
+
+        RetrofitClient.apiService.getDeviceProfile(deviceId).enqueue(object : Callback<DeviceProfileResponse> {
+            override fun onResponse(call: Call<DeviceProfileResponse>, response: Response<DeviceProfileResponse>) {
+                if (response.isSuccessful) {
+                    val deviceProfileResponse = response.body()
+
+                    if (deviceProfileResponse != null && deviceProfileResponse.success && deviceProfileResponse.profile != null) {
+                        // If the device exists, log the success and navigate to HomeActivity
+                        Log.d("DeviceProfile", "Device exists: ${deviceProfileResponse.profile}")
+                        navigateToHome() // Navigate to Home screen
+                    } else {
+                        // Log the error and navigate to DeviceNameActivity
+                        Log.e("DeviceProfile", "Device not found or profile is null. Response: $deviceProfileResponse")
+                        navigateToGetStarted() // Navigate to DeviceName screen
+                    }
+                } else {
+                    // Log API error codes for debugging
+                    Log.e("DeviceProfile", "Error Code: ${response.code()}, Message: ${response.message()}")
+                    navigateToGetStarted() // Fallback navigation to DeviceNameActivity
+                }
+            }
+
+            override fun onFailure(call: Call<DeviceProfileResponse>, t: Throwable) {
+                // Log the failure details for debugging
+                Log.e("DeviceProfile", "API call failed: ${t.message}")
+                navigateToGetStarted() // Fallback navigation
+            }
+        })
     }
+
 
     private fun checkAndRequestPermissions() {
         if (!checker.isInternetEnabled()) {
@@ -72,7 +98,6 @@ class SplashActivity : AppCompatActivity() {
             return
         }
 
-        checkDeviceDetails()
     }
 
     @SuppressLint("SetTextI18n")
@@ -125,7 +150,6 @@ class SplashActivity : AppCompatActivity() {
             // Check if the internet is now enabled
             if (checker.isInternetEnabled()) {
                 // Proceed with checking device details
-                checkDeviceDetails()
                 dialog?.dismiss()  // Ensure the dialog is dismissed if internet is enabled
             } else {
                 // Show the dialog again if the internet is still disabled
@@ -134,29 +158,6 @@ class SplashActivity : AppCompatActivity() {
         }
     }
 
-    private fun checkDeviceDetails() {
-        Log.d("SplashActivity", "Checking device details for Android ID: $androidId")
-
-        deviceReference.child(androidId).get().addOnCompleteListener { task ->
-            if (task.isSuccessful) {
-                val snapshot = task.result
-                Log.d("SplashActivity", "Task successful: ${task.result}")
-                if (snapshot.exists()) {
-                    Log.d("SplashActivity", "Device details found in Firebase.")
-                    navigateToHome()
-                } else {
-                    Log.d("SplashActivity", "Device details not found in Firebase.")
-                    navigateToGetStarted()
-                }
-            } else {
-                Log.e("SplashActivity", "Error fetching device details: ${task.exception?.message}")
-                navigateToGetStarted()
-            }
-        }.addOnFailureListener { exception ->
-            Log.e("SplashActivity", "Failed to fetch device details: ${exception.message}")
-            navigateToGetStarted()
-        }
-    }
 
     private fun navigateToHome() {
         Log.d("SplashActivity", "Navigating to HomeActivity")
@@ -187,4 +188,6 @@ class SplashActivity : AppCompatActivity() {
         val sharedPreferences = getSharedPreferences("AppPreferences", MODE_PRIVATE)
         return sharedPreferences.getString("LanguageCode", "en") // Default to English ("en")
     }
+
+
 }

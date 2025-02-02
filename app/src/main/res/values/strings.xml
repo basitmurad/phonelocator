@@ -10,7 +10,6 @@
     <string name="start_tracking_child_s_location" tools:ignore="MissingTranslation">Start Tracking Child’s Location</string>
     <string name="get_alerts_and_stay_connected_enjoy_peace_of_mind_knowing_your_child_is_safe" tools:ignore="MissingTranslation">Get alerts, and stay connected. Enjoy peace of mind knowing your child is safe.</string>
     <string name="start_tracking" tools:ignore="MissingTranslation">Start Tracking</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment" tools:ignore="MissingTranslation">Hello blank fragment</string>
     <string name="invite_others" tools:ignore="MissingTranslation">Invite others</string>
     <string name="send_your_code_to_start_tracking_others_location" tools:ignore="MissingTranslation">Send your code to start tracking\nothers location.</string>
@@ -76,15 +75,11 @@
     <string name="internet_disabled">Internet Disabled</string>
     <string name="internet_connection_is_required_for_this_app_to_function_properly_please_enable_internet_connectivity">Internet connection is required for this app to function properly. Please enable internet connectivity.</string>
     <string name="motion_tracking_permission" tools:ignore="MissingTranslation">Motion Tracking Permission</string>
-    <string name="location_is_required_for_this_app_to_function_properly_please_enable_location_services" tools:ignore="MissingTranslation">
-        Location is required for this app to function properly. Please enable location services.
-    </string>
+    <string name="location_is_required_for_this_app_to_function_properly_please_enable_location_services" tools:ignore="MissingTranslation">Location is required for this app to function properly. Please enable location services.</string>
     <string name="to_track_your_movements_the_app_requires_permission_to_access_motion_sensors_please_enable_motion_tracking_in_your_device_settings" tools:ignore="MissingTranslation">To track your movements, the app requires permission to access motion sensors. Please enable Motion Tracking in your device settings.</string>
     <string name="congratulations_you_have_successfully_connected_with_the_device" tools:ignore="MissingTranslation">Congratulations, you have successfully connected with the device.</string>
-    <string name="enter_text_here" tools:ignore="MissingTranslation">Enter text here</string>
+    <string name="enter_text_here" tools:ignore="MissingTranslation">Enter name </string>
     <string name="language1" tools:ignore="MissingTranslation">Language</string>
     <string name="no_data_available" tools:ignore="MissingTranslation">No Data Available</string>
     <string name="no_device_connection" tools:ignore="MissingTranslation">No device connections found. Please check your connection or try again later.</string>
-
-
 </resources>

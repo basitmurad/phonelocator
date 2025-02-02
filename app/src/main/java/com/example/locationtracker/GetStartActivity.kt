@@ -3,10 +3,7 @@ package com.example.locationtracker
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import com.example.locationtracker.databinding.ActivityGetStartBinding
 
 class GetStartActivity : AppCompatActivity() {
@@ -20,7 +17,10 @@ class GetStartActivity : AppCompatActivity() {
 
     fun navigateToNextScreen(view: View) {
         val intent = Intent(this, HomeActivity::class.java)
-        startActivity(intent)     }
+        intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
+
+        startActivity(intent)
+    }
 
     fun backButton(view: View) {
 

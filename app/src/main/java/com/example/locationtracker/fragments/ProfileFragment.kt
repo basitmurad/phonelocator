@@ -1,12 +1,13 @@
 package com.example.locationtracker.fragments
 
 import android.annotation.SuppressLint
+import android.app.Activity
 import android.app.AlertDialog
 import android.content.Intent
+import android.graphics.Color
 import android.net.Uri
 import android.os.Bundle
 import android.util.Log
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -14,17 +15,22 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageView
 import android.widget.LinearLayout
-import android.widget.RatingBar
 import android.widget.TextView
 import android.widget.Toast
+import androidx.activity.result.ActivityResultLauncher
+import androidx.fragment.app.Fragment
+import androidx.activity.result.contract.ActivityResultContracts
+import com.bumptech.glide.Glide
+import com.bumptech.glide.load.resource.bitmap.CircleCrop
 import com.example.locationtracker.R
+import com.example.locationtracker.api.RetrofitClient
+import com.example.locationtracker.models.DeviceProfileResponse
 import com.example.locationtracker.screens.LanguageActivity
 import com.example.locationtracker.screens.PrivacyPolicyActivity
-import com.google.firebase.database.DataSnapshot
-import com.google.firebase.database.DatabaseError
-import com.google.firebase.database.DatabaseReference
-import com.google.firebase.database.FirebaseDatabase
-import com.google.firebase.database.ValueEventListener
+import com.example.locationtracker.screens.ProfileActivity
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 import java.io.File
 
 class ProfileFragment : Fragment() {
@@ -34,67 +40,65 @@ class ProfileFragment : Fragment() {
     private lateinit var btnLanguage: LinearLayout
     private lateinit var btnFeedback: LinearLayout
     private lateinit var btnShare: LinearLayout
-    private lateinit var buttonChangeName: TextView
-    private lateinit var database: FirebaseDatabase
-    private lateinit var deviceReference: DatabaseReference
+    private lateinit var name: TextView
+
     private lateinit var androidId: String
     private lateinit var deviceName: String
-    private lateinit var textname:TextView
-    private lateinit var name:TextView
+    private lateinit var textname: TextView
+    private lateinit var profileImage: ImageView
+    private lateinit var btnClickSHow: ImageView
+    private lateinit var getContent: ActivityResultLauncher<String>  // ActivityResultLauncher for image selection
+    private var selectedImageUri: Uri? = null
 
     @SuppressLint("MissingInflatedId")
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_profile, container, false)
-
 
         buttonOpen = view.findViewById(R.id.btnPrivacy)
         buttonRateUs = view.findViewById(R.id.btnRateUs)
-        buttonChangeName = view.findViewById(R.id.profileName)
+        name = view.findViewById(R.id.profileName)
         btnShare = view.findViewById(R.id.btnShareApp)
         textname = view.findViewById(R.id.textname)
         btnFeedback = view.findViewById(R.id.btnFeedback)
         btnLanguage = view.findViewById(R.id.btnLanguage)
-        database = FirebaseDatabase.getInstance()
-        deviceReference = database.getReference("devices")
+        profileImage = view.findViewById(R.id.imageview)
+        btnClickSHow = view.findViewById(R.id.btnClickSHow)
 
         androidId = getAndroidId()
 
-        fetchDeviceInformation()
 
+        fetchDeviceProfile(androidId)
 
-        // Set the click listener to open the privacy screen
         btnFeedback.setOnClickListener {
             goNextScreen()
-
         }
+
         btnLanguage.setOnClickListener {
-            // Navigate to PrivacyPolicyActivity
             val intent = Intent(requireContext(), LanguageActivity::class.java)
             startActivity(intent)
         }
+
         btnShare.setOnClickListener {
             val apkFile = File(requireContext().filesDir, "Location Tracker.apk")
 
-            // Create an intent to share the APK file
             val intent = Intent(Intent.ACTION_SEND)
             intent.type = "application/vnd.android.package-archive"
             intent.putExtra(Intent.EXTRA_STREAM, Uri.fromFile(apkFile))
 
-            // Show share options
             startActivity(Intent.createChooser(intent, "Share app via"))
         }
-//        btnShare.setOnClickListener {
-//            shareCode()
-//        }
-        buttonChangeName.setOnClickListener {
-            showDeviceName(deviceName)
+
+        btnClickSHow.setOnClickListener {
+            val intent = Intent(requireContext(), ProfileActivity::class.java)
+            val nameValue = name.text.toString() // Assuming name is a TextView
+            intent.putExtra("name", nameValue)
+            startActivity(intent)
+//            showDeviceName(deviceName)
         }
 
-        // Set the click listener to show the rating dialog
         buttonRateUs.setOnClickListener {
             showRatingDialog()
         }
@@ -103,7 +107,6 @@ class ProfileFragment : Fragment() {
     }
 
     private fun goNextScreen() {
-        // Navigate to PrivacyPolicyActivity
         val intent = Intent(requireContext(), PrivacyPolicyActivity::class.java)
         startActivity(intent)
     }
@@ -115,43 +118,39 @@ class ProfileFragment : Fragment() {
             .setCancelable(true)
 
         val alertDialog = dialogBuilder.create()
-
-        // Ensuring the dialog background is transparent
         alertDialog.window?.setBackgroundDrawableResource(android.R.color.transparent)
-
-        // Show the dialog
         alertDialog.show()
-
     }
 
-    @SuppressLint("MissingInflatedId")
+
+
     private fun showDeviceName(deviceName: String) {
         val dialogView = LayoutInflater.from(requireContext()).inflate(R.layout.device_name_layout, null)
         val dialogBuilder = AlertDialog.Builder(requireContext())
             .setView(dialogView)
-            .setCancelable(true)
+            .setCancelable(false)
 
         val alertDialog = dialogBuilder.create()
-
-        // Ensuring the dialog background is transparent
         alertDialog.window?.setBackgroundDrawableResource(android.R.color.transparent)
-
-        // Show the dialog
         alertDialog.show()
 
         val displayNameDi: TextView = dialogView.findViewById(R.id.displayNameDi)
         val displayNameEdit: EditText = dialogView.findViewById(R.id.displayNameEdit)
         val displayNameButton: Button = dialogView.findViewById(R.id.displayNameButton)
         val displayNameCancel: Button = dialogView.findViewById(R.id.displayNameCancel)
+        val btnChooseImage: ImageView = dialogView.findViewById(R.id.changeImageIcon)
+        val profileImage: ImageView = dialogView.findViewById(R.id.imageView11) // ImageView in dialog layout
 
-        // Set initial device name
         displayNameDi.text = deviceName
 
-        // Set button listeners
+
+        btnChooseImage.setOnClickListener {
+        }
+
         displayNameButton.setOnClickListener {
             val newDeviceName = displayNameEdit.text.toString().trim()
             if (newDeviceName.isNotEmpty()) {
-                updateDeviceNameInDatabase(newDeviceName)
+                // Optionally handle profile update logic here
                 alertDialog.dismiss()
             } else {
                 Toast.makeText(requireContext(), "Name cannot be empty!", Toast.LENGTH_SHORT).show()
@@ -162,10 +161,11 @@ class ProfileFragment : Fragment() {
             alertDialog.dismiss()
         }
 
+        // Adjust the layout size of the dialog
         val window = alertDialog.window
         if (window != null) {
             val layoutParams = window.attributes
-            val margin = 50 // Set margin in pixels (e.g., 50px)
+            val margin = 50
             layoutParams.width = ViewGroup.LayoutParams.MATCH_PARENT
             layoutParams.height = ViewGroup.LayoutParams.WRAP_CONTENT
             window.setLayout(
@@ -176,110 +176,48 @@ class ProfileFragment : Fragment() {
         }
     }
 
-    private fun updateDeviceNameInDatabase(newName: String) {
-        deviceReference.child(androidId).child("deviceName").setValue(newName)
-            .addOnSuccessListener {
-                Toast.makeText(requireContext(), "Device name updated successfully!", Toast.LENGTH_SHORT).show()
-                buttonChangeName.text = newName // Update the UI
-                textname.text = newName.firstOrNull()?.toString() ?: ""
-            }
-            .addOnFailureListener { error ->
-                Toast.makeText(requireContext(), "Failed to update device name: ${error.message}", Toast.LENGTH_SHORT).show()
-            }
-    }
-
-//    @SuppressLint("MissingInflatedId")
-//    private fun showDeviceName(deviceName: String) {
-//        val dialogView = LayoutInflater.from(requireContext()).inflate(R.layout.device_name_layout, null)
-//        val dialogBuilder = AlertDialog.Builder(requireContext())
-//            .setView(dialogView)
-//            .setCancelable(true)
-//
-//
-//
-//        val alertDialog = dialogBuilder.create()
-//
-//        // Ensuring the dialog background is transparent
-//        alertDialog.window?.setBackgroundDrawableResource(android.R.color.transparent)
-//
-//        // Show the dialog
-//        alertDialog.show()
-//        val displayNameDi: TextView = dialogView.findViewById(R.id.displayNameDi)
-//        val displayNameEdit: TextView = dialogView.findViewById(R.id.displayNameEdit)
-//        val displayNameButton: TextView = dialogView.findViewById(R.id.displayNameButton)
-//        val displayNameCancel: TextView = dialogView.findViewById(R.id.displayNameCancel)
-//        displayNameDi.text = deviceName
-//
-//
-//        val window = alertDialog.window
-//        if (window != null) {
-//            val layoutParams = window.attributes
-//            val margin = 50 // Set margin in pixels (e.g., 50px)
-//            layoutParams.width = ViewGroup.LayoutParams.MATCH_PARENT
-//            layoutParams.height = ViewGroup.LayoutParams.WRAP_CONTENT
-//            window.setLayout(
-//                (resources.displayMetrics.widthPixels - 2 * margin),
-//                ViewGroup.LayoutParams.WRAP_CONTENT
-//            )
-//            window.attributes = layoutParams
-//        }
-//
-//    }
-
-    private fun shareCode() {
-        val shareIntent = Intent(Intent.ACTION_SEND).apply {
-            type = "text/plain"
-            putExtra(Intent.EXTRA_TEXT, "Download the app from :")
-        }
-
-        // Show the chooser dialog for sharing options
-        startActivity(Intent.createChooser(shareIntent, "Share via"))
-    }
-
     @SuppressLint("HardwareIds")
     private fun getAndroidId(): String {
         return requireContext().contentResolver.let {
             android.provider.Settings.Secure.getString(it, android.provider.Settings.Secure.ANDROID_ID)
         }
     }
-    private fun fetchDeviceInformation() {
 
-        deviceReference.child(androidId).addListenerForSingleValueEvent(object :
-            ValueEventListener {
-            override fun onDataChange(snapshot: DataSnapshot) {
+    private fun fetchDeviceProfile(deviceId: String) {
+        RetrofitClient.apiService.getDeviceProfile(deviceId).enqueue(object : Callback<DeviceProfileResponse> {
+            override fun onResponse(call: Call<DeviceProfileResponse>, response: Response<DeviceProfileResponse>) {
+                if (response.isSuccessful) {
+                    val deviceProfileResponse = response.body()
+                    if (deviceProfileResponse != null && deviceProfileResponse.success) {
+                        val profile = deviceProfileResponse.profile
+                        Log.d("DeviceProfile", "Success: ${deviceProfileResponse.success}")
+                        Log.d("DeviceProfile", "Device Name: ${profile.deviceName}")
+                        Log.d("DeviceProfile", "imageUrl: ${profile.image}")
 
-                if (snapshot.exists()) {
-                    // Get the device name
-                    deviceName = snapshot.child("deviceName").getValue(String::class.java) ?: "N/A"
+                        // Set the device name and display the first character in a circle
+                        deviceName = profile.deviceName
+                        textname.text = deviceName
 
-                    buttonChangeName.text = deviceName
-                    // Extract the first character of the device name
-                    val firstChar = deviceName.firstOrNull()?.toString() ?: ""
-
-                    // Set the first character to the textname TextView
-
-                    textname.text= firstChar
-
-                    println("device name is $deviceName and first char is $firstChar")
-                    val manufacturer = snapshot.child("manufacturer").getValue(String::class.java) ?: "N/A"
-                    val model = snapshot.child("model").getValue(String::class.java) ?: "N/A"
-                    val androidVersion = snapshot.child("androidVersion").getValue(String::class.java) ?: "N/A"
-                    val sdkVersion = snapshot.child("sdkVersion").getValue(Int::class.java) ?: -1
-                    val uniqueCode = snapshot.child("uniqueCode").getValue(String::class.java) ?: "N/A"
-
-                    // Display the information in the UI or log it
-                    Log.d("Device Info", "Device Name: $deviceName, Unique Code: $uniqueCode")
-
+                        // Set the first character in the circular profile image
+                        val firstChar = deviceName[0].toString()
+                        profileImage.setImageResource(R.drawable.circle_background) // Ensure this is a circular background image in drawable
+                        textname.text = firstChar
+                        name.text = deviceName
+                    } else {
+                        Log.e("DeviceProfile", "Failed: ${deviceProfileResponse?.message}")
+                    }
                 } else {
-                    Toast.makeText(requireContext(), "No device information found!", Toast.LENGTH_SHORT).show()
+                    Log.e("DeviceProfile", "Error Code: ${response.code()}")
                 }
             }
 
-            override fun onCancelled(error: DatabaseError) {
-                Toast.makeText(requireContext(), "Failed to fetch device information: ${error.message}", Toast.LENGTH_SHORT).show()
+            override fun onFailure(call: Call<DeviceProfileResponse>, t: Throwable) {
+                Log.e("DeviceProfile", "Failure: ${t.message}")
             }
         })
     }
 
 
+
 }
+

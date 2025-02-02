@@ -6,17 +6,7 @@ import android.location.LocationManager
 import android.net.ConnectivityManager
 import android.net.NetworkCapabilities
 import android.os.Build
-import android.os.PowerManager
-import android.provider.Settings
-import android.util.Log
-import androidx.core.content.ContextCompat
-import android.Manifest
-import android.app.AlertDialog
-import android.content.IntentFilter
-import android.net.Uri
-import android.view.LayoutInflater
-import android.widget.Button
-import com.example.locationtracker.R
+
 
 class Checker(private val context: Context) {
 

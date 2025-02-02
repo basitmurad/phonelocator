@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
@@ -19,6 +20,9 @@ import java.lang.String;
 public final class FragmentProfileBinding implements ViewBinding {
   @NonNull
   private final FrameLayout rootView;
+
+  @NonNull
+  public final ImageView btnClickSHow;
 
   @NonNull
   public final LinearLayout btnFeedback;
@@ -36,21 +40,32 @@ public final class FragmentProfileBinding implements ViewBinding {
   public final LinearLayout btnShareApp;
 
   @NonNull
+  public final ImageView imageview;
+
+  @NonNull
+  public final LinearLayout linearLayout6;
+
+  @NonNull
   public final TextView profileName;
 
   @NonNull
   public final TextView textname;
 
-  private FragmentProfileBinding(@NonNull FrameLayout rootView, @NonNull LinearLayout btnFeedback,
-      @NonNull LinearLayout btnLanguage, @NonNull LinearLayout btnPrivacy,
-      @NonNull LinearLayout btnRateUs, @NonNull LinearLayout btnShareApp,
-      @NonNull TextView profileName, @NonNull TextView textname) {
+  private FragmentProfileBinding(@NonNull FrameLayout rootView, @NonNull ImageView btnClickSHow,
+      @NonNull LinearLayout btnFeedback, @NonNull LinearLayout btnLanguage,
+      @NonNull LinearLayout btnPrivacy, @NonNull LinearLayout btnRateUs,
+      @NonNull LinearLayout btnShareApp, @NonNull ImageView imageview,
+      @NonNull LinearLayout linearLayout6, @NonNull TextView profileName,
+      @NonNull TextView textname) {
     this.rootView = rootView;
+    this.btnClickSHow = btnClickSHow;
     this.btnFeedback = btnFeedback;
     this.btnLanguage = btnLanguage;
     this.btnPrivacy = btnPrivacy;
     this.btnRateUs = btnRateUs;
     this.btnShareApp = btnShareApp;
+    this.imageview = imageview;
+    this.linearLayout6 = linearLayout6;
     this.profileName = profileName;
     this.textname = textname;
   }
@@ -82,6 +97,12 @@ public final class FragmentProfileBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.btnClickSHow;
+      ImageView btnClickSHow = ViewBindings.findChildViewById(rootView, id);
+      if (btnClickSHow == null) {
+        break missingId;
+      }
+
       id = R.id.btnFeedback;
       LinearLayout btnFeedback = ViewBindings.findChildViewById(rootView, id);
       if (btnFeedback == null) {
@@ -112,6 +133,18 @@ public final class FragmentProfileBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.imageview;
+      ImageView imageview = ViewBindings.findChildViewById(rootView, id);
+      if (imageview == null) {
+        break missingId;
+      }
+
+      id = R.id.linearLayout6;
+      LinearLayout linearLayout6 = ViewBindings.findChildViewById(rootView, id);
+      if (linearLayout6 == null) {
+        break missingId;
+      }
+
       id = R.id.profileName;
       TextView profileName = ViewBindings.findChildViewById(rootView, id);
       if (profileName == null) {
@@ -124,8 +157,9 @@ public final class FragmentProfileBinding implements ViewBinding {
         break missingId;
       }
 
-      return new FragmentProfileBinding((FrameLayout) rootView, btnFeedback, btnLanguage,
-          btnPrivacy, btnRateUs, btnShareApp, profileName, textname);
+      return new FragmentProfileBinding((FrameLayout) rootView, btnClickSHow, btnFeedback,
+          btnLanguage, btnPrivacy, btnRateUs, btnShareApp, imageview, linearLayout6, profileName,
+          textname);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

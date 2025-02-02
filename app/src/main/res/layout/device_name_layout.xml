@@ -19,12 +19,12 @@
 
         <!-- ImageView with Circle Background -->
         <ImageView
-            android:id="@+id/imageView"
+            android:id="@+id/imageView11"
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:layout_gravity="center"
+            android:backgroundTint="@color/primary1"
             android:background="@drawable/circle_background"
-            android:src="@drawable/lock"
             tools:ignore="MissingConstraints" />
 
         <!-- Icon to change image, positioned at the bottom right -->
@@ -34,9 +34,9 @@
             android:layout_height="32dp"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
-            android:src="@drawable/cross"
+            android:src="@drawable/baseline_photo_camera_24"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/imageView" />
+            app:layout_constraintEnd_toEndOf="@+id/imageView11" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 
@@ -45,9 +45,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/displayNameDi"
-        android:layout_marginBottom="16dp"
+        android:layout_marginTop="8dp"
         android:text="@string/i_phone_x"
         android:textAlignment="center"
+        android:fontFamily="@font/pregular"
         android:textColor="#000000"
         android:textSize="18sp" />
     <TextView
@@ -67,6 +68,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/displayNameEdit"
         android:layout_marginBottom="16dp"
+        android:background="@drawable/back_editext"
         android:hint="@string/enter_text_here"
         android:padding="12dp" />
 

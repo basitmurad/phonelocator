@@ -17,32 +17,19 @@ import android.util.Log
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
-import androidx.annotation.NonNull
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.appcompat.widget.AppCompatButton
 import androidx.fragment.app.Fragment
-import androidx.work.PeriodicWorkRequestBuilder
-import androidx.work.WorkManager
+
 import com.example.locationtracker.databinding.ActivityHomeBinding
 import com.example.locationtracker.fragments.ConnectFragment
 import com.example.locationtracker.fragments.DeviceFragment
 import com.example.locationtracker.fragments.ProfileFragment
 import com.example.permissionmanager.PermissionsManager
-import com.google.android.gms.tasks.Task
-import com.google.firebase.Firebase
-import com.google.firebase.database.DataSnapshot
-import com.google.firebase.database.DatabaseError
-import com.google.firebase.database.FirebaseDatabase
-import com.google.firebase.database.ValueEventListener
-import com.google.firebase.functions.FirebaseFunctions
-import com.google.firebase.functions.HttpsCallableResult
-import com.google.firebase.functions.functions
-import java.security.MessageDigest
-import java.util.Collections
-import java.util.concurrent.TimeUnit
+
 
 
 class HomeActivity : AppCompatActivity(), ConnectivityReceiver.ConnectivityReceiverListener {
@@ -84,7 +71,6 @@ class HomeActivity : AppCompatActivity(), ConnectivityReceiver.ConnectivityRecei
 //        // Open Auto-Start Settings
 //        permissionsManager.openAutoStartSettings()
         // Set up BottomNavigationView listener
-
 
 
         binding.bottomNavigationView.itemRippleColor = null
@@ -267,35 +253,6 @@ class HomeActivity : AppCompatActivity(), ConnectivityReceiver.ConnectivityRecei
         }
     }
 
-    private fun fetchDeviceInformation(android: String) {
-        val databaseReference = FirebaseDatabase.getInstance().getReference("Connection")
-
-        // Query the "Connection" node
-        databaseReference.addListenerForSingleValueEvent(object : ValueEventListener {
-            override fun onDataChange(snapshot: DataSnapshot) {
-                if (snapshot.exists()) {
-                    // Print the entire snapshot to the log
-                    Log.d("SnapshotData", "Full Snapshot: ${snapshot.value}")
-
-                } else {
-                    Log.d("SnapshotData", "Connection node does not exist")
-                    Toast.makeText(
-                        this@HomeActivity,
-                        "Connection node does not exist",
-                        Toast.LENGTH_SHORT
-                    ).show()
-                }
-            }
-
-            override fun onCancelled(error: DatabaseError) {
-                Toast.makeText(
-                    this@HomeActivity,
-                    "Failed to fetch device information: ${error.message}",
-                    Toast.LENGTH_SHORT
-                ).show()
-            }
-        })
-    }
 
     override fun onRequestPermissionsResult(
         requestCode: Int,
@@ -305,11 +262,12 @@ class HomeActivity : AppCompatActivity(), ConnectivityReceiver.ConnectivityRecei
         super.onRequestPermissionsResult(requestCode, permissions, grantResults)
         permissionsManager.handleMotionPermissionResult(requestCode, grantResults)
     }
-
-
-
-
 }
+
+
+
+
+
 
 
 

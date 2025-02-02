@@ -5,6 +5,7 @@
     <color name="nav_item_unselected_color">#808080</color>
     <color name="orange">#FFA500</color>
     <color name="primary">#10E80C</color>
+    <color name="primary1">#4C4747</color>
     <color name="transparent">#00000000</color>
     <color name="white">#FFFFFFFF</color>
     <string name="_234d4e5" ns1:ignore="MissingTranslation">234d4e5</string>
@@ -32,7 +33,7 @@
     <string name="done" ns1:ignore="MissingTranslation">Done</string>
     <string name="done1" ns1:ignore="MissingTranslation">Done</string>
     <string name="enter_code_here" ns1:ignore="MissingTranslation">Enter code here</string>
-    <string name="enter_text_here" ns1:ignore="MissingTranslation">Enter text here</string>
+    <string name="enter_text_here" ns1:ignore="MissingTranslation">Enter name </string>
     <string name="enter_the_invitation_code" ns1:ignore="MissingTranslation">Enter the Invitation code</string>
     <string name="enter_the_invitation_code_from_other_to_share_your_location_safely" ns1:ignore="MissingTranslation">Enter the Invitation code from \nother to share your location \nsafely</string>
     <string name="enter_your_display_name" ns1:ignore="MissingTranslation">Enter your display name</string>
@@ -63,9 +64,7 @@
     <string name="language1" ns1:ignore="MissingTranslation">Language</string>
     <string name="last_map" ns1:ignore="MissingTranslation">Last Map</string>
     <string name="live_location" ns1:ignore="MissingTranslation">Live location</string>
-    <string name="location_is_required_for_this_app_to_function_properly_please_enable_location_services" ns1:ignore="MissingTranslation">
-        Location is required for this app to function properly. Please enable location services.
-    </string>
+    <string name="location_is_required_for_this_app_to_function_properly_please_enable_location_services" ns1:ignore="MissingTranslation">Location is required for this app to function properly. Please enable location services.</string>
     <string name="motion_tracking" ns1:ignore="MissingTranslation">Motion Tracking</string>
     <string name="motion_tracking_permission" ns1:ignore="MissingTranslation">Motion Tracking Permission</string>
     <string name="n" translatable="false">N</string>

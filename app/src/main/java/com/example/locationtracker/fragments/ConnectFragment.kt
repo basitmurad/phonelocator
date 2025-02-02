@@ -20,10 +20,7 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.example.locationtracker.R
-import com.google.firebase.database.DataSnapshot
-import com.google.firebase.database.DatabaseError
-import com.google.firebase.database.FirebaseDatabase
-import com.google.firebase.database.ValueEventListener
+
 import android.text.InputFilter
 import android.view.LayoutInflater
 import android.view.View
@@ -125,34 +122,7 @@ class ConnectFragment : Fragment() {
                         editText.filters = arrayOf(InputFilter.AllCaps())
 
 
-                        val databaseReference = FirebaseDatabase.getInstance().getReference("devices")
-                        databaseReference.orderByChild("uniqueCode").equalTo(code)
-                            .addListenerForSingleValueEvent(object : ValueEventListener {
-                                override fun onDataChange(snapshot: DataSnapshot) {
-                                    progressDialog.dismiss()
-                                    if (snapshot.exists()) {
-                                        for (child in snapshot.children) {
-                                            val androidVersion = child.child("androidVersion").value?.toString() ?: "N/A"
-                                            val deviceName = child.child("deviceName").value?.toString() ?: "N/A"
-                                            val deviceID = child.child("androidId").value?.toString() ?: "N/A"
-                                            val manufacturer = child.child("manufacturer").value?.toString() ?: "N/A"
-                                            val model = child.child("model").value?.toString() ?: "N/A"
-                                            val sdkVersion = child.child("sdkVersion").value?.toString() ?: "N/A"
 
-                                            editText.text= null
-                                            openDialog(deviceName, deviceID)
-                                            break
-                                        }
-                                    } else {
-                                        Toast.makeText(requireContext(), "Invalid Code", Toast.LENGTH_SHORT).show()
-                                    }
-                                }
-
-                                override fun onCancelled(error: DatabaseError) {
-                                    progressDialog.dismiss()
-                                    Toast.makeText(requireContext(), "Error: ${error.message}", Toast.LENGTH_SHORT).show()
-                                }
-                            })
                     }
                 }
 
@@ -193,20 +163,6 @@ class ConnectFragment : Fragment() {
             println("Data us $currentUserDeviceId and $matchDeviceID")
 
 
-            val databaseReference = FirebaseDatabase.getInstance().getReference("Connection")
-            val deviceData = saveDeviceData(currentUserDeviceId, matchDeviceID,currentLatLng, batteryPercentage, currentTime, currentDate)
-
-            databaseReference.child(matchDeviceID).child(currentUserDeviceId).push()
-                .setValue(deviceData)
-                .addOnCompleteListener { task ->
-                    if (task.isSuccessful) {
-                        Toast.makeText(requireContext(), "Data saved successfully!", Toast.LENGTH_SHORT).show()
-                    } else {
-                        Toast.makeText(requireContext(), "Failed to save data: ${task.exception?.message}", Toast.LENGTH_SHORT).show()
-                    }
-                }
-
-//
 
             alertDialog.dismiss()
         }

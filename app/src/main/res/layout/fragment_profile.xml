@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -19,31 +20,91 @@
             android:orientation="vertical"
             android:gravity="center">
 
-            <!-- Profile Image -->
-            <TextView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:id="@+id/textname"
-                android:gravity="center"
-                android:text="@string/d"
-                android:textSize="32sp"
-                android:fontFamily="@font/psemibold"
-                android:textFontWeight="500"
-                android:textColor="#FFFFFF"
-                android:background="@drawable/circle_background" />
-
-            <!-- Profile Name -->
-            <TextView
-                android:id="@+id/profileName"
-                android:layout_width="wrap_content"
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:text="@string/your_name"
-                android:textSize="18sp"
-                android:textColor="#000000"
-                android:textStyle="bold" />
 
-            <!-- Options List -->
+                >
+
+
+                <LinearLayout
+                    android:id="@+id/linearLayout6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="UseCompoundDrawables">
+
+                    <TextView
+                        android:id="@+id/textname"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:background="@drawable/circle_background"
+                        android:fontFamily="@font/psemibold"
+                        android:gravity="center"
+                        android:text="@string/d"
+                        android:textColor="#FFFFFF"
+                        android:textFontWeight="800"
+                        android:textSize="32sp"
+                        android:backgroundTint="@color/primary1"
+                        android:visibility="visible"
+                        tools:targetApi="p" />
+
+                    <ImageView
+                        android:id="@+id/imageview"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:background="@drawable/circle_background"
+                        android:backgroundTint="@color/orange"
+                        android:fontFamily="@font/psemibold"
+                        android:gravity="center"
+                        android:visibility="gone"
+                        android:textColor="#FFFFFF"
+                        android:textSize="32sp" />
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical|center_horizontal"
+
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/linearLayout6"
+                    app:layout_constraintStart_toStartOf="@+id/linearLayout6"
+                    app:layout_constraintTop_toBottomOf="@+id/linearLayout6"
+
+                    android:padding="8dp"
+                    tools:ignore="ExtraText">
+                    <TextView
+                        android:id="@+id/profileName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="..."
+
+                        android:textColor="#000000"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                 />
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/baseline_edit_24"
+                        android:id="@+id/btnClickSHow"
+
+
+                        />
+
+                </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

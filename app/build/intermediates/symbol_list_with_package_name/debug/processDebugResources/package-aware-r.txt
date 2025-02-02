@@ -1492,10 +1492,6 @@ color bright_foreground_inverse_material_dark
 color bright_foreground_inverse_material_light
 color bright_foreground_material_dark
 color bright_foreground_material_light
-color browser_actions_bg_grey
-color browser_actions_divider_color
-color browser_actions_text_color
-color browser_actions_title_color
 color button_material_dark
 color button_material_light
 color call_notification_answer_color
@@ -2224,6 +2220,7 @@ color notification_icon_bg_color
 color orange
 color preference_fallback_accent_color
 color primary
+color primary1
 color primary_dark_material_dark
 color primary_dark_material_light
 color primary_material_dark
@@ -2332,8 +2329,6 @@ dimen abc_text_size_subtitle_material_toolbar
 dimen abc_text_size_title_material
 dimen abc_text_size_title_material_toolbar
 dimen appcompat_dialog_background_inset
-dimen browser_actions_context_menu_max_width
-dimen browser_actions_context_menu_min_padding
 dimen cardview_compat_inset_shadow
 dimen cardview_default_elevation
 dimen cardview_default_radius
@@ -3162,6 +3157,7 @@ drawable baseline_edit_24
 drawable baseline_home_24
 drawable baseline_perm_device_information_24
 drawable baseline_person_24
+drawable baseline_photo_camera_24
 drawable bi_facebook
 drawable btn_checkbox_checked_mtrl
 drawable btn_checkbox_checked_to_unchecked_mtrl_animation
@@ -3222,9 +3218,6 @@ drawable ic_mtrl_checked_circle
 drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
-drawable ic_other_sign_in
-drawable ic_passkey
-drawable ic_password
 drawable ic_search_black_24
 drawable iconoir_message
 drawable indeterminate_static
@@ -3435,16 +3428,13 @@ id bounce
 id bounceBoth
 id bounceEnd
 id bounceStart
-id browser_actions_header_text
-id browser_actions_menu_item_icon
-id browser_actions_menu_item_text
-id browser_actions_menu_items
-id browser_actions_menu_view
 id btnAllowPermissions
 id btnBack
 id btnCancel
+id btnClickSHow
 id btnClose
 id btnDismiss
+id btnDone
 id btnFeedback
 id btnGoToSettings
 id btnLanguage
@@ -3488,6 +3478,7 @@ id compress
 id confirm_button
 id constraint
 id constraintLayout
+id constraintLayout2
 id consume_window_insets_tag
 id container
 id content
@@ -3585,6 +3576,7 @@ id fullscreen_header
 id getLocation
 id ghost_view
 id ghost_view_holder
+id glide_custom_view_target_tag
 id gone
 id graph
 id graph_wrap
@@ -3611,8 +3603,10 @@ id ignore
 id ignoreRequest
 id image
 id imageView
+id imageView11
 id imageView2
 id imageView3
+id imageview
 id immediateStop
 id included
 id indeterminate
@@ -3642,6 +3636,8 @@ id linearLayout2
 id linearLayout3
 id linearLayout4
 id linearLayout5
+id linearLayout6
+id linearLayout7
 id listMode
 id list_item
 id locale
@@ -4080,14 +4076,14 @@ layout activity_get_start
 layout activity_home
 layout activity_language
 layout activity_main
+layout activity_main2
 layout activity_permission
 layout activity_privacy_policy
+layout activity_profile
 layout activity_show_detail
 layout activity_show_device_detail
 layout activity_splash
 layout bottom_sheet_permissions
-layout browser_actions_context_menu_page
-layout browser_actions_context_menu_row
 layout confirm_dialog_layout
 layout connect_device_layout
 layout custom_dialog
@@ -4203,7 +4199,6 @@ menu bottom_nav_menu
 mipmap ic_launcher
 mipmap ic_launcher_round
 plurals mtrl_badge_content_description
-raw firebase_common_keep
 string _234d4e5
 string abc_action_bar_home_description
 string abc_action_bar_up_description
@@ -4237,8 +4232,6 @@ string all_devices
 string allow
 string allow_location_access
 string allow_permissions
-string android_credentials_TYPE_PASSWORD_CREDENTIAL
-string androidx_credentials_TYPE_PUBLIC_KEY_CREDENTIAL
 string androidx_startup
 string app_name
 string appbar_scrolling_view_behavior
@@ -4290,7 +4283,6 @@ string congratulations_you_have_successfully_connected_with_the_device
 string connect
 string connected_now
 string copy
-string copy_toast_msg
 string d
 string default_error_message
 string default_popup_window_title
@@ -4311,9 +4303,6 @@ string expand_button_title
 string exposed_dropdown_menu_content_description
 string fab_transformation_scrim_behavior
 string fab_transformation_sheet_behavior
-string fallback_menu_item_copy_link
-string fallback_menu_item_open_in_browser
-string fallback_menu_item_share_link
 string feed_back
 string feedback
 string firebase_database_url
@@ -5156,7 +5145,6 @@ style Theme_Design_Light
 style Theme_Design_Light_BottomSheetDialog
 style Theme_Design_Light_NoActionBar
 style Theme_Design_NoActionBar
-style Theme_Hidden
 style Theme_LocationTracker
 style Theme_Material3_Dark
 style Theme_Material3_Dark_BottomSheetDialog
@@ -5235,7 +5223,6 @@ style Theme_MaterialComponents_Light_NoActionBar
 style Theme_MaterialComponents_Light_NoActionBar_Bridge
 style Theme_MaterialComponents_NoActionBar
 style Theme_MaterialComponents_NoActionBar_Bridge
-style Theme_PlayCore_Transparent
 style ThemeOverlay_AppCompat
 style ThemeOverlay_AppCompat_ActionBar
 style ThemeOverlay_AppCompat_Dark
@@ -5914,5 +5901,3 @@ styleable ViewTransition android_id SharedValue SharedValueId clearsTag duration
 styleable include constraintSet
 xml backup_rules
 xml data_extraction_rules
-xml ga_ad_services_config
-xml image_share_filepaths
