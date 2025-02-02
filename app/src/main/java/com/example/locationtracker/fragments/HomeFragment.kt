@@ -4,7 +4,6 @@ import android.content.ClipboardManager
 import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
-import android.location.LocationManager
 import android.os.Bundle
 import android.provider.Settings
 import android.util.Log
@@ -30,6 +29,15 @@ import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
 
 import android.Manifest
+import android.graphics.BitmapFactory
+import android.util.Base64
+import com.example.locationtracker.api.RetrofitClient
+import com.example.locationtracker.connectionModels.QRCodeResponse
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
+
+
 
 class HomeFragment : Fragment(), OnMapReadyCallback {
 
@@ -56,7 +64,6 @@ class HomeFragment : Fragment(), OnMapReadyCallback {
 
         fusedLocationClient = LocationServices.getFusedLocationProviderClient(requireContext())
 
-        // Get Android ID
         androidId = getAndroidId()
 
 
@@ -73,7 +80,6 @@ class HomeFragment : Fragment(), OnMapReadyCallback {
     override fun onMapReady(map: GoogleMap) {
         googleMap = map
 
-        // Request current location
         getCurrentLocation()
     }
 
@@ -101,28 +107,33 @@ class HomeFragment : Fragment(), OnMapReadyCallback {
         }
     }
 
-    private fun showCustomDialog() {
-        if (!::uniqueCode.isInitialized || uniqueCode.isBlank()) {
-            Toast.makeText(requireContext(), "Unique code is not available yet. Please try again later.", Toast.LENGTH_SHORT).show()
-            return
-        }
 
+
+
+    @SuppressLint("HardwareIds")
+    private fun getAndroidId(): String {
+        return requireContext().contentResolver.let {
+            Settings.Secure.getString(it, Settings.Secure.ANDROID_ID)
+        }
+    }
+
+    private fun showCustomDialog() {
         val dialogView = LayoutInflater.from(requireContext()).inflate(R.layout.dialog_custom, null)
         val dialogBuilder = AlertDialog.Builder(requireContext())
             .setView(dialogView)
             .setCancelable(true)
 
         val alertDialog = dialogBuilder.create()
-
         alertDialog.window?.setBackgroundDrawableResource(android.R.color.transparent)
         alertDialog.show()
 
-        val closeButton: ImageView = dialogView.findViewById(R.id.btnClose)
+        val qrImageView: ImageView = dialogView.findViewById(R.id.btnClose) // Ensure this exists in `dialog_custom.xml`
         val code: TextView = dialogView.findViewById(R.id.textView6)
         val btnCopy: TextView = dialogView.findViewById(R.id.textView10)
         val btnShare: LinearLayout = dialogView.findViewById(R.id.btnShare)
 
-        code.text = uniqueCode.uppercase()
+        // Generate and display the QR code in the dialog
+        generateQRCode1(androidId, qrImageView)
 
         btnShare.setOnClickListener {
             shareCode(uniqueCode)
@@ -133,18 +144,62 @@ class HomeFragment : Fragment(), OnMapReadyCallback {
             Toast.makeText(requireContext(), "Code copied to clipboard!", Toast.LENGTH_SHORT).show()
         }
 
-        closeButton.setOnClickListener {
+        qrImageView.setOnClickListener {
             alertDialog.dismiss()
         }
     }
 
-    @SuppressLint("ServiceCast")
+    // Generate QR code and display it in the ImageView
+    @SuppressLint("HardwareIds")
+    fun generateQRCode1(deviceId: String, imageView: ImageView) {
+        RetrofitClient.apiService.generateQRCode(deviceId).enqueue(object : Callback<QRCodeResponse> {
+            override fun onResponse(call: Call<QRCodeResponse>, response: Response<QRCodeResponse>) {
+                if (response.isSuccessful) {
+                    val qrCodeResponse = response.body()
+                    if (qrCodeResponse != null && qrCodeResponse.success) {
+                        uniqueCode = qrCodeResponse.qrCode // Store the unique code
+                        Log.d("QRCodeData", "Received QR Code: $uniqueCode")
+                        Log.d("QRCodeData", "QR Code Length: ${uniqueCode.length}")
+
+                        // Remove prefix if it exists
+                        if (uniqueCode.startsWith("data:image/png;base64,")) {
+                            uniqueCode = uniqueCode.substring("data:image/png;base64,".length)
+                        }
+
+                        // Decode Base64 to Bitmap
+                        if (isValidBase64(uniqueCode)) {
+                            try {
+                                val imageBytes = Base64.decode(uniqueCode, Base64.DEFAULT)
+                                val bitmap = BitmapFactory.decodeByteArray(imageBytes, 0, imageBytes.size)
+                                imageView.setImageBitmap(bitmap)
+                            } catch (e: IllegalArgumentException) {
+                                Log.e("QRCodeError", "Invalid Base64 string", e)
+                            }
+                        } else {
+                            Log.e("QRCodeError", "Received an invalid Base64 string")
+                        }
+                    } else {
+                        Log.e("QRCodeError", "API Response Error: ${qrCodeResponse?.message}")
+                    }
+                } else {
+                    Log.e("QRCodeError", "Server Error: ${response.errorBody()?.string()}")
+                }
+            }
+
+            override fun onFailure(call: Call<QRCodeResponse>, t: Throwable) {
+                Log.e("QRCode", "Failure: ${t.message}")
+            }
+        })
+    }
+
+    // Copy the unique code to the clipboard
     private fun copyToClipboard(uniqueCode: String) {
         val clipboard = requireContext().getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
         val clip = ClipData.newPlainText("Unique Code", uniqueCode)
         clipboard.setPrimaryClip(clip)
     }
 
+    // Share the unique code
     private fun shareCode(uniqueCode: String) {
         val shareIntent = Intent(Intent.ACTION_SEND).apply {
             type = "text/plain"
@@ -153,31 +208,12 @@ class HomeFragment : Fragment(), OnMapReadyCallback {
         startActivity(Intent.createChooser(shareIntent, "Share via"))
     }
 
-    override fun onResume() {
-        super.onResume()
-        mapView.onResume()
-    }
-
-    override fun onPause() {
-        super.onPause()
-        mapView.onPause()
-    }
-
-    override fun onDestroy() {
-        super.onDestroy()
-        mapView.onDestroy()
-    }
-
-    @Deprecated("Deprecated in Java")
-    override fun onLowMemory() {
-        super.onLowMemory()
-        mapView.onLowMemory()
-    }
-
-    @SuppressLint("HardwareIds")
-    private fun getAndroidId(): String {
-        return requireContext().contentResolver.let {
-            Settings.Secure.getString(it, Settings.Secure.ANDROID_ID)
+    fun isValidBase64(base64: String): Boolean {
+        return try {
+            Base64.decode(base64, Base64.DEFAULT)
+            true
+        } catch (e: IllegalArgumentException) {
+            false
         }
     }
 

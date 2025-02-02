@@ -9,7 +9,6 @@ import com.example.locationtracker.api.RetrofitClient
 import com.example.locationtracker.models.AddDeviceRequest
 import com.example.locationtracker.models.AddDeviceResponse
 import com.example.locationtracker.models.DeviceProfileResponse
-import com.example.locationtracker.models.UpdateDeviceRequest
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response

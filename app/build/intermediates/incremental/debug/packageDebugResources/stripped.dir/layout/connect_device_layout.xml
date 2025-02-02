@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layoutDirection="ltr"
+
+    android:background="@drawable/dialoge_back"
+    android:layout_margin="26dp"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
+        android:fontFamily="@font/psemibold"
+        android:gravity="center"
+        android:text="@string/enter_the_invitation_code"
+        android:textColor="#000000"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_marginTop="40dp"
+        android:textAllCaps="true"
+        android:background="@drawable/back_buttom"
+        android:fontFamily="@font/psemibold"
+        android:hint="@string/enter_code_here"
+        android:inputType="text|textCapCharacters"
+        android:padding="12dp"
+        android:textColor="@color/black"
+        android:textAlignment="center" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/appCompatButton2"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:layout_marginTop="52dp"
+        android:background="@drawable/back_buttom"
+        android:fontFamily="@font/pmedium"
+        android:text="@string/join"
+        android:textColor="@color/black"
+        android:textAllCaps="false"
+        android:textSize="16sp" />
+
+</LinearLayout>
