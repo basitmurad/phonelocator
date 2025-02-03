@@ -4,7 +4,7 @@
             "outputFile": "com.example.locationtracker.app-mergeDebugResources-70:/values-port/values-port.xml",
             "map": [
                 {
-                    "source": "/home/appomatrix/.gradle/caches/transforms-4/0507657d5f16edb435d7e00f29e01845/transformed/appcompat-1.7.0/res/values-port/values-port.xml",
+                    "source": "C:\\Users\\swp\\.gradle\\caches\\transforms-4\\0507657d5f16edb435d7e00f29e01845\\transformed\\appcompat-1.7.0\\res\\values-port\\values-port.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

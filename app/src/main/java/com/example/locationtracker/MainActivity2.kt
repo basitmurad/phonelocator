@@ -1,5 +1,6 @@
 package com.example.locationtracker
 
+import android.content.Context
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
@@ -9,6 +10,10 @@ import com.example.locationtracker.api.RetrofitClient
 import com.example.locationtracker.models.AddDeviceRequest
 import com.example.locationtracker.models.AddDeviceResponse
 import com.example.locationtracker.models.DeviceProfileResponse
+import com.example.locationtracker.models.LocationHistoryResponse
+import com.example.locationtracker.models.LocationRequest
+import com.example.locationtracker.models.LocationResponse
+import com.example.locationtracker.models.RecentLocationResponse
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -21,16 +26,34 @@ class MainActivity2 : AppCompatActivity() {
         setContentView(R.layout.activity_main2)
 
         val device = AddDeviceRequest(
-            deviceId = "987985865",  // This should ideally be dynamically assigned
+            deviceId = "9347080e93f705da",  // This should ideally be dynamically assigned
             deviceName = "ali shan"
         )
+
+
+        val locationRequest = LocationRequest(
+            deviceId = "9347080e93f705da",
+            lat = "148.35",
+            lng = "459.242",
+            batteryPercentage = 60,
+            date = "2025-02-03T00:00:00.000Z",
+            time = "2:31:07 a.m."
+        )
+//        addLocation(context = this, locationRequest = locationRequest)
+
+//        // Example: Get location history
+        val connectionId = "9347080e93f705da"
+        getLocationHistory(context = this, connectionId = connectionId)
+//
+//        // Example: Get recent locations
+//        getRecentLocations(context = this, connectionId = connectionId)
 
 //        registerDevice(device)
 //        fetchDeviceProfile("90909090")
 //
 //        updateDeviceProfile("987985865","samsung1212","1737876915867_alex-mccarthy-RGKdWJOUFH0-unsplash.jpg")
 //
-        fetchDeviceProfile("9347080e93f705da")
+//        fetchDeviceProfile("9347080e93f705da")
 
     }
 
@@ -86,6 +109,59 @@ class MainActivity2 : AppCompatActivity() {
             }
         })
     }
+    fun addLocation(context: Context, locationRequest: LocationRequest) {
+        RetrofitClient.apiService.addLocation(locationRequest).enqueue(object : Callback<LocationResponse> {
+            override fun onResponse(call: Call<LocationResponse>, response: Response<LocationResponse>) {
+                if (response.isSuccessful) {
+                    Toast.makeText(context, "Location added successfully", Toast.LENGTH_LONG).show()
+                } else {
+                    Toast.makeText(context, "Failed to add location", Toast.LENGTH_LONG).show()
+                }
+            }
+
+            override fun onFailure(call: Call<LocationResponse>, t: Throwable) {
+                Toast.makeText(context, "Error: ${t.message}", Toast.LENGTH_LONG).show()
+            }
+        })
+    }
+    fun getLocationHistory(context: Context, connectionId: String) {
+        RetrofitClient.apiService.getLocationHistory(connectionId).enqueue(object : Callback<LocationHistoryResponse> {
+            override fun onResponse(call: Call<LocationHistoryResponse>, response: Response<LocationHistoryResponse>) {
+                if (response.isSuccessful) {
+                    val locationHistory = response.body()?.locations
+                        Log.d("location","$locationHistory")
+                    // Handle the location history response (e.g., display in a RecyclerView or log the result)
+                    Toast.makeText(context, "Location history fetched!", Toast.LENGTH_LONG).show()
+                } else {
+                    Toast.makeText(context, "Failed to fetch location history", Toast.LENGTH_LONG).show()
+                }
+            }
+
+            override fun onFailure(call: Call<LocationHistoryResponse>, t: Throwable) {
+                Toast.makeText(context, "Error: ${t.message}", Toast.LENGTH_LONG).show()
+            }
+        })
+    }
+
+    fun getRecentLocations(context: Context, connectionId: String) {
+        RetrofitClient.apiService.getRecentLocations(connectionId).enqueue(object : Callback<RecentLocationResponse> {
+            override fun onResponse(call: Call<RecentLocationResponse>, response: Response<RecentLocationResponse>) {
+                if (response.isSuccessful) {
+                    val recentLocations = response.body()?.locations
+                    // Handle the recent locations response (e.g., display in a RecyclerView or log the result)
+                    Toast.makeText(context, "Recent locations fetched!", Toast.LENGTH_LONG).show()
+                } else {
+                    Toast.makeText(context, "Failed to fetch recent locations", Toast.LENGTH_LONG).show()
+                }
+            }
+
+            override fun onFailure(call: Call<RecentLocationResponse>, t: Throwable) {
+                Toast.makeText(context, "Error: ${t.message}", Toast.LENGTH_LONG).show()
+            }
+        })
+    }
+
+
 
 //    private fun updateDeviceProfile(deviceId: String, deviceName: String?, image: String?) {
 //        // Create the update request with the new device name and image

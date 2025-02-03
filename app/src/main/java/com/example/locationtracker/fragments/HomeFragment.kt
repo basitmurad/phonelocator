@@ -135,6 +135,7 @@ class HomeFragment : Fragment(), OnMapReadyCallback {
         // Generate and display the QR code in the dialog
         generateQRCode1(androidId, qrImageView)
 
+        code.text = getAndroidId();
         btnShare.setOnClickListener {
             shareCode(uniqueCode)
         }
