@@ -104,26 +104,27 @@ class ProfileActivity : AppCompatActivity() {
     private fun updateDeviceProfile(updatedName: String, selectedImageUri: Uri?) {
         val deviceId = getAndroidId()
 
+        // Create request body for device name
         val deviceNameRequestBody: RequestBody? = if (updatedName.isNotEmpty()) {
             RequestBody.create("text/plain".toMediaTypeOrNull(), updatedName)
         } else {
             null
         }
 
-        val imagePart: MultipartBody.Part? = if (selectedImageUri != null) {
-            val inputStream: InputStream? = contentResolver.openInputStream(selectedImageUri)
-            val imageBytes = inputStream?.readBytes()
+        // Convert image to binary format and create MultipartBody.Part
+        val imagePart: MultipartBody.Part? = selectedImageUri?.let { uri ->
+            val inputStream = contentResolver.openInputStream(uri)
+            val tempFile = File(cacheDir, "profile_image.jpg")
+            val outputStream = FileOutputStream(tempFile)
+            inputStream?.copyTo(outputStream)
+            outputStream.close()
+            inputStream?.close()
 
-            if (imageBytes != null) {
-                val requestFile = RequestBody.create("image/jpeg".toMediaTypeOrNull(), imageBytes)
-                MultipartBody.Part.createFormData("image", "profile_image.jpg", requestFile)
-            } else {
-                null
-            }
-        } else {
-            null
+            val requestFile = RequestBody.create("image/jpeg".toMediaTypeOrNull(), tempFile)
+            MultipartBody.Part.createFormData("image", tempFile.name, requestFile)
         }
 
+        // Make the API call
         RetrofitClient.apiService.updateDevice(deviceId, deviceNameRequestBody, imagePart).enqueue(object : Callback<DeviceProfileResponse> {
             override fun onResponse(call: Call<DeviceProfileResponse>, response: Response<DeviceProfileResponse>) {
                 if (response.isSuccessful) {
@@ -139,4 +140,5 @@ class ProfileActivity : AppCompatActivity() {
             }
         })
     }
+
 }

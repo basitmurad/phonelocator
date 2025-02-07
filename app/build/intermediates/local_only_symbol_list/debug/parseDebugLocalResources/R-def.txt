@@ -101,6 +101,7 @@ id displayNameCancel
 id displayNameDi
 id displayNameEdit
 id editText
+id editText12
 id fragmentContainer
 id getLocation
 id imageView

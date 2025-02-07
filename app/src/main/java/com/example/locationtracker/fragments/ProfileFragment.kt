@@ -47,8 +47,7 @@ class ProfileFragment : Fragment() {
     private lateinit var textname: TextView
     private lateinit var profileImage: ImageView
     private lateinit var btnClickSHow: ImageView
-    private lateinit var getContent: ActivityResultLauncher<String>  // ActivityResultLauncher for image selection
-    private var selectedImageUri: Uri? = null
+
 
     @SuppressLint("MissingInflatedId")
     override fun onCreateView(
@@ -145,6 +144,7 @@ class ProfileFragment : Fragment() {
                         // Set the device name and display the first character in a circle
                         deviceName = profile.deviceName
                         textname.text = deviceName
+
 
                         // Set the first character in the circular profile image
                         val firstChar = deviceName[0].toString()
