@@ -2,6 +2,7 @@ package com.example.locationtracker.screens
 
 import android.annotation.SuppressLint
 import android.app.Activity
+import android.app.ProgressDialog
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
@@ -9,6 +10,7 @@ import android.provider.MediaStore
 import android.provider.Settings
 import android.util.Log
 import android.widget.Toast
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import com.bumptech.glide.Glide
 import com.example.locationtracker.api.RetrofitClient
@@ -29,32 +31,42 @@ class ProfileActivity : AppCompatActivity() {
     private lateinit var binding: ActivityProfileBinding
     private lateinit var androidId: String
     private var selectedImageUri: Uri? = null
+    private var progressDialog: ProgressDialog? = null
+
+    private val getImageResult =
+        registerForActivityResult(ActivityResultContracts.GetContent()) { uri: Uri? ->
+            uri?.let {
+                selectedImageUri = it
+                binding.imageView11.setImageURI(selectedImageUri)
+            }
+        }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityProfileBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        // Initialize progress dialog
+        progressDialog = ProgressDialog(this).apply {
+            setMessage("Updating profile...")
+            setCancelable(false) // Prevent dismissal by back button
+        }
+
         androidId = getAndroidId()
         fetchDeviceProfile(androidId)
 
         binding.btnDone.setOnClickListener {
             val updatedName = binding.displayNameEdit.text.toString()
-//            updateProfile(updatedName, selectedImageUri)
+
+            if (updatedName.isNotEmpty() || selectedImageUri != null) {
+                updateDeviceProfile(updatedName, selectedImageUri)
+            } else {
+                Toast.makeText(this, "No changes to update", Toast.LENGTH_SHORT).show()
+            }
         }
 
         binding.changeImageIcon.setOnClickListener {
-            val intent = Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI)
-            startActivityForResult(intent, 1)
-        }
-    }
-
-    @Deprecated("This method has been deprecated in favor of using the Activity Result API\n      which brings increased type safety via an {@link ActivityResultContract} and the prebuilt\n      contracts for common intents available in\n      {@link androidx.activity.result.contract.ActivityResultContracts}, provides hooks for\n      testing, and allow receiving results in separate, testable classes independent from your\n      activity. Use\n      {@link #registerForActivityResult(ActivityResultContract, ActivityResultCallback)}\n      with the appropriate {@link ActivityResultContract} and handling the result in the\n      {@link ActivityResultCallback#onActivityResult(Object) callback}.")
-    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        super.onActivityResult(requestCode, resultCode, data)
-        if (requestCode == 1 && resultCode == Activity.RESULT_OK) {
-            selectedImageUri = data?.data
-            binding.imageView11.setImageURI(selectedImageUri)
+            getImageResult.launch("image/*")
         }
     }
 
@@ -64,18 +76,18 @@ class ProfileActivity : AppCompatActivity() {
     }
 
     private fun fetchDeviceProfile(deviceId: String) {
+        progressDialog?.show()
+
         RetrofitClient.apiService.getDeviceProfile(deviceId).enqueue(object : Callback<DeviceProfileResponse> {
             override fun onResponse(call: Call<DeviceProfileResponse>, response: Response<DeviceProfileResponse>) {
+                progressDialog?.dismiss()
+
                 if (response.isSuccessful) {
                     val profile = response.body()?.profile
                     profile?.let {
                         binding.displayNameDi.text = it.deviceName
                         binding.displayNameEdit.setText(it.deviceName)
-                        Log.d("Profile Image ","${it.image}")
                         Glide.with(this@ProfileActivity).load(it.image).into(binding.imageView11)
-//                        if (!it.image.isNullOrEmpty()) {
-//                            Glide.with(this@ProfileActivity).load(it.image).into(binding.imageView11)
-//                        }
                     }
                 } else {
                     Toast.makeText(this@ProfileActivity, "Error loading profile", Toast.LENGTH_SHORT).show()
@@ -83,41 +95,50 @@ class ProfileActivity : AppCompatActivity() {
             }
 
             override fun onFailure(call: Call<DeviceProfileResponse>, t: Throwable) {
+                progressDialog?.dismiss()
                 Toast.makeText(this@ProfileActivity, "Failed to fetch profile", Toast.LENGTH_SHORT).show()
             }
         })
     }
 
-//    private fun updateProfile(updatedName: String, imageUri: Uri?) {
-//        val namePart = RequestBody.create("text/plain".toMediaTypeOrNull(), updatedName)
-//        val imagePart = imageUri?.let { uri ->
-//            val file = getFileFromUri(uri)
-//            val requestBody = RequestBody.create("image/*".toMediaTypeOrNull(), file)
-//            MultipartBody.Part.createFormData("image", file.name, requestBody)
-//        }
-//
-//        RetrofitClient.apiService.updateDeviceProfile(androidId, namePart, imagePart).enqueue(object : Callback<DeviceProfileResponse> {
-//            override fun onResponse(call: Call<DeviceProfileResponse>, response: Response<DeviceProfileResponse>) {
-//                if (response.isSuccessful) {
-//                    Toast.makeText(this@ProfileActivity, "Profile updated!", Toast.LENGTH_SHORT).show()
-//                } else {
-//                    Toast.makeText(this@ProfileActivity, "Update failed", Toast.LENGTH_SHORT).show()
-//                }
-//            }
-//
-//            override fun onFailure(call: Call<DeviceProfileResponse>, t: Throwable) {
-//                Toast.makeText(this@ProfileActivity, "Error: ${t.message}", Toast.LENGTH_SHORT).show()
-//            }
-//        })
-//    }
+    private fun updateDeviceProfile(updatedName: String, selectedImageUri: Uri?) {
+        val deviceId = getAndroidId()
 
-    private fun getFileFromUri(uri: Uri): File {
-        val inputStream: InputStream? = contentResolver.openInputStream(uri)
-        val file = File(cacheDir, "profile_image.jpg")
-        val outputStream = FileOutputStream(file)
-        inputStream?.copyTo(outputStream)
-        inputStream?.close()
-        outputStream.close()
-        return file
+        // Create request body for device name
+        val deviceNameRequestBody: RequestBody? = if (updatedName.isNotEmpty()) {
+            RequestBody.create("text/plain".toMediaTypeOrNull(), updatedName)
+        } else {
+            null
+        }
+
+        // Convert image to binary format and create MultipartBody.Part
+        val imagePart: MultipartBody.Part? = selectedImageUri?.let { uri ->
+            val inputStream = contentResolver.openInputStream(uri)
+            val tempFile = File(cacheDir, "profile_image.jpg")
+            val outputStream = FileOutputStream(tempFile)
+            inputStream?.copyTo(outputStream)
+            outputStream.close()
+            inputStream?.close()
+
+            val requestFile = RequestBody.create("image/jpeg".toMediaTypeOrNull(), tempFile)
+            MultipartBody.Part.createFormData("image", tempFile.name, requestFile)
+        }
+
+        // Make the API call
+        RetrofitClient.apiService.updateDevice(deviceId, deviceNameRequestBody, imagePart).enqueue(object : Callback<DeviceProfileResponse> {
+            override fun onResponse(call: Call<DeviceProfileResponse>, response: Response<DeviceProfileResponse>) {
+                if (response.isSuccessful) {
+                    Toast.makeText(this@ProfileActivity, "Profile updated successfully", Toast.LENGTH_SHORT).show()
+                    fetchDeviceProfile(deviceId)
+                } else {
+                    Toast.makeText(this@ProfileActivity, "Error updating profile", Toast.LENGTH_SHORT).show()
+                }
+            }
+
+            override fun onFailure(call: Call<DeviceProfileResponse>, t: Throwable) {
+                Toast.makeText(this@ProfileActivity, "Failed to update profile", Toast.LENGTH_SHORT).show()
+            }
+        })
     }
+
 }

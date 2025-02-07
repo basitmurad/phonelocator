@@ -47,8 +47,7 @@ class ProfileFragment : Fragment() {
     private lateinit var textname: TextView
     private lateinit var profileImage: ImageView
     private lateinit var btnClickSHow: ImageView
-    private lateinit var getContent: ActivityResultLauncher<String>  // ActivityResultLauncher for image selection
-    private var selectedImageUri: Uri? = null
+
 
     @SuppressLint("MissingInflatedId")
     override fun onCreateView(
@@ -96,7 +95,6 @@ class ProfileFragment : Fragment() {
             val nameValue = name.text.toString() // Assuming name is a TextView
             intent.putExtra("name", nameValue)
             startActivity(intent)
-//            showDeviceName(deviceName)
         }
 
         buttonRateUs.setOnClickListener {
@@ -124,57 +122,6 @@ class ProfileFragment : Fragment() {
 
 
 
-    private fun showDeviceName(deviceName: String) {
-        val dialogView = LayoutInflater.from(requireContext()).inflate(R.layout.device_name_layout, null)
-        val dialogBuilder = AlertDialog.Builder(requireContext())
-            .setView(dialogView)
-            .setCancelable(false)
-
-        val alertDialog = dialogBuilder.create()
-        alertDialog.window?.setBackgroundDrawableResource(android.R.color.transparent)
-        alertDialog.show()
-
-        val displayNameDi: TextView = dialogView.findViewById(R.id.displayNameDi)
-        val displayNameEdit: EditText = dialogView.findViewById(R.id.displayNameEdit)
-        val displayNameButton: Button = dialogView.findViewById(R.id.displayNameButton)
-        val displayNameCancel: Button = dialogView.findViewById(R.id.displayNameCancel)
-        val btnChooseImage: ImageView = dialogView.findViewById(R.id.changeImageIcon)
-        val profileImage: ImageView = dialogView.findViewById(R.id.imageView11) // ImageView in dialog layout
-
-        displayNameDi.text = deviceName
-
-
-        btnChooseImage.setOnClickListener {
-        }
-
-        displayNameButton.setOnClickListener {
-            val newDeviceName = displayNameEdit.text.toString().trim()
-            if (newDeviceName.isNotEmpty()) {
-                // Optionally handle profile update logic here
-                alertDialog.dismiss()
-            } else {
-                Toast.makeText(requireContext(), "Name cannot be empty!", Toast.LENGTH_SHORT).show()
-            }
-        }
-
-        displayNameCancel.setOnClickListener {
-            alertDialog.dismiss()
-        }
-
-        // Adjust the layout size of the dialog
-        val window = alertDialog.window
-        if (window != null) {
-            val layoutParams = window.attributes
-            val margin = 50
-            layoutParams.width = ViewGroup.LayoutParams.MATCH_PARENT
-            layoutParams.height = ViewGroup.LayoutParams.WRAP_CONTENT
-            window.setLayout(
-                (resources.displayMetrics.widthPixels - 2 * margin),
-                ViewGroup.LayoutParams.WRAP_CONTENT
-            )
-            window.attributes = layoutParams
-        }
-    }
 
     @SuppressLint("HardwareIds")
     private fun getAndroidId(): String {
@@ -197,6 +144,7 @@ class ProfileFragment : Fragment() {
                         // Set the device name and display the first character in a circle
                         deviceName = profile.deviceName
                         textname.text = deviceName
+
 
                         // Set the first character in the circular profile image
                         val firstChar = deviceName[0].toString()

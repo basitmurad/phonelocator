@@ -1,110 +1,114 @@
 [
     {
-        "merged": "com.example.locationtracker.app-mergeDebugResources-73:/layout/device_list_layout.xml",
-        "source": "com.example.locationtracker.app-main-76:/layout/device_list_layout.xml"
+        "merged": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-mergeDebugResources-71:\\layout\\activity_get_start.xml",
+        "source": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-main-74:\\layout\\activity_get_start.xml"
     },
     {
-        "merged": "com.example.locationtracker.app-mergeDebugResources-73:/layout/activity_get_start.xml",
-        "source": "com.example.locationtracker.app-main-76:/layout/activity_get_start.xml"
+        "merged": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-mergeDebugResources-71:\\layout\\fragment_connect.xml",
+        "source": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-main-74:\\layout\\fragment_connect.xml"
     },
     {
-        "merged": "com.example.locationtracker.app-mergeDebugResources-73:/layout/activity_privacy_policy.xml",
-        "source": "com.example.locationtracker.app-main-76:/layout/activity_privacy_policy.xml"
+        "merged": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-mergeDebugResources-71:\\layout\\confirm_dialog_layout.xml",
+        "source": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-main-74:\\layout\\confirm_dialog_layout.xml"
     },
     {
-        "merged": "com.example.locationtracker.app-mergeDebugResources-73:/layout/activity_permission.xml",
-        "source": "com.example.locationtracker.app-main-76:/layout/activity_permission.xml"
+        "merged": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-mergeDebugResources-71:\\layout\\activity_splash.xml",
+        "source": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-main-74:\\layout\\activity_splash.xml"
     },
     {
-        "merged": "com.example.locationtracker.app-mergeDebugResources-73:/layout/dialog_rating.xml",
-        "source": "com.example.locationtracker.app-main-76:/layout/dialog_rating.xml"
+        "merged": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-mergeDebugResources-71:\\layout\\activity_device_name.xml",
+        "source": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-main-74:\\layout\\activity_device_name.xml"
     },
     {
-        "merged": "com.example.locationtracker.app-mergeDebugResources-73:/layout/device_name_layout.xml",
-        "source": "com.example.locationtracker.app-main-76:/layout/device_name_layout.xml"
+        "merged": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-mergeDebugResources-71:\\layout\\dialog_custom.xml",
+        "source": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-main-74:\\layout\\dialog_custom.xml"
     },
     {
-        "merged": "com.example.locationtracker.app-mergeDebugResources-73:/layout/custom_motion_tracking_dialog.xml",
-        "source": "com.example.locationtracker.app-main-76:/layout/custom_motion_tracking_dialog.xml"
+        "merged": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-mergeDebugResources-71:\\layout\\fragment_profile.xml",
+        "source": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-main-74:\\layout\\fragment_profile.xml"
     },
     {
-        "merged": "com.example.locationtracker.app-mergeDebugResources-73:/layout/activity_main2.xml",
-        "source": "com.example.locationtracker.app-main-76:/layout/activity_main2.xml"
+        "merged": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-mergeDebugResources-71:\\layout\\device_name_layout.xml",
+        "source": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-main-74:\\layout\\device_name_layout.xml"
     },
     {
-        "merged": "com.example.locationtracker.app-mergeDebugResources-73:/layout/activity_main.xml",
-        "source": "com.example.locationtracker.app-main-76:/layout/activity_main.xml"
+        "merged": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-mergeDebugResources-71:\\layout\\custom_motion_tracking_dialog.xml",
+        "source": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-main-74:\\layout\\custom_motion_tracking_dialog.xml"
     },
     {
-        "merged": "com.example.locationtracker.app-mergeDebugResources-73:/layout/connect_device_layout.xml",
-        "source": "com.example.locationtracker.app-main-76:/layout/connect_device_layout.xml"
+        "merged": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-mergeDebugResources-71:\\layout\\activity_language.xml",
+        "source": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-main-74:\\layout\\activity_language.xml"
     },
     {
-        "merged": "com.example.locationtracker.app-mergeDebugResources-73:/layout/dialog_custom.xml",
-        "source": "com.example.locationtracker.app-main-76:/layout/dialog_custom.xml"
+        "merged": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-mergeDebugResources-71:\\layout\\dialog_rating.xml",
+        "source": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-main-74:\\layout\\dialog_rating.xml"
     },
     {
-        "merged": "com.example.locationtracker.app-mergeDebugResources-73:/layout/confirm_dialog_layout.xml",
-        "source": "com.example.locationtracker.app-main-76:/layout/confirm_dialog_layout.xml"
+        "merged": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-mergeDebugResources-71:\\layout\\activity_home.xml",
+        "source": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-main-74:\\layout\\activity_home.xml"
     },
     {
-        "merged": "com.example.locationtracker.app-mergeDebugResources-73:/layout/dialog_generic_disabled.xml",
-        "source": "com.example.locationtracker.app-main-76:/layout/dialog_generic_disabled.xml"
+        "merged": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-mergeDebugResources-71:\\layout\\connect_device_layout.xml",
+        "source": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-main-74:\\layout\\connect_device_layout.xml"
     },
     {
-        "merged": "com.example.locationtracker.app-mergeDebugResources-73:/layout/fragment_connect.xml",
-        "source": "com.example.locationtracker.app-main-76:/layout/fragment_connect.xml"
+        "merged": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-mergeDebugResources-71:\\layout\\item_language.xml",
+        "source": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-main-74:\\layout\\item_language.xml"
     },
     {
-        "merged": "com.example.locationtracker.app-mergeDebugResources-73:/layout/activity_language.xml",
-        "source": "com.example.locationtracker.app-main-76:/layout/activity_language.xml"
+        "merged": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-mergeDebugResources-71:\\layout\\fragment_home.xml",
+        "source": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-main-74:\\layout\\fragment_home.xml"
     },
     {
-        "merged": "com.example.locationtracker.app-mergeDebugResources-73:/layout/fragment_profile.xml",
-        "source": "com.example.locationtracker.app-main-76:/layout/fragment_profile.xml"
+        "merged": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-mergeDebugResources-71:\\layout\\device_list_layout.xml",
+        "source": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-main-74:\\layout\\device_list_layout.xml"
     },
     {
-        "merged": "com.example.locationtracker.app-mergeDebugResources-73:/layout/dialog_success.xml",
-        "source": "com.example.locationtracker.app-main-76:/layout/dialog_success.xml"
+        "merged": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-mergeDebugResources-71:\\layout\\bottom_sheet_permissions.xml",
+        "source": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-main-74:\\layout\\bottom_sheet_permissions.xml"
     },
     {
-        "merged": "com.example.locationtracker.app-mergeDebugResources-73:/layout/bottom_sheet_permissions.xml",
-        "source": "com.example.locationtracker.app-main-76:/layout/bottom_sheet_permissions.xml"
+        "merged": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-mergeDebugResources-71:\\layout\\activity_main2.xml",
+        "source": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-main-74:\\layout\\activity_main2.xml"
     },
     {
-        "merged": "com.example.locationtracker.app-mergeDebugResources-73:/layout/activity_show_detail.xml",
-        "source": "com.example.locationtracker.app-main-76:/layout/activity_show_detail.xml"
+        "merged": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-mergeDebugResources-71:\\layout\\fragment_device.xml",
+        "source": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-main-74:\\layout\\fragment_device.xml"
     },
     {
-        "merged": "com.example.locationtracker.app-mergeDebugResources-73:/layout/activity_profile.xml",
-        "source": "com.example.locationtracker.app-main-76:/layout/activity_profile.xml"
+        "merged": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-mergeDebugResources-71:\\layout\\activity_profile.xml",
+        "source": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-main-74:\\layout\\activity_profile.xml"
     },
     {
-        "merged": "com.example.locationtracker.app-mergeDebugResources-73:/layout/activity_show_device_detail.xml",
-        "source": "com.example.locationtracker.app-main-76:/layout/activity_show_device_detail.xml"
+        "merged": "com.example.locationtracker.app-mergeDebugResources-71:/layout/fragment_profile.xml",
+        "source": "com.example.locationtracker.app-main-74:/layout/fragment_profile.xml"
     },
     {
-        "merged": "com.example.locationtracker.app-mergeDebugResources-73:/layout/activity_splash.xml",
-        "source": "com.example.locationtracker.app-main-76:/layout/activity_splash.xml"
+        "merged": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-mergeDebugResources-71:\\layout\\activity_show_detail.xml",
+        "source": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-main-74:\\layout\\activity_show_detail.xml"
     },
     {
-        "merged": "com.example.locationtracker.app-mergeDebugResources-73:/layout/fragment_home.xml",
-        "source": "com.example.locationtracker.app-main-76:/layout/fragment_home.xml"
+        "merged": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-mergeDebugResources-71:\\layout\\activity_privacy_policy.xml",
+        "source": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-main-74:\\layout\\activity_privacy_policy.xml"
     },
     {
-        "merged": "com.example.locationtracker.app-mergeDebugResources-73:/layout/item_language.xml",
-        "source": "com.example.locationtracker.app-main-76:/layout/item_language.xml"
+        "merged": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-mergeDebugResources-71:\\layout\\activity_show_device_detail.xml",
+        "source": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-main-74:\\layout\\activity_show_device_detail.xml"
     },
     {
-        "merged": "com.example.locationtracker.app-mergeDebugResources-73:/layout/activity_device_name.xml",
-        "source": "com.example.locationtracker.app-main-76:/layout/activity_device_name.xml"
+        "merged": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-mergeDebugResources-71:\\layout\\dialog_generic_disabled.xml",
+        "source": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-main-74:\\layout\\dialog_generic_disabled.xml"
     },
     {
-        "merged": "com.example.locationtracker.app-mergeDebugResources-73:/layout/fragment_device.xml",
-        "source": "com.example.locationtracker.app-main-76:/layout/fragment_device.xml"
+        "merged": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-mergeDebugResources-71:\\layout\\dialog_success.xml",
+        "source": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-main-74:\\layout\\dialog_success.xml"
     },
     {
-        "merged": "com.example.locationtracker.app-mergeDebugResources-73:/layout/activity_home.xml",
-        "source": "com.example.locationtracker.app-main-76:/layout/activity_home.xml"
+        "merged": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-mergeDebugResources-71:\\layout\\activity_main.xml",
+        "source": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-main-74:\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-mergeDebugResources-71:\\layout\\activity_permission.xml",
+        "source": "C:\\Users\\swp\\.gradle\\daemon\\8.7\\com.example.locationtracker.app-main-74:\\layout\\activity_permission.xml"
     }
 ]

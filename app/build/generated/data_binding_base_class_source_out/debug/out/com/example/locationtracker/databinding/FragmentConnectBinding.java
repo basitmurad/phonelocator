@@ -25,7 +25,7 @@ public final class FragmentConnectBinding implements ViewBinding {
   public final AppCompatButton appCompatButton2;
 
   @NonNull
-  public final EditText editText;
+  public final EditText editText12;
 
   @NonNull
   public final TextView textView11;
@@ -40,12 +40,12 @@ public final class FragmentConnectBinding implements ViewBinding {
   public final View view;
 
   private FragmentConnectBinding(@NonNull FrameLayout rootView,
-      @NonNull AppCompatButton appCompatButton2, @NonNull EditText editText,
+      @NonNull AppCompatButton appCompatButton2, @NonNull EditText editText12,
       @NonNull TextView textView11, @NonNull TextView textView13, @NonNull TextView textView14,
       @NonNull View view) {
     this.rootView = rootView;
     this.appCompatButton2 = appCompatButton2;
-    this.editText = editText;
+    this.editText12 = editText12;
     this.textView11 = textView11;
     this.textView13 = textView13;
     this.textView14 = textView14;
@@ -85,9 +85,9 @@ public final class FragmentConnectBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.editText;
-      EditText editText = ViewBindings.findChildViewById(rootView, id);
-      if (editText == null) {
+      id = R.id.editText12;
+      EditText editText12 = ViewBindings.findChildViewById(rootView, id);
+      if (editText12 == null) {
         break missingId;
       }
 
@@ -115,7 +115,7 @@ public final class FragmentConnectBinding implements ViewBinding {
         break missingId;
       }
 
-      return new FragmentConnectBinding((FrameLayout) rootView, appCompatButton2, editText,
+      return new FragmentConnectBinding((FrameLayout) rootView, appCompatButton2, editText12,
           textView11, textView13, textView14, view);
     }
     String missingId = rootView.getResources().getResourceName(id);
