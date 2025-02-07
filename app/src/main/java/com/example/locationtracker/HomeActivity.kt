@@ -62,15 +62,6 @@ class HomeActivity : AppCompatActivity(), ConnectivityReceiver.ConnectivityRecei
         permissionsManager = PermissionsManager(this)
 
 
-//        // Request Motion Permissions
-//        permissionsManager.requestMotionPermissions()
-//
-//        // Open Protected App Settings
-//        permissionsManager.openProtectedAppSettings()
-//
-//        // Open Auto-Start Settings
-//        permissionsManager.openAutoStartSettings()
-        // Set up BottomNavigationView listener
 
 
         binding.bottomNavigationView.itemRippleColor = null
@@ -123,7 +114,6 @@ class HomeActivity : AppCompatActivity(), ConnectivityReceiver.ConnectivityRecei
         val androidId = Settings.Secure.getString(contentResolver, Settings.Secure.ANDROID_ID)
 
 
-//        fetchDeviceInformation(androidId)
 
 
     }

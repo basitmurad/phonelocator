@@ -10,7 +10,7 @@ android {
 
     defaultConfig {
         applicationId = "com.example.locationtracker"
-        minSdk = 23
+        minSdk = 23  // You can keep this at 23 to support ZXing 3.6.0
         targetSdk = 35
         versionCode = 1
         versionName = "1.0"
@@ -19,7 +19,7 @@ android {
     }
 
     buildFeatures {
-        viewBinding= true
+        viewBinding = true
     }
 
     buildTypes {
@@ -31,10 +31,12 @@ android {
             )
         }
     }
+
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
     }
+
     kotlinOptions {
         jvmTarget = "1.8"
     }
@@ -55,36 +57,24 @@ dependencies {
     androidTestImplementation(libs.androidx.espresso.core)
 
     implementation(libs.circleimageview)
-
-
     implementation(libs.play.services.location.v1800)
     implementation(libs.androidx.preference.ktx)
-
-
 
     implementation(libs.gson)
     implementation(libs.androidx.work.runtime.ktx)
     implementation(libs.retrofit)
     implementation(libs.converter.gson)
 
-    implementation(libs.play.services.location) // Example for Location
+    implementation(libs.play.services.location)
     implementation(libs.androidx.work.runtime.ktx.v281)
 
     implementation(libs.okhttp)
-
     implementation(libs.kotlinx.coroutines.android)
-
     implementation(libs.logging.interceptor)
-
     implementation(libs.kotlinx.serialization.json)
+    implementation(libs.okhttp.v490)
+    implementation(libs.glide)
+    annotationProcessor(libs.compiler)
 
-    implementation (libs.okhttp.v490)
-
-    implementation (libs.glide)
-    annotationProcessor (libs.compiler)
-
-    implementation ("com.journeyapps:zxing-android-embedded:4.3.0")
-
-    implementation ("com.karumi:dexter:6.2.2")
+    // Add ZXing dependency
 }
-

@@ -217,8 +217,4 @@
     <string msgid="3124740595719787496" name="tooltip_label">"εμφάνιση επεξήγησης εργαλείου"</string>
     <string msgid="3140233346420563315" name="v7_preference_off">"ΑΝΕΝΕΡΓΗ"</string>
     <string msgid="89551595707643515" name="v7_preference_on">"ΕΝΕΡΓΗ"</string>
-    <string name="zxing_app_name">Barcode Scanner</string>
-    <string name="zxing_button_ok">OK</string>
-    <string name="zxing_msg_camera_framework_bug">Συγνώμη, προέκυψε ένα πρόβλημα με την κάμερα. Ίσως χρειαστεί να επανεκιννήσετε τη συσκευή.</string>
-    <string name="zxing_msg_default_status">Τοποθετήστε ένα barcode μέσα στο πλαίσιο για να το σκανάρετε.</string>
 </resources>

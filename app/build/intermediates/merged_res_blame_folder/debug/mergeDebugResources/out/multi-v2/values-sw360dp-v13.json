@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.locationtracker.app-mergeDebugResources-72:/values-sw360dp-v13/values-sw360dp-v13.xml",
+            "outputFile": "com.example.locationtracker.app-mergeDebugResources-70:/values-sw360dp-v13/values-sw360dp-v13.xml",
             "map": [
                 {
-                    "source": "/home/appomatrix/.gradle/caches/transforms-4/f750ff1a226f0bbb850fd6c27741febd/transformed/preference-1.2.1/res/values-sw360dp-v13/values-sw360dp-v13.xml",
+                    "source": "/home/appomatrix/.gradle/caches/transforms-4/d71f7834311482f8f56d15d4034f15c4/transformed/preference-1.2.1/res/values-sw360dp-v13/values-sw360dp-v13.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

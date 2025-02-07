@@ -120,8 +120,4 @@
     <string msgid="3124740595719787496" name="tooltip_label">"mostrar dica"</string>
     <string msgid="3140233346420563315" name="v7_preference_off">"DESATIVADO"</string>
     <string msgid="89551595707643515" name="v7_preference_on">"ATIVADO"</string>
-    <string name="zxing_app_name">Barcode Scanner</string>
-    <string name="zxing_button_ok">OK</string>
-    <string name="zxing_msg_camera_framework_bug">Desculpe, a câmera do Android encontrou um problema. Poderá precisar de reiniciar o dispositivo.</string>
-    <string name="zxing_msg_default_status">Alinhar código de barras com o exemplo para ser lido.</string>
 </resources>

@@ -219,8 +219,4 @@
     <string msgid="3124740595719787496" name="tooltip_label">"pokaži opis orodja"</string>
     <string msgid="3140233346420563315" name="v7_preference_off">"IZKLOPLJENO"</string>
     <string msgid="89551595707643515" name="v7_preference_on">"VKLOPLJENO"</string>
-    <string name="zxing_app_name">Barcode Scanner</string>
-    <string name="zxing_button_ok">V redu</string>
-    <string name="zxing_msg_camera_framework_bug">Oprostite, Android kamera je naletela na težave. Mogoče boste morali ponovno zagnati napravo.</string>
-    <string name="zxing_msg_default_status">Za branje postavite črtno kodo znotraj iskala.</string>
 </resources>
