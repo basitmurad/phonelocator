@@ -4,7 +4,7 @@
             "outputFile": "com.example.locationtracker.app-mergeDebugResources-70:/values-small-v4/values-small-v4.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\swp\\.gradle\\caches\\transforms-4\\837ab281ef87bc4ccc67156334b305b4\\transformed\\material-1.12.0\\res\\values-small-v4\\values-small-v4.xml",
+                    "source": "/home/appomatrix/.gradle/caches/transforms-4/837ab281ef87bc4ccc67156334b305b4/transformed/material-1.12.0/res/values-small-v4/values-small-v4.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",

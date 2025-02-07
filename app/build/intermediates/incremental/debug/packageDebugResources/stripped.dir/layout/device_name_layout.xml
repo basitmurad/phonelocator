@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:layoutDirection="ltr"
+
+    android:background="@drawable/dialoge_back"
+    android:padding="16dp">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_gravity="center">
+
+        <!-- ImageView with Circle Background -->
+        <ImageView
+            android:id="@+id/imageView11"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center"
+            android:backgroundTint="@color/primary1"
+            android:background="@drawable/circle_background"
+            tools:ignore="MissingConstraints" />
+
+        <!-- Icon to change image, positioned at the bottom right -->
+        <ImageView
+            android:id="@+id/changeImageIcon"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:src="@drawable/baseline_photo_camera_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/imageView11" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/displayNameDi"
+        android:layout_marginTop="8dp"
+        android:text="@string/i_phone_x"
+        android:textAlignment="center"
+        android:fontFamily="@font/pregular"
+        android:textColor="#000000"
+        android:textSize="18sp" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginBottom="16dp"
+        android:text="@string/change_display_name"
+        android:textAlignment="center"
+        android:textColor="#818181"
+        android:textSize="14sp"
+        android:fontFamily="@font/psemibold"/>
+
+    <!-- EditText below the TextView -->
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/displayNameEdit"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/back_editext"
+        android:hint="@string/enter_text_here"
+        android:padding="12dp" />
+
+    <!-- First Button below the EditText -->
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      >
+      <androidx.appcompat.widget.AppCompatButton
+          android:id="@+id/displayNameCancel"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="16dp"
+          android:background="@drawable/stroke_back"
+          android:fontFamily="@font/pmedium"
+          android:layout_weight="1"
+          android:layout_marginEnd="12dp"
+          android:layout_marginStart="12dp"
+          android:text="@string/cancel"
+          android:textColor="@color/primary"
+          android:textSize="16sp"
+          app:layout_constraintStart_toStartOf="@id/appCompatButton4"
+          app:layout_constraintEnd_toEndOf="@id/appCompatButton4"
+          app:layout_constraintTop_toBottomOf="@id/appCompatButton4" />
+      <androidx.appcompat.widget.AppCompatButton
+          android:id="@+id/displayNameButton"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="16dp"
+          android:layout_weight="1"
+          android:layout_marginEnd="12dp"
+          android:layout_marginStart="12dp"
+          android:background="@drawable/back_buttom"
+          android:fontFamily="@font/pmedium"
+          android:text="@string/done"
+          android:textColor="@color/black"
+          android:textSize="16sp"
+          app:layout_constraintStart_toStartOf="@id/appCompatButton4"
+          app:layout_constraintEnd_toEndOf="@id/appCompatButton4"
+          app:layout_constraintTop_toBottomOf="@id/appCompatButton4" />
+
+  </LinearLayout>
+
+</LinearLayout>
