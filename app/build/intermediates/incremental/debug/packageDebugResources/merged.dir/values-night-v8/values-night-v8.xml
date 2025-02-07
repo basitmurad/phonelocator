@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="http://schemas.android.com/tools">
+    <style name="Base.Theme.LocationTracker" parent="Theme.Material3.DayNight.NoActionBar">
+        
+        <item name="colorPrimary">@color/white</item>
+        <item name="colorPrimaryVariant">@color/white</item>
+        <item name="colorOnPrimary">@color/white</item>
+
+        
+        <item name="android:windowIsTranslucent">false</item>
+
+        
+        <item name="android:statusBarColor">@android:color/white</item>
+        
+        <item name="android:windowLightStatusBar" ns1:ignore="NewApi">true</item>
+    </style>
+    <style name="Theme.LocationTracker" parent="Base.Theme.LocationTracker">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:statusBarColor">@android:color/white</item>
+        <item name="android:windowLightStatusBar" ns1:ignore="NewApi">true</item>
+    </style>
+</resources>

@@ -1,10 +1,27 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.locationtracker.app-mergeDebugResources-70:/values-night-v8/values-night-v8.xml",
+            "outputFile": "com.example.locationtracker.app-mergeDebugResources-72:/values-night-v8/values-night-v8.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\swp\\.gradle\\caches\\transforms-4\\7d220971b4920f5d72f5d6a769b18d60\\transformed\\material-1.12.0\\res\\values-night-v8\\values-night-v8.xml",
+                    "source": "/home/appomatrix/.gradle/caches/transforms-4/9136da9e1516fb5e05ef18f088acca24/transformed/appcompat-1.7.0/res/values-night-v8/values-night-v8.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,125,209,293,389,491,593,687",
+                        "endColumns": "69,83,83,95,101,101,93,88",
+                        "endOffsets": "120,204,288,384,486,588,682,771"
+                    },
+                    "to": {
+                        "startLines": "16,17,18,19,20,21,22,54",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "630,700,784,868,964,1066,1168,4455",
+                        "endColumns": "69,83,83,95,101,101,93,88",
+                        "endOffsets": "695,779,863,959,1061,1163,1257,4539"
+                    }
+                },
+                {
+                    "source": "/home/appomatrix/.gradle/caches/transforms-4/7d220971b4920f5d72f5d6a769b18d60/transformed/material-1.12.0/res/values-night-v8/values-night-v8.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -21,7 +38,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\swp\\StudioProjects\\LocationTracker\\app\\src\\main\\res\\values-night\\themes.xml",
+                    "source": "/home/appomatrix/AndroidStudioProjects/phonelocator/app/src/main/res/values-night/themes.xml",
                     "from": {
                         "startLines": "2,18",
                         "startColumns": "4,4",
@@ -37,23 +54,6 @@
                         "endLines": "15,27",
                         "endColumns": "12,12",
                         "endOffsets": "625,1562"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\swp\\.gradle\\caches\\transforms-4\\9136da9e1516fb5e05ef18f088acca24\\transformed\\appcompat-1.7.0\\res\\values-night-v8\\values-night-v8.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,125,209,293,389,491,593,687",
-                        "endColumns": "69,83,83,95,101,101,93,88",
-                        "endOffsets": "120,204,288,384,486,588,682,771"
-                    },
-                    "to": {
-                        "startLines": "16,17,18,19,20,21,22,54",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "630,700,784,868,964,1066,1168,4455",
-                        "endColumns": "69,83,83,95,101,101,93,88",
-                        "endOffsets": "695,779,863,959,1061,1163,1257,4539"
                     }
                 }
             ]

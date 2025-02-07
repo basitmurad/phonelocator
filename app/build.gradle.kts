@@ -55,21 +55,12 @@ dependencies {
     androidTestImplementation(libs.androidx.espresso.core)
 
     implementation(libs.circleimageview)
-    implementation(platform(libs.firebase.bom)) // Firebase BOM removed
-    // implementation(libs.firebase.analytics) // Firebase Analytics removed
-    // implementation(libs.firebase.database) // Firebase Realtime Database removed
-    // implementation(libs.firebase.auth) // Firebase Authentication removed
-    // implementation(libs.firebase.dynamic.links) // Firebase Dynamic Links removed
+
 
     implementation(libs.play.services.location.v1800)
     implementation(libs.androidx.preference.ktx)
 
-    // Firebase Functions and related dependencies removed
-    // implementation(libs.google.firebase.functions.ktx)
-    // implementation(libs.firebase.analytics.ktx)
-    // implementation(libs.firebase.dynamic.links.ktx)
-    // implementation(libs.com.google.firebase.firebase.functions.ktx)
-    // implementation(libs.firebase.functions.ktx.v2010)
+
 
     implementation(libs.gson)
     implementation(libs.androidx.work.runtime.ktx)
@@ -92,6 +83,8 @@ dependencies {
     implementation (libs.glide)
     annotationProcessor (libs.compiler)
 
+    implementation ("com.journeyapps:zxing-android-embedded:4.3.0")
 
+    implementation ("com.karumi:dexter:6.2.2")
 }
 

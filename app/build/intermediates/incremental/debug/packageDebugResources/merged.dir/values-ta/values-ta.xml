@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="http://schemas.android.com/tools">
+    <string name="_234d4e5" ns1:ignore="MissingTranslation">234d4e5</string>
+    <string name="add" ns1:ignore="MissingTranslation">சேர்</string>
+    <string name="all_devices" translatable="false">எல்லா பரிகரங்களும்</string>
+    <string name="allow" ns1:ignore="MissingTranslation">அனுமதிக்கவும்</string>
+    <string name="allow_location_access" ns1:ignore="MissingTranslation">இடம் அணுகலை அனுமதிக்கவும்</string>
+    <string name="allow_permissions" ns1:ignore="MissingTranslation">அனுமதிகளை வழங்கவும்</string>
+    <string name="app_name">இடம் கண்காணிப்பு</string>
+    <string name="auto_start" ns1:ignore="MissingTranslation">ஆட்டோ ஸ்டார்ட்</string>
+    <string name="back" ns1:ignore="MissingTranslation">பின்வாங்கவும்</string>
+    <string name="be_located" ns1:ignore="MissingTranslation">இடம் கண்டறியவும்</string>
+    <string name="cancel" ns1:ignore="MissingTranslation">ரத்து செய்யவும்</string>
+    <string name="cancel2" ns1:ignore="MissingTranslation">ரத்து செய்யவும்</string>
+    <string name="change_display_name" ns1:ignore="MissingTranslation">காட்சி பெயரை மாற்றவும்</string>
+    <string name="confirm" ns1:ignore="MissingTranslation">உறுதிப்படுத்தவும்</string>
+    <string name="congratulations_you_have_successfully_connected_with_the_device" ns1:ignore="MissingTranslation">வாழ்த்துகள், நீங்கள் சாதனத்துடன் வெற்றிகரமாக இணைந்துவிட்டீர்கள்.</string>
+    <string name="connect" translatable="false">இணைக்கவும்</string>
+    <string name="connected_now" ns1:ignore="MissingTranslation">இப்போது இணைக்கப்பட்டுள்ளது</string>
+    <string name="copy" ns1:ignore="MissingTranslation">பிரதி எடு</string>
+    <string name="d" ns1:ignore="MissingTranslation"/>
+    <string name="device_name" ns1:ignore="MissingTranslation">பரிகரத்தின் பெயர்</string>
+    <string name="devices" translatable="false">பரிகரங்கள்</string>
+    <string name="dialog_icon" ns1:ignore="MissingTranslation">படம்</string>
+    <string name="done" ns1:ignore="MissingTranslation">நிறைவு</string>
+    <string name="done1" ns1:ignore="MissingTranslation">நிறைவு</string>
+    <string name="enter_code_here" ns1:ignore="MissingTranslation">இங்கு குறியீட்டை உள்ளிடவும்</string>
+    <string name="enter_text_here" ns1:ignore="MissingTranslation">இங்கே உரை உள்ளிடவும்</string>
+    <string name="enter_the_invitation_code" ns1:ignore="MissingTranslation">அழைப்புக் குறியீட்டை உள்ளிடவும்</string>
+    <string name="enter_the_invitation_code_from_other_to_share_your_location_safely" ns1:ignore="MissingTranslation">மற்றவரிடமிருந்து உங்கள் இடத்தை பாதுகாப்பாக பகிர்ந்திட அழைப்புக் குறியீட்டை உள்ளிடவும்</string>
+    <string name="enter_your_display_name" ns1:ignore="MissingTranslation">உங்கள் காட்சி பெயரை உள்ளிடவும்</string>
+    <string name="feed_back" ns1:ignore="MissingTranslation">பின்னூட்டம்</string>
+    <string name="feedback" ns1:ignore="MissingTranslation">பின்னூட்டம்</string>
+    <string name="fri_13_dec_2024" ns1:ignore="MissingTranslation">வெள்ளி, 13 டிசம்பர் 2024</string>
+    <string name="get_alerts_and_stay_connected_enjoy_peace_of_mind_knowing_your_child_is_safe" ns1:ignore="MissingTranslation">எச்சரிக்கைகள் பெறவும் மற்றும் இணைந்திருங்கள். உங்கள் குழந்தை பாதுகாப்பில் இருப்பதை அறிந்து மனம் அமைதியுடன் இருங்கள்.</string>
+    <string name="go_to_settings" ns1:ignore="MissingTranslation">அமைப்புகளுக்கு செல்லவும்</string>
+    <string name="great" ns1:ignore="MissingTranslation">அதிகாரம்!</string>
+    <string name="hello_blank_fragment" ns1:ignore="MissingTranslation">வணக்கம், காலியான துண்டு</string>
+    <string name="home" ns1:ignore="MissingTranslation">முகப்பு பக்கம்</string>
+    <string name="how_to_use" ns1:ignore="MissingTranslation">எப்படி பயன்படுத்துவது</string>
+    <string name="how_would_you_rate_our_app_experience" ns1:ignore="MissingTranslation">நீங்கள் எவ்வாறு எங்கள் ஆப் அனுபவத்தை மதிப்பிடுவீர்கள்?</string>
+    <string name="i_phone_x" translatable="false">ஐபோன் X</string>
+    <string name="icon" ns1:ignore="MissingTranslation">படம்</string>
+    <string name="internet_connection_is_required_for_this_app_to_function_properly_please_enable_internet_connectivity">இந்த செயலி சரியாக செயல்பட इंटरनेट கनेक்டிவிட்டி தேவை. தயவுசெய்து இணைய இணைப்பை இயக்கவும்.</string>
+    <string name="internet_disabled">இணையம் முடக்கம்</string>
+    <string name="invite_others" ns1:ignore="MissingTranslation">மற்றவர்களை அழைக்கவும்</string>
+    <string name="join" ns1:ignore="MissingTranslation">சேரவும்</string>
+    <string name="jutial_gilgit" ns1:ignore="MissingTranslation">ஜூடியல், கில்கிட்</string>
+    <string name="language" ns1:ignore="MissingTranslation">மொழி</string>
+    <string name="last_map" ns1:ignore="MissingTranslation">கடைசி வரைபடம்</string>
+    <string name="live_location" ns1:ignore="MissingTranslation">நேரடி இடம்</string>
+    <string name="location_is_required_for_this_app_to_function_properly_please_enable_location_services" ns1:ignore="MissingTranslation">இந்த செயலி சரியாக செயல்பட இடம் சேவைகள் தேவை. தயவுசெய்து இடம் சேவைகளை இயக்கவும்.</string>
+    <string name="motion_tracking" ns1:ignore="MissingTranslation">சுழற்சி கண்காணிப்பு</string>
+    <string name="motion_tracking_permission" ns1:ignore="MissingTranslation">சுழற்சி கண்காணிப்பு அனுமதி</string>
+    <string name="n" translatable="false">என்</string>
+    <string name="no" ns1:ignore="MissingTranslation">இல்லை</string>
+    <string name="notifications" ns1:ignore="MissingTranslation">அறிவிப்புகள்</string>
+    <string name="or" ns1:ignore="MissingTranslation">அல்லது</string>
+    <string name="permission_setup" ns1:ignore="MissingTranslation">அனுமதி அமைப்பு!</string>
+    <string name="please_grant_the_following_permissions" ns1:ignore="MissingTranslation">தயவுசெய்து பின்வரும் அனுமதிகளை வழங்கவும்:</string>
+    <string name="privacy_policy" ns1:ignore="MissingTranslation">தனியுரிமை கொள்கை</string>
+    <string name="profile" translatable="false">சுயவிவரம்</string>
+    <string name="protected_app" ns1:ignore="MissingTranslation">பாதுகாப்பான செயலி</string>
+    <string name="rate_us" ns1:ignore="MissingTranslation">எங்களை மதிப்பிடுக</string>
+    <string name="send_your_code_to_start_tracking_others_location" ns1:ignore="MissingTranslation">மற்றவர்களின் இடத்தை கண்காணிக்க உங்கள் குறியீட்டை அனுப்பவும்</string>
+    <string name="share" ns1:ignore="MissingTranslation">பகிரவும்</string>
+    <string name="share_through" ns1:ignore="MissingTranslation">மூலம் பகிரவும்</string>
+    <string name="start_now" ns1:ignore="MissingTranslation">இப்போது தொடங்கவும்</string>
+    <string name="start_safe_location_sharing_with" ns1:ignore="MissingTranslation">பாதுகாப்பான இடம் பகிர்வு தொடங்கவும்!</string>
+    <string name="start_tracking" ns1:ignore="MissingTranslation">கண்காணிப்பு தொடங்கவும்</string>
+    <string name="start_tracking_child_s_location" ns1:ignore="MissingTranslation">குழந்தையின் இடம் கண்காணிப்பைத் தொடங்கவும்</string>
+    <string name="submit" ns1:ignore="MissingTranslation">சமர்ப்பிக்கவும்</string>
+    <string name="tap_here_to_locate_your_family" ns1:ignore="MissingTranslation">உங்கள் குடும்பத்தை கண்டறிய இங்கு டாப் செய்யவும்</string>
+    <string name="to_track_your_movements_the_app_requires_permission_to_access_motion_sensors_please_enable_motion_tracking_in_your_device_settings" ns1:ignore="MissingTranslation">உங்கள் இயக்கங்களை கண்காணிக்க, செயலிக்கு இயக்க சென்சார்களுக்கு அணுகல் அனுமதி தேவை. தயவுசெய்து உங்கள் சாதன அமைப்புகளில் இயக்க கண்காணிப்பை இயக்கவும்.</string>
+    <string name="todo" ns1:ignore="MissingTranslation">செய்ய வேண்டும்</string>
+    <string name="view_in_map" ns1:ignore="MissingTranslation">வரைபடத்தில் காண்க</string>
+    <string name="we_need_your_permission_to_provide_accurate_tracking_and_alerts" ns1:ignore="MissingTranslation">நாங்கள் சரியான கண்காணிப்பு மற்றும் எச்சரிக்கைகளை வழங்க உங்கள் அனுமதியை தேவைப்படுகிறோம்.</string>
+    <string name="we_value_your_opinion" ns1:ignore="MissingTranslation">நாங்கள் உங்கள் கருத்தை மதிக்கின்றோம்!</string>
+    <string name="would_you_like_to_confirm_vivo_y20s_s_invitation" ns1:ignore="MissingTranslation">நீங்கள் விவோ Y20s இன் அழைப்பை உறுதிப்படுத்த விரும்புகிறீர்களா?</string>
+    <string name="your_feedback_or_suggestion" ns1:ignore="MissingTranslation">உங்கள் பின்னூட்டம் அல்லது பரிந்துரை......</string>
+    <string name="your_name" ns1:ignore="MissingTranslation">உங்கள் பெயர்</string>
+    <string name="your_name_makes_it_easier_for_loved_ones_to_find_you" ns1:ignore="MissingTranslation">உங்கள் பெயர் உங்கள் அன்பானவர்களுக்கு உங்களை கண்டுபிடிக்க எளிதாகிறது</string>
+</resources>

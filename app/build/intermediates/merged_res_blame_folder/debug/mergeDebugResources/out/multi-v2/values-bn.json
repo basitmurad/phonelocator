@@ -1,61 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.locationtracker.app-mergeDebugResources-70:/values-bn/values-bn.xml",
+            "outputFile": "com.example.locationtracker.app-mergeDebugResources-72:/values-bn/values-bn.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\swp\\.gradle\\caches\\transforms-4\\7bee088eb759f838faf45013c1d749a2\\transformed\\foundation-release\\res\\values-bn\\values-bn.xml",
-                    "from": {
-                        "startLines": "2,3",
-                        "startColumns": "4,4",
-                        "startOffsets": "55,140",
-                        "endColumns": "84,84",
-                        "endOffsets": "135,220"
-                    },
-                    "to": {
-                        "startLines": "215,216",
-                        "startColumns": "4,4",
-                        "startOffsets": "20638,20723",
-                        "endColumns": "84,84",
-                        "endOffsets": "20718,20803"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\swp\\.gradle\\caches\\transforms-4\\7b758f1ce19f73c0aa05d7d7fe0154f5\\transformed\\core-1.15.0\\res\\values-bn\\values-bn.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,154,256,358,461,562,664,784",
-                        "endColumns": "98,101,101,102,100,101,119,100",
-                        "endOffsets": "149,251,353,456,557,659,779,880"
-                    },
-                    "to": {
-                        "startLines": "38,39,40,41,42,43,44,210",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "3518,3617,3719,3821,3924,4025,4127,20107",
-                        "endColumns": "98,101,101,102,100,101,119,100",
-                        "endOffsets": "3612,3714,3816,3919,4020,4122,4242,20203"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\swp\\.gradle\\caches\\transforms-4\\9a92d37820aca5dec210dfed5544810d\\transformed\\play-services-base-18.5.0\\res\\values-bn\\values.xml",
-                    "from": {
-                        "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
-                        "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
-                        "startOffsets": "193,298,453,577,684,816,934,1042,1142,1281,1386,1538,1662,1791,1935,1991,2054",
-                        "endColumns": "104,154,123,106,131,117,107,99,138,104,151,123,128,143,55,62,85",
-                        "endOffsets": "297,452,576,683,815,933,1041,1141,1280,1385,1537,1661,1790,1934,1990,2053,2139"
-                    },
-                    "to": {
-                        "startLines": "50,51,52,53,54,55,56,57,59,60,61,62,63,64,65,66,67",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "4727,4836,4995,5123,5234,5370,5492,5604,5860,6003,6112,6268,6396,6529,6677,6737,6804",
-                        "endColumns": "108,158,127,110,135,121,111,103,142,108,155,127,132,147,59,66,89",
-                        "endOffsets": "4831,4990,5118,5229,5365,5487,5599,5703,5998,6107,6263,6391,6524,6672,6732,6799,6889"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\swp\\.gradle\\caches\\transforms-4\\9136da9e1516fb5e05ef18f088acca24\\transformed\\appcompat-1.7.0\\res\\values-bn\\values-bn.xml",
+                    "source": "/home/appomatrix/.gradle/caches/transforms-4/9136da9e1516fb5e05ef18f088acca24/transformed/appcompat-1.7.0/res/values-bn/values-bn.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -72,7 +21,92 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\swp\\.gradle\\caches\\transforms-4\\7d220971b4920f5d72f5d6a769b18d60\\transformed\\material-1.12.0\\res\\values-bn\\values-bn.xml",
+                    "source": "/home/appomatrix/.gradle/caches/transforms-4/7b758f1ce19f73c0aa05d7d7fe0154f5/transformed/core-1.15.0/res/values-bn/values-bn.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,154,256,358,461,562,664,784",
+                        "endColumns": "98,101,101,102,100,101,119,100",
+                        "endOffsets": "149,251,353,456,557,659,779,880"
+                    },
+                    "to": {
+                        "startLines": "38,39,40,41,42,43,44,210",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "3518,3617,3719,3821,3924,4025,4127,20107",
+                        "endColumns": "98,101,101,102,100,101,119,100",
+                        "endOffsets": "3612,3714,3816,3919,4020,4122,4242,20203"
+                    }
+                },
+                {
+                    "source": "/home/appomatrix/.gradle/caches/transforms-4/5fea76258b95e319ebf9249734300f90/transformed/ui-release/res/values-bn/values-bn.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "105,199,283,373,471,557,636,742,829,918,996,1077,1160,1236,1313,1389,1464,1532",
+                        "endColumns": "93,83,89,97,85,78,105,86,88,77,80,82,75,76,75,74,67,117",
+                        "endOffsets": "194,278,368,466,552,631,737,824,913,991,1072,1155,1231,1308,1384,1459,1527,1645"
+                    },
+                    "to": {
+                        "startLines": "48,49,69,70,71,77,78,195,196,200,201,205,207,208,209,212,213,214",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "4549,4643,6966,7056,7154,7608,7687,18829,18916,19314,19392,19722,19878,19954,20031,20377,20452,20520",
+                        "endColumns": "93,83,89,97,85,78,105,86,88,77,80,82,75,76,75,74,67,117",
+                        "endOffsets": "4638,4722,7051,7149,7235,7682,7788,18911,19000,19387,19468,19800,19949,20026,20102,20447,20515,20633"
+                    }
+                },
+                {
+                    "source": "/home/appomatrix/.gradle/caches/transforms-4/bbd0a43bd0a110660382ea2e1b6b233b/transformed/play-services-basement-18.4.0/res/values-bn/values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "195",
+                        "endColumns": "147",
+                        "endOffsets": "342"
+                    },
+                    "to": {
+                        "startLines": "58",
+                        "startColumns": "4",
+                        "startOffsets": "5708",
+                        "endColumns": "151",
+                        "endOffsets": "5855"
+                    }
+                },
+                {
+                    "source": "/home/appomatrix/.gradle/caches/transforms-4/9a92d37820aca5dec210dfed5544810d/transformed/play-services-base-18.5.0/res/values-bn/values.xml",
+                    "from": {
+                        "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
+                        "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
+                        "startOffsets": "193,298,453,577,684,816,934,1042,1142,1281,1386,1538,1662,1791,1935,1991,2054",
+                        "endColumns": "104,154,123,106,131,117,107,99,138,104,151,123,128,143,55,62,85",
+                        "endOffsets": "297,452,576,683,815,933,1041,1141,1280,1385,1537,1661,1790,1934,1990,2053,2139"
+                    },
+                    "to": {
+                        "startLines": "50,51,52,53,54,55,56,57,59,60,61,62,63,64,65,66,67",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "4727,4836,4995,5123,5234,5370,5492,5604,5860,6003,6112,6268,6396,6529,6677,6737,6804",
+                        "endColumns": "108,158,127,110,135,121,111,103,142,108,155,127,132,147,59,66,89",
+                        "endOffsets": "4831,4990,5118,5229,5365,5487,5599,5703,5998,6107,6263,6391,6524,6672,6732,6799,6889"
+                    }
+                },
+                {
+                    "source": "/home/appomatrix/.gradle/caches/transforms-4/f750ff1a226f0bbb850fd6c27741febd/transformed/preference-1.2.1/res/values-bn/values-bn.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8",
+                        "startColumns": "4,4,4,4,4,4,4",
+                        "startOffsets": "105,177,261,341,490,659,740",
+                        "endColumns": "71,83,79,148,168,80,77",
+                        "endOffsets": "172,256,336,485,654,735,813"
+                    },
+                    "to": {
+                        "startLines": "68,74,197,199,211,217,218",
+                        "startColumns": "4,4,4,4,4,4,4",
+                        "startOffsets": "6894,7367,19005,19165,20208,20808,20889",
+                        "endColumns": "71,83,79,148,168,80,77",
+                        "endOffsets": "6961,7446,19080,19309,20372,20884,20962"
+                    }
+                },
+                {
+                    "source": "/home/appomatrix/.gradle/caches/transforms-4/7d220971b4920f5d72f5d6a769b18d60/transformed/material-1.12.0/res/values-bn/values-bn.xml",
                     "from": {
                         "startLines": "2,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -91,7 +125,24 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\swp\\.gradle\\caches\\transforms-4\\5517ce298313952b81a3cda2b17f8cd1\\transformed\\material3-release\\res\\values-bn\\values-bn.xml",
+                    "source": "/home/appomatrix/.gradle/caches/transforms-4/7bee088eb759f838faf45013c1d749a2/transformed/foundation-release/res/values-bn/values-bn.xml",
+                    "from": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,140",
+                        "endColumns": "84,84",
+                        "endOffsets": "135,220"
+                    },
+                    "to": {
+                        "startLines": "215,216",
+                        "startColumns": "4,4",
+                        "startOffsets": "20638,20723",
+                        "endColumns": "84,84",
+                        "endOffsets": "20718,20803"
+                    }
+                },
+                {
+                    "source": "/home/appomatrix/.gradle/caches/transforms-4/5517ce298313952b81a3cda2b17f8cd1/transformed/material3-release/res/values-bn/values-bn.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -105,57 +156,6 @@
                         "startOffsets": "7854,7992,8129,8248,8382,8499,8598,8714,8856,8977,9119,9204,9310,9404,9505,9634,9763,9874,10003,10130,10260,10440,10562,10682,10804,10935,11030,11125,11258,11405,11502,11607,11717,11844,11976,12083,12184,12261,12364,12464,12570,12661,12751,12854,12934,13019,13120,13224,13317,13422,13509,13615,13714,13822,13940,14020,14120",
                         "endColumns": "137,136,118,133,116,98,115,141,120,141,84,105,93,100,128,128,110,128,126,129,179,121,119,121,130,94,94,132,146,96,104,109,126,131,106,100,76,102,99,105,90,89,102,79,84,100,103,92,104,86,105,98,107,117,79,99,93",
                         "endOffsets": "7987,8124,8243,8377,8494,8593,8709,8851,8972,9114,9199,9305,9399,9500,9629,9758,9869,9998,10125,10255,10435,10557,10677,10799,10930,11025,11120,11253,11400,11497,11602,11712,11839,11971,12078,12179,12256,12359,12459,12565,12656,12746,12849,12929,13014,13115,13219,13312,13417,13504,13610,13709,13817,13935,14015,14115,14209"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\swp\\.gradle\\caches\\transforms-4\\f750ff1a226f0bbb850fd6c27741febd\\transformed\\preference-1.2.1\\res\\values-bn\\values-bn.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8",
-                        "startColumns": "4,4,4,4,4,4,4",
-                        "startOffsets": "105,177,261,341,490,659,740",
-                        "endColumns": "71,83,79,148,168,80,77",
-                        "endOffsets": "172,256,336,485,654,735,813"
-                    },
-                    "to": {
-                        "startLines": "68,74,197,199,211,217,218",
-                        "startColumns": "4,4,4,4,4,4,4",
-                        "startOffsets": "6894,7367,19005,19165,20208,20808,20889",
-                        "endColumns": "71,83,79,148,168,80,77",
-                        "endOffsets": "6961,7446,19080,19309,20372,20884,20962"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\swp\\.gradle\\caches\\transforms-4\\5fea76258b95e319ebf9249734300f90\\transformed\\ui-release\\res\\values-bn\\values-bn.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "105,199,283,373,471,557,636,742,829,918,996,1077,1160,1236,1313,1389,1464,1532",
-                        "endColumns": "93,83,89,97,85,78,105,86,88,77,80,82,75,76,75,74,67,117",
-                        "endOffsets": "194,278,368,466,552,631,737,824,913,991,1072,1155,1231,1308,1384,1459,1527,1645"
-                    },
-                    "to": {
-                        "startLines": "48,49,69,70,71,77,78,195,196,200,201,205,207,208,209,212,213,214",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "4549,4643,6966,7056,7154,7608,7687,18829,18916,19314,19392,19722,19878,19954,20031,20377,20452,20520",
-                        "endColumns": "93,83,89,97,85,78,105,86,88,77,80,82,75,76,75,74,67,117",
-                        "endOffsets": "4638,4722,7051,7149,7235,7682,7788,18911,19000,19387,19468,19800,19949,20026,20102,20447,20515,20633"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\swp\\.gradle\\caches\\transforms-4\\bbd0a43bd0a110660382ea2e1b6b233b\\transformed\\play-services-basement-18.4.0\\res\\values-bn\\values.xml",
-                    "from": {
-                        "startLines": "4",
-                        "startColumns": "0",
-                        "startOffsets": "195",
-                        "endColumns": "147",
-                        "endOffsets": "342"
-                    },
-                    "to": {
-                        "startLines": "58",
-                        "startColumns": "4",
-                        "startOffsets": "5708",
-                        "endColumns": "151",
-                        "endOffsets": "5855"
                     }
                 }
             ]

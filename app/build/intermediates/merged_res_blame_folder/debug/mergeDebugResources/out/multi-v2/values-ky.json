@@ -1,44 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.locationtracker.app-mergeDebugResources-70:/values-ky/values-ky.xml",
+            "outputFile": "com.example.locationtracker.app-mergeDebugResources-72:/values-ky/values-ky.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\swp\\.gradle\\caches\\transforms-4\\7bee088eb759f838faf45013c1d749a2\\transformed\\foundation-release\\res\\values-ky\\values-ky.xml",
-                    "from": {
-                        "startLines": "2,3",
-                        "startColumns": "4,4",
-                        "startOffsets": "55,154",
-                        "endColumns": "98,103",
-                        "endOffsets": "149,253"
-                    },
-                    "to": {
-                        "startLines": "215,216",
-                        "startColumns": "4,4",
-                        "startOffsets": "20758,20857",
-                        "endColumns": "98,103",
-                        "endOffsets": "20852,20956"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\swp\\.gradle\\caches\\transforms-4\\f750ff1a226f0bbb850fd6c27741febd\\transformed\\preference-1.2.1\\res\\values-ky\\values-ky.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8",
-                        "startColumns": "4,4,4,4,4,4,4",
-                        "startOffsets": "105,176,268,347,488,657,738",
-                        "endColumns": "70,91,78,140,168,80,78",
-                        "endOffsets": "171,263,342,483,652,733,812"
-                    },
-                    "to": {
-                        "startLines": "68,74,197,199,211,217,218",
-                        "startColumns": "4,4,4,4,4,4,4",
-                        "startOffsets": "6941,7431,19129,19290,20324,20961,21042",
-                        "endColumns": "70,91,78,140,168,80,78",
-                        "endOffsets": "7007,7518,19203,19426,20488,21037,21116"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\swp\\.gradle\\caches\\transforms-4\\9136da9e1516fb5e05ef18f088acca24\\transformed\\appcompat-1.7.0\\res\\values-ky\\values-ky.xml",
+                    "source": "/home/appomatrix/.gradle/caches/transforms-4/9136da9e1516fb5e05ef18f088acca24/transformed/appcompat-1.7.0/res/values-ky/values-ky.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -55,24 +21,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\swp\\.gradle\\caches\\transforms-4\\5fea76258b95e319ebf9249734300f90\\transformed\\ui-release\\res\\values-ky\\values-ky.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "105,198,282,392,492,577,659,757,846,931,1016,1103,1176,1250,1323,1396,1475,1543",
-                        "endColumns": "92,83,109,99,84,81,97,88,84,84,86,72,73,72,72,78,67,117",
-                        "endOffsets": "193,277,387,487,572,654,752,841,926,1011,1098,1171,1245,1318,1391,1470,1538,1656"
-                    },
-                    "to": {
-                        "startLines": "48,49,69,70,71,77,78,195,196,200,201,205,207,208,209,212,213,214",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "4560,4653,7012,7122,7222,7687,7769,18955,19044,19431,19516,19847,20003,20077,20150,20493,20572,20640",
-                        "endColumns": "92,83,109,99,84,81,97,88,84,84,86,72,73,72,72,78,67,117",
-                        "endOffsets": "4648,4732,7117,7217,7302,7764,7862,19039,19124,19511,19598,19915,20072,20145,20218,20567,20635,20753"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\swp\\.gradle\\caches\\transforms-4\\9a92d37820aca5dec210dfed5544810d\\transformed\\play-services-base-18.5.0\\res\\values-ky\\values.xml",
+                    "source": "/home/appomatrix/.gradle/caches/transforms-4/9a92d37820aca5dec210dfed5544810d/transformed/play-services-base-18.5.0/res/values-ky/values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
                         "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
@@ -89,7 +38,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\swp\\.gradle\\caches\\transforms-4\\5517ce298313952b81a3cda2b17f8cd1\\transformed\\material3-release\\res\\values-ky\\values-ky.xml",
+                    "source": "/home/appomatrix/.gradle/caches/transforms-4/5517ce298313952b81a3cda2b17f8cd1/transformed/material3-release/res/values-ky/values-ky.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -106,7 +55,24 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\swp\\.gradle\\caches\\transforms-4\\7d220971b4920f5d72f5d6a769b18d60\\transformed\\material-1.12.0\\res\\values-ky\\values-ky.xml",
+                    "source": "/home/appomatrix/.gradle/caches/transforms-4/f750ff1a226f0bbb850fd6c27741febd/transformed/preference-1.2.1/res/values-ky/values-ky.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8",
+                        "startColumns": "4,4,4,4,4,4,4",
+                        "startOffsets": "105,176,268,347,488,657,738",
+                        "endColumns": "70,91,78,140,168,80,78",
+                        "endOffsets": "171,263,342,483,652,733,812"
+                    },
+                    "to": {
+                        "startLines": "68,74,197,199,211,217,218",
+                        "startColumns": "4,4,4,4,4,4,4",
+                        "startOffsets": "6941,7431,19129,19290,20324,20961,21042",
+                        "endColumns": "70,91,78,140,168,80,78",
+                        "endOffsets": "7007,7518,19203,19426,20488,21037,21116"
+                    }
+                },
+                {
+                    "source": "/home/appomatrix/.gradle/caches/transforms-4/7d220971b4920f5d72f5d6a769b18d60/transformed/material-1.12.0/res/values-ky/values-ky.xml",
                     "from": {
                         "startLines": "2,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -125,24 +91,41 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\swp\\.gradle\\caches\\transforms-4\\7b758f1ce19f73c0aa05d7d7fe0154f5\\transformed\\core-1.15.0\\res\\values-ky\\values-ky.xml",
+                    "source": "/home/appomatrix/.gradle/caches/transforms-4/7bee088eb759f838faf45013c1d749a2/transformed/foundation-release/res/values-ky/values-ky.xml",
                     "from": {
-                        "startLines": "2,3,4,5,6,7,8,9",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,155,257,360,467,569,673,784",
-                        "endColumns": "99,101,102,106,101,103,110,100",
-                        "endOffsets": "150,252,355,462,564,668,779,880"
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,154",
+                        "endColumns": "98,103",
+                        "endOffsets": "149,253"
                     },
                     "to": {
-                        "startLines": "38,39,40,41,42,43,44,210",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "3505,3605,3707,3810,3917,4019,4123,20223",
-                        "endColumns": "99,101,102,106,101,103,110,100",
-                        "endOffsets": "3600,3702,3805,3912,4014,4118,4229,20319"
+                        "startLines": "215,216",
+                        "startColumns": "4,4",
+                        "startOffsets": "20758,20857",
+                        "endColumns": "98,103",
+                        "endOffsets": "20852,20956"
                     }
                 },
                 {
-                    "source": "C:\\Users\\swp\\.gradle\\caches\\transforms-4\\bbd0a43bd0a110660382ea2e1b6b233b\\transformed\\play-services-basement-18.4.0\\res\\values-ky\\values.xml",
+                    "source": "/home/appomatrix/.gradle/caches/transforms-4/5fea76258b95e319ebf9249734300f90/transformed/ui-release/res/values-ky/values-ky.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "105,198,282,392,492,577,659,757,846,931,1016,1103,1176,1250,1323,1396,1475,1543",
+                        "endColumns": "92,83,109,99,84,81,97,88,84,84,86,72,73,72,72,78,67,117",
+                        "endOffsets": "193,277,387,487,572,654,752,841,926,1011,1098,1171,1245,1318,1391,1470,1538,1656"
+                    },
+                    "to": {
+                        "startLines": "48,49,69,70,71,77,78,195,196,200,201,205,207,208,209,212,213,214",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "4560,4653,7012,7122,7222,7687,7769,18955,19044,19431,19516,19847,20003,20077,20150,20493,20572,20640",
+                        "endColumns": "92,83,109,99,84,81,97,88,84,84,86,72,73,72,72,78,67,117",
+                        "endOffsets": "4648,4732,7117,7217,7302,7764,7862,19039,19124,19511,19598,19915,20072,20145,20218,20567,20635,20753"
+                    }
+                },
+                {
+                    "source": "/home/appomatrix/.gradle/caches/transforms-4/bbd0a43bd0a110660382ea2e1b6b233b/transformed/play-services-basement-18.4.0/res/values-ky/values.xml",
                     "from": {
                         "startLines": "4",
                         "startColumns": "0",
@@ -156,6 +139,23 @@
                         "startOffsets": "5724",
                         "endColumns": "157",
                         "endOffsets": "5877"
+                    }
+                },
+                {
+                    "source": "/home/appomatrix/.gradle/caches/transforms-4/7b758f1ce19f73c0aa05d7d7fe0154f5/transformed/core-1.15.0/res/values-ky/values-ky.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,155,257,360,467,569,673,784",
+                        "endColumns": "99,101,102,106,101,103,110,100",
+                        "endOffsets": "150,252,355,462,564,668,779,880"
+                    },
+                    "to": {
+                        "startLines": "38,39,40,41,42,43,44,210",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "3505,3605,3707,3810,3917,4019,4123,20223",
+                        "endColumns": "99,101,102,106,101,103,110,100",
+                        "endOffsets": "3600,3702,3805,3912,4014,4118,4229,20319"
                     }
                 }
             ]

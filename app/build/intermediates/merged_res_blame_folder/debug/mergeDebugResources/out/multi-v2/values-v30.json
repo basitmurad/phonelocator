@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.locationtracker.app-mergeDebugResources-70:/values-v30/values-v30.xml",
+            "outputFile": "com.example.locationtracker.app-mergeDebugResources-72:/values-v30/values-v30.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\swp\\.gradle\\caches\\transforms-4\\5517ce298313952b81a3cda2b17f8cd1\\transformed\\material3-release\\res\\values-v30\\values-v30.xml",
+                    "source": "/home/appomatrix/.gradle/caches/transforms-4/5517ce298313952b81a3cda2b17f8cd1/transformed/material3-release/res/values-v30/values-v30.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
