@@ -275,7 +275,7 @@ class ConnectFragment : Fragment() {
                             Log.d("DeviceProfile", ": ${connectionResponse.message}")
 
                             println("Connection Created: ${connectionResponse.message}")
-                            println("Connection ID: ${connectionResponse.connection?._id}")
+                            println("Connection ID: ${connectionResponse.connections}")
                         } else {
                             Log.d("DeviceProfile", ": ${connectionResponse?.message}")
 

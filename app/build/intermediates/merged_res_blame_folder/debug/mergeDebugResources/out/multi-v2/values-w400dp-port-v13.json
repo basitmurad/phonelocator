@@ -4,7 +4,7 @@
             "outputFile": "com.example.locationtracker.app-mergeDebugResources-71:/values-w400dp-port-v13/values-w400dp-port-v13.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\swp\\.gradle\\caches\\transforms-4\\837ab281ef87bc4ccc67156334b305b4\\transformed\\material-1.12.0\\res\\values-w400dp-port-v13\\values-w400dp-port-v13.xml",
+                    "source": "/home/appomatrix/.gradle/caches/transforms-4/837ab281ef87bc4ccc67156334b305b4/transformed/material-1.12.0/res/values-w400dp-port-v13/values-w400dp-port-v13.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9",
                         "startColumns": "4,4,4,4,4,4,4,4",

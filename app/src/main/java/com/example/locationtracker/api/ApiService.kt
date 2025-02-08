@@ -1,6 +1,7 @@
 package com.example.locationtracker.api
 import com.example.locationtracker.models.AddDeviceRequest
 import com.example.locationtracker.models.AddDeviceResponse
+import com.example.locationtracker.models.ConnectionDetails
 import com.example.locationtracker.models.ConnectionRequest
 import com.example.locationtracker.models.ConnectionResponse
 import com.example.locationtracker.models.DeviceProfileResponse
@@ -44,8 +45,15 @@ interface ApiService {
     @GET("/connections/qrcode/{deviceId}")
     fun generateQRCode(@Path("deviceId") deviceId: String): Call<QRCodeResponse>
 
+//    @GET("connections/all/{deviceId}")
+//    fun getConnections(@Path("deviceId") deviceId: String): Call<List<ConnectionDetails>>
 
+    @GET("connections/all/{deviceId}")
+    fun getConnections(@Path("deviceId") deviceId: String): Call<List<ConnectionDetails>>
 
+//
+//    @GET("connections/all/{deviceId}")
+//    fun getConnections(@Path("deviceId") deviceId: String): Call<List<ConnectionDetails>>
 
 
 
