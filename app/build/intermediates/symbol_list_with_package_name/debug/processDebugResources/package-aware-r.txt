@@ -3422,7 +3422,7 @@ id antiClockwise
 id anticipate
 id appCompatButton
 id appCompatButton2
-id appCompatButton234545
+id appCompatButton21
 id appCompatButton3
 id appCompatButton4
 id arc
@@ -3821,6 +3821,7 @@ id save_non_transition_alpha
 id save_overlay_view
 id sawtooth
 id scale
+id scanButton
 id screen
 id scroll
 id scrollIndicatorDown

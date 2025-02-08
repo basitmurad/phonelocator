@@ -24,19 +24,11 @@ data class ConnectionDetails(
 
 data class QRCodeResponse(
     val success: Boolean,
-    val qrCode: String,
+    val qrCode: String,  // This will hold the base64 image string of the QR code
     val message: String
 )
 
-data class ConnectionDetailsResponse(
-    val _id: String,
-    val deviceId: String,
-    val connectionId: ConnectionIdDetails
-)
 
-data class ConnectionIdDetails(
-    val _id: String,
-    val deviceId: String,
-    val deviceName: String,
-    val image: String
-)
+
+
+

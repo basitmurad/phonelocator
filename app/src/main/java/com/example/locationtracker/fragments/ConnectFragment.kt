@@ -115,8 +115,8 @@ class ConnectFragment : Fragment() {
         userHelpers = UserHelpers(requireContext())
         permissionChecker = Checker(requireContext())
 
-        appCompatButton2 = view.findViewById(R.id.appCompatButton2)
-        scanButton = view.findViewById(R.id.appCompatButton234545)
+        appCompatButton2 = view.findViewById(R.id.appCompatButton21)
+        scanButton = view.findViewById(R.id.scanButton)
         editText = view.findViewById(R.id.editText12)
 
         appCompatButton2.setOnClickListener {
@@ -157,14 +157,13 @@ class ConnectFragment : Fragment() {
                 startActivity(Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS))
                 return@setOnClickListener
             }
-            val currentLatLng = this.currentLatLng
 
-//            val currentLatLng = this.currentLatLng
+            val currentLatLng = this.currentLatLng
 
             val currentUserDeviceId = userHelpers.getAndroidId()
             val currentTime = userHelpers.getCurrentTime()
             val currentDate = userHelpers.getCurrentDate()
-            val batteryPercentage = getBatteryPercentage()
+            val batteryPercentage = userHelpers.getBatteryPercentage()
 
             println("Data us $currentUserDeviceId and $connectionID")
 
@@ -196,12 +195,7 @@ class ConnectFragment : Fragment() {
         }
     }
 
-    private fun getBatteryPercentage(): String {
-        val batteryManager =
-            requireContext().getSystemService(Context.BATTERY_SERVICE) as BatteryManager
-        val batteryLevel = batteryManager.getIntProperty(BatteryManager.BATTERY_PROPERTY_CAPACITY)
-        return "$batteryLevel%"
-    }
+
 
     private fun initializeLocation() {
         fusedLocationClient = LocationServices.getFusedLocationProviderClient(requireContext())

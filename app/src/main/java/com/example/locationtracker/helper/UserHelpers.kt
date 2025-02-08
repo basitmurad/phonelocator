@@ -4,6 +4,7 @@ import android.Manifest
 import android.annotation.SuppressLint
 import android.content.Context
 import android.content.pm.PackageManager
+import android.os.BatteryManager
 import android.os.Build
 import android.widget.Toast
 import androidx.annotation.RequiresApi
@@ -43,7 +44,12 @@ class UserHelpers(private val context: Context) {
     }
 
 
-
+     fun getBatteryPercentage(): String {
+        val batteryManager =
+            context.getSystemService(Context.BATTERY_SERVICE) as BatteryManager
+        val batteryLevel = batteryManager.getIntProperty(BatteryManager.BATTERY_PROPERTY_CAPACITY)
+        return "$batteryLevel%"
+    }
 
 }
 

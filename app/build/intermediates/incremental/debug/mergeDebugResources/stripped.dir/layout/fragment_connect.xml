@@ -90,7 +90,7 @@
             app:layout_constraintTop_toBottomOf="@+id/editText12" />
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/appCompatButton2"
+            android:id="@+id/appCompatButton21"
             android:layout_width="0dp"
             android:layout_height="42dp"
             android:layout_marginTop="52dp"
@@ -103,22 +103,20 @@
             app:layout_constraintEnd_toEndOf="@+id/textView14"
             app:layout_constraintStart_toStartOf="@+id/textView14"
             app:layout_constraintTop_toBottomOf="@+id/textView14" />
-
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/appCompatButton234545"
+            android:id="@+id/scanButton"
             android:layout_width="0dp"
             android:layout_height="42dp"
-            android:layout_marginTop="56dp"
+            android:layout_marginTop="52dp"
             android:background="@drawable/back_buttom"
             android:fontFamily="@font/pmedium"
             android:text="@string/scan"
-            android:textAllCaps="false"
             android:textColor="@color/black"
+            android:textAllCaps="false"
             android:textSize="16sp"
-            app:layout_constraintEnd_toEndOf="@+id/appCompatButton2"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="@+id/appCompatButton2"
-            app:layout_constraintTop_toBottomOf="@+id/appCompatButton2" />
+            app:layout_constraintEnd_toEndOf="@+id/appCompatButton21"
+            app:layout_constraintStart_toStartOf="@+id/appCompatButton21"
+            app:layout_constraintTop_toBottomOf="@+id/appCompatButton21" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
