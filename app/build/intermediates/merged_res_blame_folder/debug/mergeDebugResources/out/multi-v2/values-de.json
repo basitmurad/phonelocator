@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.locationtracker.app-mergeDebugResources-70:/values-de/values-de.xml",
+            "outputFile": "com.example.locationtracker.app-mergeDebugResources-71:/values-de/values-de.xml",
             "map": [
                 {
                     "source": "/home/appomatrix/.gradle/caches/transforms-4/0507657d5f16edb435d7e00f29e01845/transformed/appcompat-1.7.0/res/values-de/values-de.xml",
@@ -86,6 +86,23 @@
                         "startOffsets": "4531,4627,7138,7236,7336,7803,7888,19109,19198,19591,19672,19998,20149,20224,20296,20636,20715,20781",
                         "endColumns": "95,87,97,99,86,84,91,88,87,80,83,74,74,71,69,78,65,119",
                         "endOffsets": "4622,4710,7231,7331,7418,7883,7975,19193,19281,19667,19751,20068,20219,20291,20361,20710,20776,20896"
+                    }
+                },
+                {
+                    "source": "/home/appomatrix/.gradle/caches/transforms-4/5ab53c1487403011b21d5191add2915e/transformed/zxing-android-embedded-4.3.0/res/values-de/values-de.xml",
+                    "from": {
+                        "startLines": "2,3,4,5",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,114,161,333",
+                        "endColumns": "58,46,171,108",
+                        "endOffsets": "109,156,328,437"
+                    },
+                    "to": {
+                        "startLines": "219,220,221,222",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "21234,21293,21340,21512",
+                        "endColumns": "58,46,171,108",
+                        "endOffsets": "21288,21335,21507,21616"
                     }
                 },
                 {

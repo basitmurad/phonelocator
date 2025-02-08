@@ -24,6 +24,8 @@ import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.bitmap.CircleCrop
 import com.example.locationtracker.R
 import com.example.locationtracker.api.RetrofitClient
+import com.example.locationtracker.api.RetrofitClient.apiService
+import com.example.locationtracker.models.ConnectionDetailsResponse
 import com.example.locationtracker.models.DeviceProfileResponse
 import com.example.locationtracker.screens.LanguageActivity
 import com.example.locationtracker.screens.PrivacyPolicyActivity
@@ -70,6 +72,7 @@ class ProfileFragment : Fragment() {
 
 
         fetchDeviceProfile(androidId)
+
 
         btnFeedback.setOnClickListener {
             goNextScreen()

@@ -1,7 +1,6 @@
 package com.example.locationtracker.screens
 
 import Checker
-import PermissionHelper
 import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
@@ -31,7 +30,6 @@ class SplashActivity : AppCompatActivity() {
     private lateinit var binding: ActivitySplashBinding
     private lateinit var androidId: String
     private lateinit var checker: Checker
-    private lateinit var permissionHelper: PermissionHelper
     private var dialog: AlertDialog? = null  // Declare dialog here
 
     companion object {

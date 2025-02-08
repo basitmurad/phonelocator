@@ -217,4 +217,8 @@
     <string msgid="3124740595719787496" name="tooltip_label">"ツールチップを表示"</string>
     <string msgid="3140233346420563315" name="v7_preference_off">"OFF"</string>
     <string msgid="89551595707643515" name="v7_preference_on">"ON"</string>
+    <string name="zxing_app_name">QRコードスキャナー</string>
+    <string name="zxing_button_ok">OK</string>
+    <string name="zxing_msg_camera_framework_bug">Androidのカメラに問題が発生しました。デバイスを再起動する必要があります。</string>
+    <string name="zxing_msg_default_status">QRコードを画面の読み取り範囲内に写すとスキャンします。</string>
 </resources>

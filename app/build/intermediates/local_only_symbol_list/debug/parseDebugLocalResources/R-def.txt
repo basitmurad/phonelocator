@@ -57,6 +57,7 @@ font pregular
 font psemibold
 id appCompatButton
 id appCompatButton2
+id appCompatButton234545
 id appCompatButton3
 id appCompatButton4
 id autoStartCheckBox
@@ -258,6 +259,7 @@ string profile
 string project_id
 string protected_app
 string rate_us
+string scan
 string send_your_code_to_start_tracking_others_location
 string share
 string share_through

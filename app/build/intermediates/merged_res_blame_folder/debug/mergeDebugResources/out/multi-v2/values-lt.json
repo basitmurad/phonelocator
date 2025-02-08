@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.locationtracker.app-mergeDebugResources-70:/values-lt/values-lt.xml",
+            "outputFile": "com.example.locationtracker.app-mergeDebugResources-71:/values-lt/values-lt.xml",
             "map": [
                 {
                     "source": "/home/appomatrix/.gradle/caches/transforms-4/20b5d8423236ed0f67b4cddf82e7e963/transformed/ui-release/res/values-lt/values-lt.xml",

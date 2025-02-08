@@ -3,8 +3,6 @@ package com.example.locationtracker.api
 import com.example.locationtracker.connectionModels.QRCodeResponse
 import com.example.locationtracker.models.AddDeviceRequest
 import com.example.locationtracker.models.AddDeviceResponse
-import com.example.locationtracker.models.ConnectionDetailsResponse
-import com.example.locationtracker.models.ConnectionResponse
 import com.example.locationtracker.models.DeviceProfileResponse
 import com.example.locationtracker.models.LocationHistoryResponse
 import com.example.locationtracker.models.LocationRequest
@@ -12,6 +10,8 @@ import com.example.locationtracker.models.LocationResponse
 import com.example.locationtracker.models.RecentLocationResponse
 import okhttp3.MultipartBody
 import okhttp3.RequestBody
+import com.example.locationtracker.models.ConnectionResponse
+import com.example.locationtracker.models.connections.Connection
 
 import retrofit2.Call
 import retrofit2.http.Body
@@ -53,8 +53,8 @@ interface ApiService {
     @GET("/connections/qrcode/{deviceId}")
     fun generateQRCode(@Path("deviceId") deviceId: String): Call<QRCodeResponse>
 
-    @GET("/connections/all/{deviceId}")
-    fun getAllConnections(@Path("deviceId") deviceId: String): Call<List<ConnectionDetailsResponse>>
+    @GET("connections/{deviceId}") // Replace with actual API path
+    fun getConnections(@Path("deviceId") deviceId: String): Call<List<Connection>>
 
 
 

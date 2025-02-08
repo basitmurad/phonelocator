@@ -2,7 +2,6 @@ package com.example.locationtracker
 
 import Checker
 import HomeFragment
-import PermissionHelper
 import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
@@ -36,7 +35,6 @@ class HomeActivity : AppCompatActivity(), ConnectivityReceiver.ConnectivityRecei
 
     private lateinit var binding: ActivityHomeBinding
     private lateinit var checker: Checker
-    private lateinit var permissionHelper: PermissionHelper
     private var internetDialog: AlertDialog? = null
     private var gpsDialog: AlertDialog? = null
     private lateinit var connectivityReceiver: ConnectivityReceiver
@@ -57,7 +55,6 @@ class HomeActivity : AppCompatActivity(), ConnectivityReceiver.ConnectivityRecei
         setContentView(binding.root)
 
         checker = Checker(this)
-        permissionHelper = PermissionHelper(this)
         connectivityReceiver = ConnectivityReceiver(this)
         permissionsManager = PermissionsManager(this)
 
@@ -134,13 +131,7 @@ class HomeActivity : AppCompatActivity(), ConnectivityReceiver.ConnectivityRecei
             showInternetDisabledDialog()
         }
 
-        if (!permissionHelper.checkLocationPermissions()) {
-            permissionHelper.requestLocationPermissions()
-        }
 
-        if (!permissionHelper.checkBackgroundLocationPermission()) {
-            permissionHelper.requestBackgroundLocationPermission()
-        }
     }
 
     private fun checkAndRequestGPS() {

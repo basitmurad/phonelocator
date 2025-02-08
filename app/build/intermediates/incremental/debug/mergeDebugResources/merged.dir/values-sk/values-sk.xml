@@ -219,4 +219,8 @@
     <string msgid="3124740595719787496" name="tooltip_label">"zobraziť popis"</string>
     <string msgid="3140233346420563315" name="v7_preference_off">"Vypnuté"</string>
     <string msgid="89551595707643515" name="v7_preference_on">"Zapnuté"</string>
+    <string name="zxing_app_name">Barcode Scanner</string>
+    <string name="zxing_button_ok">OK</string>
+    <string name="zxing_msg_camera_framework_bug">Ospravedlňujeme sa, fotoaparát narazil na problém. Možno bude potrebné reštartovať zariadenie.</string>
+    <string name="zxing_msg_default_status">Umiestnite čiarový kód do vnútra obdĺžnika hľadáčiku pre skenovanie</string>
 </resources>

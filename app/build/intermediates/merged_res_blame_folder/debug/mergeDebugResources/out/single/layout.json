@@ -1,110 +1,110 @@
 [
     {
-        "merged": "com.example.locationtracker.app-mergeDebugResources-71:/layout/activity_device_name.xml",
-        "source": "com.example.locationtracker.app-main-74:/layout/activity_device_name.xml"
+        "merged": "com.example.locationtracker.app-mergeDebugResources-72:/layout/activity_permission.xml",
+        "source": "com.example.locationtracker.app-main-75:/layout/activity_permission.xml"
     },
     {
-        "merged": "com.example.locationtracker.app-mergeDebugResources-71:/layout/activity_permission.xml",
-        "source": "com.example.locationtracker.app-main-74:/layout/activity_permission.xml"
+        "merged": "com.example.locationtracker.app-mergeDebugResources-72:/layout/dialog_success.xml",
+        "source": "com.example.locationtracker.app-main-75:/layout/dialog_success.xml"
     },
     {
-        "merged": "com.example.locationtracker.app-mergeDebugResources-71:/layout/fragment_home.xml",
-        "source": "com.example.locationtracker.app-main-74:/layout/fragment_home.xml"
+        "merged": "com.example.locationtracker.app-mergeDebugResources-72:/layout/dialog_custom.xml",
+        "source": "com.example.locationtracker.app-main-75:/layout/dialog_custom.xml"
     },
     {
-        "merged": "com.example.locationtracker.app-mergeDebugResources-71:/layout/connect_device_layout.xml",
-        "source": "com.example.locationtracker.app-main-74:/layout/connect_device_layout.xml"
+        "merged": "com.example.locationtracker.app-mergeDebugResources-72:/layout/fragment_device.xml",
+        "source": "com.example.locationtracker.app-main-75:/layout/fragment_device.xml"
     },
     {
-        "merged": "com.example.locationtracker.app-mergeDebugResources-71:/layout/item_language.xml",
-        "source": "com.example.locationtracker.app-main-74:/layout/item_language.xml"
+        "merged": "com.example.locationtracker.app-mergeDebugResources-72:/layout/confirm_dialog_layout.xml",
+        "source": "com.example.locationtracker.app-main-75:/layout/confirm_dialog_layout.xml"
     },
     {
-        "merged": "com.example.locationtracker.app-mergeDebugResources-71:/layout/device_list_layout.xml",
-        "source": "com.example.locationtracker.app-main-74:/layout/device_list_layout.xml"
+        "merged": "com.example.locationtracker.app-mergeDebugResources-72:/layout/activity_privacy_policy.xml",
+        "source": "com.example.locationtracker.app-main-75:/layout/activity_privacy_policy.xml"
     },
     {
-        "merged": "com.example.locationtracker.app-mergeDebugResources-71:/layout/activity_get_start.xml",
-        "source": "com.example.locationtracker.app-main-74:/layout/activity_get_start.xml"
+        "merged": "com.example.locationtracker.app-mergeDebugResources-72:/layout/fragment_home.xml",
+        "source": "com.example.locationtracker.app-main-75:/layout/fragment_home.xml"
     },
     {
-        "merged": "com.example.locationtracker.app-mergeDebugResources-71:/layout/fragment_device.xml",
-        "source": "com.example.locationtracker.app-main-74:/layout/fragment_device.xml"
+        "merged": "com.example.locationtracker.app-mergeDebugResources-72:/layout/dialog_rating.xml",
+        "source": "com.example.locationtracker.app-main-75:/layout/dialog_rating.xml"
     },
     {
-        "merged": "com.example.locationtracker.app-mergeDebugResources-71:/layout/activity_splash.xml",
-        "source": "com.example.locationtracker.app-main-74:/layout/activity_splash.xml"
+        "merged": "com.example.locationtracker.app-mergeDebugResources-72:/layout/bottom_sheet_permissions.xml",
+        "source": "com.example.locationtracker.app-main-75:/layout/bottom_sheet_permissions.xml"
     },
     {
-        "merged": "com.example.locationtracker.app-mergeDebugResources-71:/layout/activity_home.xml",
-        "source": "com.example.locationtracker.app-main-74:/layout/activity_home.xml"
+        "merged": "com.example.locationtracker.app-mergeDebugResources-72:/layout/activity_profile.xml",
+        "source": "com.example.locationtracker.app-main-75:/layout/activity_profile.xml"
     },
     {
-        "merged": "com.example.locationtracker.app-mergeDebugResources-71:/layout/bottom_sheet_permissions.xml",
-        "source": "com.example.locationtracker.app-main-74:/layout/bottom_sheet_permissions.xml"
+        "merged": "com.example.locationtracker.app-mergeDebugResources-72:/layout/item_language.xml",
+        "source": "com.example.locationtracker.app-main-75:/layout/item_language.xml"
     },
     {
-        "merged": "com.example.locationtracker.app-mergeDebugResources-71:/layout/custom_motion_tracking_dialog.xml",
-        "source": "com.example.locationtracker.app-main-74:/layout/custom_motion_tracking_dialog.xml"
+        "merged": "com.example.locationtracker.app-mergeDebugResources-72:/layout/dialog_generic_disabled.xml",
+        "source": "com.example.locationtracker.app-main-75:/layout/dialog_generic_disabled.xml"
     },
     {
-        "merged": "com.example.locationtracker.app-mergeDebugResources-71:/layout/fragment_connect.xml",
-        "source": "com.example.locationtracker.app-main-74:/layout/fragment_connect.xml"
+        "merged": "com.example.locationtracker.app-mergeDebugResources-72:/layout/device_name_layout.xml",
+        "source": "com.example.locationtracker.app-main-75:/layout/device_name_layout.xml"
     },
     {
-        "merged": "com.example.locationtracker.app-mergeDebugResources-71:/layout/activity_show_detail.xml",
-        "source": "com.example.locationtracker.app-main-74:/layout/activity_show_detail.xml"
+        "merged": "com.example.locationtracker.app-mergeDebugResources-72:/layout/connect_device_layout.xml",
+        "source": "com.example.locationtracker.app-main-75:/layout/connect_device_layout.xml"
     },
     {
-        "merged": "com.example.locationtracker.app-mergeDebugResources-71:/layout/activity_show_device_detail.xml",
-        "source": "com.example.locationtracker.app-main-74:/layout/activity_show_device_detail.xml"
+        "merged": "com.example.locationtracker.app-mergeDebugResources-72:/layout/activity_splash.xml",
+        "source": "com.example.locationtracker.app-main-75:/layout/activity_splash.xml"
     },
     {
-        "merged": "com.example.locationtracker.app-mergeDebugResources-71:/layout/fragment_profile.xml",
-        "source": "com.example.locationtracker.app-main-74:/layout/fragment_profile.xml"
+        "merged": "com.example.locationtracker.app-mergeDebugResources-72:/layout/activity_device_name.xml",
+        "source": "com.example.locationtracker.app-main-75:/layout/activity_device_name.xml"
     },
     {
-        "merged": "com.example.locationtracker.app-mergeDebugResources-71:/layout/dialog_rating.xml",
-        "source": "com.example.locationtracker.app-main-74:/layout/dialog_rating.xml"
+        "merged": "com.example.locationtracker.app-mergeDebugResources-72:/layout/activity_language.xml",
+        "source": "com.example.locationtracker.app-main-75:/layout/activity_language.xml"
     },
     {
-        "merged": "com.example.locationtracker.app-mergeDebugResources-71:/layout/activity_main2.xml",
-        "source": "com.example.locationtracker.app-main-74:/layout/activity_main2.xml"
+        "merged": "com.example.locationtracker.app-mergeDebugResources-72:/layout/activity_home.xml",
+        "source": "com.example.locationtracker.app-main-75:/layout/activity_home.xml"
     },
     {
-        "merged": "com.example.locationtracker.app-mergeDebugResources-71:/layout/activity_privacy_policy.xml",
-        "source": "com.example.locationtracker.app-main-74:/layout/activity_privacy_policy.xml"
+        "merged": "com.example.locationtracker.app-mergeDebugResources-72:/layout/activity_show_device_detail.xml",
+        "source": "com.example.locationtracker.app-main-75:/layout/activity_show_device_detail.xml"
     },
     {
-        "merged": "com.example.locationtracker.app-mergeDebugResources-71:/layout/confirm_dialog_layout.xml",
-        "source": "com.example.locationtracker.app-main-74:/layout/confirm_dialog_layout.xml"
+        "merged": "com.example.locationtracker.app-mergeDebugResources-72:/layout/activity_get_start.xml",
+        "source": "com.example.locationtracker.app-main-75:/layout/activity_get_start.xml"
     },
     {
-        "merged": "com.example.locationtracker.app-mergeDebugResources-71:/layout/activity_main.xml",
-        "source": "com.example.locationtracker.app-main-74:/layout/activity_main.xml"
+        "merged": "com.example.locationtracker.app-mergeDebugResources-72:/layout/activity_show_detail.xml",
+        "source": "com.example.locationtracker.app-main-75:/layout/activity_show_detail.xml"
     },
     {
-        "merged": "com.example.locationtracker.app-mergeDebugResources-71:/layout/activity_profile.xml",
-        "source": "com.example.locationtracker.app-main-74:/layout/activity_profile.xml"
+        "merged": "com.example.locationtracker.app-mergeDebugResources-72:/layout/fragment_connect.xml",
+        "source": "com.example.locationtracker.app-main-75:/layout/fragment_connect.xml"
     },
     {
-        "merged": "com.example.locationtracker.app-mergeDebugResources-71:/layout/dialog_generic_disabled.xml",
-        "source": "com.example.locationtracker.app-main-74:/layout/dialog_generic_disabled.xml"
+        "merged": "com.example.locationtracker.app-mergeDebugResources-72:/layout/fragment_profile.xml",
+        "source": "com.example.locationtracker.app-main-75:/layout/fragment_profile.xml"
     },
     {
-        "merged": "com.example.locationtracker.app-mergeDebugResources-71:/layout/activity_language.xml",
-        "source": "com.example.locationtracker.app-main-74:/layout/activity_language.xml"
+        "merged": "com.example.locationtracker.app-mergeDebugResources-72:/layout/custom_motion_tracking_dialog.xml",
+        "source": "com.example.locationtracker.app-main-75:/layout/custom_motion_tracking_dialog.xml"
     },
     {
-        "merged": "com.example.locationtracker.app-mergeDebugResources-71:/layout/dialog_custom.xml",
-        "source": "com.example.locationtracker.app-main-74:/layout/dialog_custom.xml"
+        "merged": "com.example.locationtracker.app-mergeDebugResources-72:/layout/device_list_layout.xml",
+        "source": "com.example.locationtracker.app-main-75:/layout/device_list_layout.xml"
     },
     {
-        "merged": "com.example.locationtracker.app-mergeDebugResources-71:/layout/dialog_success.xml",
-        "source": "com.example.locationtracker.app-main-74:/layout/dialog_success.xml"
+        "merged": "com.example.locationtracker.app-mergeDebugResources-72:/layout/activity_main2.xml",
+        "source": "com.example.locationtracker.app-main-75:/layout/activity_main2.xml"
     },
     {
-        "merged": "com.example.locationtracker.app-mergeDebugResources-71:/layout/device_name_layout.xml",
-        "source": "com.example.locationtracker.app-main-74:/layout/device_name_layout.xml"
+        "merged": "com.example.locationtracker.app-mergeDebugResources-72:/layout/activity_main.xml",
+        "source": "com.example.locationtracker.app-main-75:/layout/activity_main.xml"
     }
 ]

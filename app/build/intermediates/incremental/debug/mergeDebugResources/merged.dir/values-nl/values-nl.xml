@@ -217,4 +217,8 @@
     <string msgid="3124740595719787496" name="tooltip_label">"tooltip tonen"</string>
     <string msgid="3140233346420563315" name="v7_preference_off">"UIT"</string>
     <string msgid="89551595707643515" name="v7_preference_on">"AAN"</string>
+    <string name="zxing_app_name">Barcode Scanner</string>
+    <string name="zxing_button_ok">OK</string>
+    <string name="zxing_msg_camera_framework_bug">Sorry, er is een probleem met de Android-camera. Probeer je telefoon opnieuw op te starten.</string>
+    <string name="zxing_msg_default_status">Plaats een barcode binnen de rechthoek om deze te scannen.</string>
 </resources>

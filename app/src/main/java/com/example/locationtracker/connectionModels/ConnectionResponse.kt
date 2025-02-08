@@ -1,14 +1,3 @@
-// Data classes to represent request and response models
-
-data class ConnectionRequest(
-    val deviceId: String,
-    val connectionId: String
-)
-
-data class ConnectRequest(
-    val deviceId: String,
-    val connectionId: String
-)
 
 data class ConnectionResponse(
     val success: Boolean,
