@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.locationtracker.app-mergeDebugResources-70:/values-bs/values-bs.xml",
+            "outputFile": "com.example.locationtracker.app-mergeDebugResources-71:/values-bs/values-bs.xml",
             "map": [
                 {
                     "source": "C:\\Users\\swp\\.gradle\\caches\\transforms-4\\24649a1cf4b62704cd63c9beeba87dd7\\transformed\\core-1.15.0\\res\\values-bs\\values-bs.xml",

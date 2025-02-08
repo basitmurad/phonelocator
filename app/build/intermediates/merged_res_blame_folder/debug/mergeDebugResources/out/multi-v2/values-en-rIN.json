@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.locationtracker.app-mergeDebugResources-70:/values-en-rIN/values-en-rIN.xml",
+            "outputFile": "com.example.locationtracker.app-mergeDebugResources-71:/values-en-rIN/values-en-rIN.xml",
             "map": [
                 {
                     "source": "C:\\Users\\swp\\.gradle\\caches\\transforms-4\\ee13e295512db04b1ddc41d284294a6d\\transformed\\foundation-release\\res\\values-en-rIN\\values-en-rIN.xml",

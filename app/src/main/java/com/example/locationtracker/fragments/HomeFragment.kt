@@ -32,7 +32,7 @@ import android.Manifest
 import android.graphics.BitmapFactory
 import android.util.Base64
 import com.example.locationtracker.api.RetrofitClient
-import com.example.locationtracker.connectionModels.QRCodeResponse
+import com.example.locationtracker.models.QRCodeResponse
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response

@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.locationtracker.app-mergeDebugResources-70:/values-hu/values-hu.xml",
+            "outputFile": "com.example.locationtracker.app-mergeDebugResources-71:/values-hu/values-hu.xml",
             "map": [
                 {
                     "source": "C:\\Users\\swp\\.gradle\\caches\\transforms-4\\837ab281ef87bc4ccc67156334b305b4\\transformed\\material-1.12.0\\res\\values-hu\\values-hu.xml",
@@ -139,6 +139,23 @@
                         "startOffsets": "4678,4789,4973,5111,5220,5388,5526,5648,5935,6105,6213,6398,6535,6707,6879,6950,7018",
                         "endColumns": "110,183,137,108,167,137,121,109,169,107,184,136,171,171,70,67,87",
                         "endOffsets": "4784,4968,5106,5215,5383,5521,5643,5753,6100,6208,6393,6530,6702,6874,6945,7013,7101"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\swp\\.gradle\\caches\\transforms-4\\5ab53c1487403011b21d5191add2915e\\transformed\\zxing-android-embedded-4.3.0\\res\\values-hu\\values-hu.xml",
+                    "from": {
+                        "startLines": "2,3,4,5",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,114,161,287",
+                        "endColumns": "58,46,125,115",
+                        "endOffsets": "109,156,282,398"
+                    },
+                    "to": {
+                        "startLines": "219,220,221,222",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "21224,21283,21330,21456",
+                        "endColumns": "58,46,125,115",
+                        "endOffsets": "21278,21325,21451,21567"
                     }
                 },
                 {

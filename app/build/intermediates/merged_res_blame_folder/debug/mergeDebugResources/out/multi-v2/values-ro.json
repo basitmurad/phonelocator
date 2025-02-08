@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.locationtracker.app-mergeDebugResources-70:/values-ro/values-ro.xml",
+            "outputFile": "com.example.locationtracker.app-mergeDebugResources-71:/values-ro/values-ro.xml",
             "map": [
                 {
                     "source": "C:\\Users\\swp\\.gradle\\caches\\transforms-4\\0507657d5f16edb435d7e00f29e01845\\transformed\\appcompat-1.7.0\\res\\values-ro\\values-ro.xml",
@@ -122,6 +122,23 @@
                         "startOffsets": "7035,7521,19227,19381,20424,21047,21134",
                         "endColumns": "70,85,74,138,168,86,80",
                         "endOffsets": "7101,7602,19297,19515,20588,21129,21210"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\swp\\.gradle\\caches\\transforms-4\\5ab53c1487403011b21d5191add2915e\\transformed\\zxing-android-embedded-4.3.0\\res\\values-ro\\values-ro.xml",
+                    "from": {
+                        "startLines": "2,3,4,5",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,114,166,275",
+                        "endColumns": "58,51,108,116",
+                        "endOffsets": "109,161,270,387"
+                    },
+                    "to": {
+                        "startLines": "220,221,222,223",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "21215,21274,21326,21435",
+                        "endColumns": "58,51,108,116",
+                        "endOffsets": "21269,21321,21430,21547"
                     }
                 },
                 {

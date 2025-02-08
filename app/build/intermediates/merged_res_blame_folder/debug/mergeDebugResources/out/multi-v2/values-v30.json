@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.locationtracker.app-mergeDebugResources-70:/values-v30/values-v30.xml",
+            "outputFile": "com.example.locationtracker.app-mergeDebugResources-71:/values-v30/values-v30.xml",
             "map": [
                 {
                     "source": "C:\\Users\\swp\\.gradle\\caches\\transforms-4\\bd20e73134172df79d05d79f78a4a4a7\\transformed\\material3-release\\res\\values-v30\\values-v30.xml",

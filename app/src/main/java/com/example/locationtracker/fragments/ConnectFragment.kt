@@ -3,11 +3,13 @@ package com.example.locationtracker.fragments
 import Checker
 import android.Manifest
 import android.annotation.SuppressLint
+import android.app.Activity
 import android.app.AlertDialog
 import android.app.Dialog
 import android.app.ProgressDialog
 import android.content.Context
 import android.content.Intent
+import android.content.pm.ActivityInfo
 import android.content.pm.PackageManager
 import android.location.LocationManager
 import android.os.BatteryManager
@@ -22,13 +24,12 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.example.locationtracker.R
 
-import android.text.InputFilter
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.annotation.RequiresApi
-import androidx.appcompat.widget.AppCompatButton
 import androidx.core.app.ActivityCompat
 import com.example.locationtracker.api.RetrofitClient
 import com.example.locationtracker.helper.UserHelpers
@@ -38,6 +39,8 @@ import com.example.locationtracker.models.DeviceProfileResponse
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationServices
 import com.google.android.gms.maps.model.LatLng
+import com.google.zxing.integration.android.IntentIntegrator
+import com.google.zxing.integration.android.IntentResult
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -46,6 +49,7 @@ import retrofit2.Response
 class ConnectFragment : Fragment() {
 
     private lateinit var appCompatButton2: Button
+    private lateinit var scanButton: Button
     private lateinit var editText: EditText
     private lateinit var progressDialog: ProgressDialog
     private lateinit var permissionChecker: Checker
@@ -53,7 +57,48 @@ class ConnectFragment : Fragment() {
     private lateinit var fusedLocationClient: FusedLocationProviderClient
     private lateinit var userHelpers: UserHelpers
 
-    @SuppressLint("ServiceCast")
+
+    private val qrScannerLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
+        requireActivity().requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED // Reset orientation after scan
+
+        if (result.resultCode == Activity.RESULT_OK) {
+            val data: Intent? = result.data
+            val scanResult = IntentIntegrator.parseActivityResult(result.resultCode, data)
+
+            if (scanResult.contents != null) {
+                Log.d("QRScanner", "Scanned QR Code: ${scanResult.contents}") // ✅ Show in Logs
+
+                // Extract ID from URL and set it in EditText
+                val extractedId = extractIdFromUrl(scanResult.contents)
+                editText.setText(extractedId)
+
+            } else {
+                Log.d("QRScanner", "Scan cancelled or failed.") // ✅ Show in Logs
+                Toast.makeText(requireContext(), "Scan cancelled", Toast.LENGTH_SHORT).show()
+            }
+        }
+    }
+
+    private fun startQRScanner() {
+        requireActivity().requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT // Force portrait mode
+
+        val integrator = IntentIntegrator.forSupportFragment(this)
+        integrator.setDesiredBarcodeFormats(IntentIntegrator.QR_CODE)
+        integrator.setPrompt("Scan a QR Code")
+        integrator.setCameraId(0) // Use the back camera
+        integrator.setBeepEnabled(true)
+        integrator.setBarcodeImageEnabled(true)
+        qrScannerLauncher.launch(integrator.createScanIntent())
+    }
+
+    private fun extractIdFromUrl(url: String): String {
+        return url.substringAfterLast("=") // ✅ Extracts everything after the last '='
+    }
+
+
+
+
+    @SuppressLint("ServiceCast", "MissingInflatedId")
     @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -70,7 +115,8 @@ class ConnectFragment : Fragment() {
         userHelpers = UserHelpers(requireContext())
         permissionChecker = Checker(requireContext())
 
-        appCompatButton2 = view.findViewById(R.id.appCompatButton2)
+        appCompatButton2 = view.findViewById(R.id.appCompatButton21)
+        scanButton = view.findViewById(R.id.scanButton)
         editText = view.findViewById(R.id.editText12)
 
         appCompatButton2.setOnClickListener {
@@ -84,15 +130,18 @@ class ConnectFragment : Fragment() {
 
         }
 
+        scanButton.setOnClickListener{
+            startQRScanner()
+
+        }
+
         return view
     }
 
-    @SuppressLint("HardwareIds")
-    private fun getAndroidId(): String {
-        return Settings.Secure.getString(requireContext().contentResolver, Settings.Secure.ANDROID_ID)
-    }
+
+
     @RequiresApi(Build.VERSION_CODES.O)
-    private fun openDialog(deviceName: String, matchDeviceID: String) {
+    private fun openDialog(deviceName: String, connectionID: String) {
         val dialogView =
             LayoutInflater.from(requireContext()).inflate(R.layout.confirm_dialog_layout, null)
         val dialogBuilder =
@@ -114,12 +163,14 @@ class ConnectFragment : Fragment() {
             val currentUserDeviceId = userHelpers.getAndroidId()
             val currentTime = userHelpers.getCurrentTime()
             val currentDate = userHelpers.getCurrentDate()
-            val batteryPercentage = getBatteryPercentage()
+            val batteryPercentage = userHelpers.getBatteryPercentage()
 
-            println("Data us $currentUserDeviceId and $matchDeviceID")
+            println("Data us $currentUserDeviceId and $connectionID")
+
+            Log.d("data is " , " current user id$currentUserDeviceId and connectioID is $connectionID")
 
 
-
+            createConnection(currentUserDeviceId, connectionID)
             alertDialog.dismiss()
         }
 
@@ -144,12 +195,7 @@ class ConnectFragment : Fragment() {
         }
     }
 
-    private fun getBatteryPercentage(): String {
-        val batteryManager =
-            requireContext().getSystemService(Context.BATTERY_SERVICE) as BatteryManager
-        val batteryLevel = batteryManager.getIntProperty(BatteryManager.BATTERY_PROPERTY_CAPACITY)
-        return "$batteryLevel%"
-    }
+
 
     private fun initializeLocation() {
         fusedLocationClient = LocationServices.getFusedLocationProviderClient(requireContext())
@@ -190,12 +236,12 @@ class ConnectFragment : Fragment() {
                         val profile = deviceProfileResponse.profile
                         if (profile != null) {
                             val deviceName = profile.deviceName
-                            val matchDeviceID = profile.deviceId
+                            val connectionID = profile.deviceId
 
                             Log.d("DeviceProfile", "Device Name: $deviceName")
 
                             // Open dialog with retrieved device name and ID
-                            openDialog(deviceName,matchDeviceID )
+                            openDialog(deviceName,connectionID )
                         } else {
                             Toast.makeText(requireContext(), "Device profile not found", Toast.LENGTH_SHORT).show()
                         }
@@ -232,11 +278,15 @@ class ConnectFragment : Fragment() {
                         val connectionResponse = response.body()
                         if (connectionResponse != null && connectionResponse.success) {
                             // Successfully created the connection
+                            Log.d("DeviceProfile", ": ${connectionResponse.message}")
+
                             println("Connection Created: ${connectionResponse.message}")
                             println("Connection ID: ${connectionResponse.connection?._id}")
                         } else {
+                            Log.d("DeviceProfile", ": ${connectionResponse?.message}")
+
                             // Handle the case where the connection wasn't created
-                            println("Error: ${connectionResponse?.message}")
+                            println("Connection: ${connectionResponse?.message}")
                         }
                     } else {
                         // Handle unsuccessful response

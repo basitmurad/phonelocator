@@ -8,6 +8,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 object RetrofitClient {
 
+
         private const val BASE_URL = "http://locationtrackerapp.eu-4.evennode.com"
 
     val apiService: ApiService by lazy {

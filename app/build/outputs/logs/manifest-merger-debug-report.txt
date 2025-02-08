@@ -76,6 +76,7 @@ MERGED from [androidx.lifecycle:lifecycle-runtime-compose-android:2.8.3] C:\User
 MERGED from [androidx.compose.runtime:runtime-android:1.7.0] C:\Users\swp\.gradle\caches\transforms-4\c18c44f537acdf83d6595f12fcd87b6d\transformed\runtime-release\AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.room:room-runtime:2.5.0] C:\Users\swp\.gradle\caches\transforms-4\a581661994ad720be6ba6eee30829cc0\transformed\room-runtime-2.5.0\AndroidManifest.xml:17:1-31:12
 MERGED from [de.hdodenhof:circleimageview:3.1.0] C:\Users\swp\.gradle\caches\transforms-4\08c41102191764fc5a644d1546fc56e4\transformed\circleimageview-3.1.0\AndroidManifest.xml:2:1-11:12
+MERGED from [com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\swp\.gradle\caches\transforms-4\5ab53c1487403011b21d5191add2915e\transformed\zxing-android-embedded-4.3.0\AndroidManifest.xml:17:1-56:12
 MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\swp\.gradle\caches\transforms-4\d5f0fa263d95837f833827040b27d12f\transformed\cursoradapter-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\swp\.gradle\caches\transforms-4\a67e099eb48225303e4b5dba716366c4\transformed\cardview-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\swp\.gradle\caches\transforms-4\5751509a1e2a68bb7b277e4d210bf791\transformed\profileinstaller-1.4.0\AndroidManifest.xml:17:1-55:12
@@ -250,6 +251,8 @@ MERGED from [androidx.room:room-runtime:2.5.0] C:\Users\swp\.gradle\caches\trans
 MERGED from [androidx.room:room-runtime:2.5.0] C:\Users\swp\.gradle\caches\transforms-4\a581661994ad720be6ba6eee30829cc0\transformed\room-runtime-2.5.0\AndroidManifest.xml:21:5-44
 MERGED from [de.hdodenhof:circleimageview:3.1.0] C:\Users\swp\.gradle\caches\transforms-4\08c41102191764fc5a644d1546fc56e4\transformed\circleimageview-3.1.0\AndroidManifest.xml:5:5-7:41
 MERGED from [de.hdodenhof:circleimageview:3.1.0] C:\Users\swp\.gradle\caches\transforms-4\08c41102191764fc5a644d1546fc56e4\transformed\circleimageview-3.1.0\AndroidManifest.xml:5:5-7:41
+MERGED from [com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\swp\.gradle\caches\transforms-4\5ab53c1487403011b21d5191add2915e\transformed\zxing-android-embedded-4.3.0\AndroidManifest.xml:20:5-44
+MERGED from [com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\swp\.gradle\caches\transforms-4\5ab53c1487403011b21d5191add2915e\transformed\zxing-android-embedded-4.3.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\swp\.gradle\caches\transforms-4\d5f0fa263d95837f833827040b27d12f\transformed\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\swp\.gradle\caches\transforms-4\d5f0fa263d95837f833827040b27d12f\transformed\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\swp\.gradle\caches\transforms-4\a67e099eb48225303e4b5dba716366c4\transformed\cardview-1.0.0\AndroidManifest.xml:20:5-44
@@ -291,6 +294,8 @@ MERGED from [androidx.annotation:annotation-experimental:1.4.1] C:\Users\swp\.gr
 		INJECTED from C:\Users\swp\StudioProjects\LocationTracker\app\src\main\AndroidManifest.xml
 uses-feature#android.hardware.camera
 ADDED from C:\Users\swp\StudioProjects\LocationTracker\app\src\main\AndroidManifest.xml:7:5-9:36
+MERGED from [com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\swp\.gradle\caches\transforms-4\5ab53c1487403011b21d5191add2915e\transformed\zxing-android-embedded-4.3.0\AndroidManifest.xml:25:5-27:36
+MERGED from [com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\swp\.gradle\caches\transforms-4\5ab53c1487403011b21d5191add2915e\transformed\zxing-android-embedded-4.3.0\AndroidManifest.xml:25:5-27:36
 	android:required
 		ADDED from C:\Users\swp\StudioProjects\LocationTracker\app\src\main\AndroidManifest.xml:9:9-33
 	android:name
@@ -347,6 +352,8 @@ ADDED from C:\Users\swp\StudioProjects\LocationTracker\app\src\main\AndroidManif
 		ADDED from C:\Users\swp\StudioProjects\LocationTracker\app\src\main\AndroidManifest.xml:23:9-65
 uses-permission#android.permission.CAMERA
 ADDED from C:\Users\swp\StudioProjects\LocationTracker\app\src\main\AndroidManifest.xml:25:5-65
+MERGED from [com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\swp\.gradle\caches\transforms-4\5ab53c1487403011b21d5191add2915e\transformed\zxing-android-embedded-4.3.0\AndroidManifest.xml:22:5-65
+MERGED from [com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\swp\.gradle\caches\transforms-4\5ab53c1487403011b21d5191add2915e\transformed\zxing-android-embedded-4.3.0\AndroidManifest.xml:22:5-65
 	android:name
 		ADDED from C:\Users\swp\StudioProjects\LocationTracker\app\src\main\AndroidManifest.xml:25:22-62
 application
@@ -380,6 +387,8 @@ MERGED from [androidx.room:room-runtime:2.5.0] C:\Users\swp\.gradle\caches\trans
 MERGED from [androidx.room:room-runtime:2.5.0] C:\Users\swp\.gradle\caches\transforms-4\a581661994ad720be6ba6eee30829cc0\transformed\room-runtime-2.5.0\AndroidManifest.xml:23:5-29:19
 MERGED from [de.hdodenhof:circleimageview:3.1.0] C:\Users\swp\.gradle\caches\transforms-4\08c41102191764fc5a644d1546fc56e4\transformed\circleimageview-3.1.0\AndroidManifest.xml:9:5-20
 MERGED from [de.hdodenhof:circleimageview:3.1.0] C:\Users\swp\.gradle\caches\transforms-4\08c41102191764fc5a644d1546fc56e4\transformed\circleimageview-3.1.0\AndroidManifest.xml:9:5-20
+MERGED from [com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\swp\.gradle\caches\transforms-4\5ab53c1487403011b21d5191add2915e\transformed\zxing-android-embedded-4.3.0\AndroidManifest.xml:46:5-54:19
+MERGED from [com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\swp\.gradle\caches\transforms-4\5ab53c1487403011b21d5191add2915e\transformed\zxing-android-embedded-4.3.0\AndroidManifest.xml:46:5-54:19
 MERGED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\swp\.gradle\caches\transforms-4\5751509a1e2a68bb7b277e4d210bf791\transformed\profileinstaller-1.4.0\AndroidManifest.xml:23:5-53:19
 MERGED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\swp\.gradle\caches\transforms-4\5751509a1e2a68bb7b277e4d210bf791\transformed\profileinstaller-1.4.0\AndroidManifest.xml:23:5-53:19
 MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\swp\.gradle\caches\transforms-4\14b5b737c1b810fa7a8db0a9c1e82119\transformed\startup-runtime-1.1.1\AndroidManifest.xml:25:5-31:19
@@ -830,6 +839,50 @@ ADDED from [androidx.room:room-runtime:2.5.0] C:\Users\swp\.gradle\caches\transf
 		ADDED from [androidx.room:room-runtime:2.5.0] C:\Users\swp\.gradle\caches\transforms-4\a581661994ad720be6ba6eee30829cc0\transformed\room-runtime-2.5.0\AndroidManifest.xml:26:13-43
 	android:name
 		ADDED from [androidx.room:room-runtime:2.5.0] C:\Users\swp\.gradle\caches\transforms-4\a581661994ad720be6ba6eee30829cc0\transformed\room-runtime-2.5.0\AndroidManifest.xml:25:13-74
+uses-feature#android.hardware.camera.front
+ADDED from [com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\swp\.gradle\caches\transforms-4\5ab53c1487403011b21d5191add2915e\transformed\zxing-android-embedded-4.3.0\AndroidManifest.xml:28:5-30:36
+	android:required
+		ADDED from [com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\swp\.gradle\caches\transforms-4\5ab53c1487403011b21d5191add2915e\transformed\zxing-android-embedded-4.3.0\AndroidManifest.xml:30:9-33
+	android:name
+		ADDED from [com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\swp\.gradle\caches\transforms-4\5ab53c1487403011b21d5191add2915e\transformed\zxing-android-embedded-4.3.0\AndroidManifest.xml:29:9-53
+uses-feature#android.hardware.camera.autofocus
+ADDED from [com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\swp\.gradle\caches\transforms-4\5ab53c1487403011b21d5191add2915e\transformed\zxing-android-embedded-4.3.0\AndroidManifest.xml:33:5-35:36
+	android:required
+		ADDED from [com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\swp\.gradle\caches\transforms-4\5ab53c1487403011b21d5191add2915e\transformed\zxing-android-embedded-4.3.0\AndroidManifest.xml:35:9-33
+	android:name
+		ADDED from [com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\swp\.gradle\caches\transforms-4\5ab53c1487403011b21d5191add2915e\transformed\zxing-android-embedded-4.3.0\AndroidManifest.xml:34:9-57
+uses-feature#android.hardware.camera.flash
+ADDED from [com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\swp\.gradle\caches\transforms-4\5ab53c1487403011b21d5191add2915e\transformed\zxing-android-embedded-4.3.0\AndroidManifest.xml:36:5-38:36
+	android:required
+		ADDED from [com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\swp\.gradle\caches\transforms-4\5ab53c1487403011b21d5191add2915e\transformed\zxing-android-embedded-4.3.0\AndroidManifest.xml:38:9-33
+	android:name
+		ADDED from [com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\swp\.gradle\caches\transforms-4\5ab53c1487403011b21d5191add2915e\transformed\zxing-android-embedded-4.3.0\AndroidManifest.xml:37:9-53
+uses-feature#android.hardware.screen.landscape
+ADDED from [com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\swp\.gradle\caches\transforms-4\5ab53c1487403011b21d5191add2915e\transformed\zxing-android-embedded-4.3.0\AndroidManifest.xml:39:5-41:36
+	android:required
+		ADDED from [com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\swp\.gradle\caches\transforms-4\5ab53c1487403011b21d5191add2915e\transformed\zxing-android-embedded-4.3.0\AndroidManifest.xml:41:9-33
+	android:name
+		ADDED from [com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\swp\.gradle\caches\transforms-4\5ab53c1487403011b21d5191add2915e\transformed\zxing-android-embedded-4.3.0\AndroidManifest.xml:40:9-57
+uses-feature#android.hardware.wifi
+ADDED from [com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\swp\.gradle\caches\transforms-4\5ab53c1487403011b21d5191add2915e\transformed\zxing-android-embedded-4.3.0\AndroidManifest.xml:42:5-44:36
+	android:required
+		ADDED from [com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\swp\.gradle\caches\transforms-4\5ab53c1487403011b21d5191add2915e\transformed\zxing-android-embedded-4.3.0\AndroidManifest.xml:44:9-33
+	android:name
+		ADDED from [com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\swp\.gradle\caches\transforms-4\5ab53c1487403011b21d5191add2915e\transformed\zxing-android-embedded-4.3.0\AndroidManifest.xml:43:9-45
+activity#com.journeyapps.barcodescanner.CaptureActivity
+ADDED from [com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\swp\.gradle\caches\transforms-4\5ab53c1487403011b21d5191add2915e\transformed\zxing-android-embedded-4.3.0\AndroidManifest.xml:47:9-53:63
+	android:screenOrientation
+		ADDED from [com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\swp\.gradle\caches\transforms-4\5ab53c1487403011b21d5191add2915e\transformed\zxing-android-embedded-4.3.0\AndroidManifest.xml:50:13-56
+	android:clearTaskOnLaunch
+		ADDED from [com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\swp\.gradle\caches\transforms-4\5ab53c1487403011b21d5191add2915e\transformed\zxing-android-embedded-4.3.0\AndroidManifest.xml:49:13-45
+	android:stateNotNeeded
+		ADDED from [com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\swp\.gradle\caches\transforms-4\5ab53c1487403011b21d5191add2915e\transformed\zxing-android-embedded-4.3.0\AndroidManifest.xml:51:13-42
+	android:windowSoftInputMode
+		ADDED from [com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\swp\.gradle\caches\transforms-4\5ab53c1487403011b21d5191add2915e\transformed\zxing-android-embedded-4.3.0\AndroidManifest.xml:53:13-60
+	android:theme
+		ADDED from [com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\swp\.gradle\caches\transforms-4\5ab53c1487403011b21d5191add2915e\transformed\zxing-android-embedded-4.3.0\AndroidManifest.xml:52:13-54
+	android:name
+		ADDED from [com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\swp\.gradle\caches\transforms-4\5ab53c1487403011b21d5191add2915e\transformed\zxing-android-embedded-4.3.0\AndroidManifest.xml:48:13-74
 meta-data#androidx.profileinstaller.ProfileInstallerInitializer
 ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\swp\.gradle\caches\transforms-4\5751509a1e2a68bb7b277e4d210bf791\transformed\profileinstaller-1.4.0\AndroidManifest.xml:29:13-31:52
 	android:value

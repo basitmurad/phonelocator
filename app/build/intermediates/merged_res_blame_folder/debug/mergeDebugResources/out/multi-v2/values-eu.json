@@ -1,8 +1,25 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.locationtracker.app-mergeDebugResources-70:/values-eu/values-eu.xml",
+            "outputFile": "com.example.locationtracker.app-mergeDebugResources-71:/values-eu/values-eu.xml",
             "map": [
+                {
+                    "source": "C:\\Users\\swp\\.gradle\\caches\\transforms-4\\5ab53c1487403011b21d5191add2915e\\transformed\\zxing-android-embedded-4.3.0\\res\\values-eu\\values-eu.xml",
+                    "from": {
+                        "startLines": "2,3,4,5",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,119,168,316",
+                        "endColumns": "63,48,147,111",
+                        "endOffsets": "114,163,311,423"
+                    },
+                    "to": {
+                        "startLines": "219,220,221,222",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "21278,21342,21391,21539",
+                        "endColumns": "63,48,147,111",
+                        "endOffsets": "21337,21386,21534,21646"
+                    }
+                },
                 {
                     "source": "C:\\Users\\swp\\.gradle\\caches\\transforms-4\\0507657d5f16edb435d7e00f29e01845\\transformed\\appcompat-1.7.0\\res\\values-eu\\values-eu.xml",
                     "from": {

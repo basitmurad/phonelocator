@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.locationtracker.app-mergeDebugResources-70:/values-zh-rTW/values-zh-rTW.xml",
+            "outputFile": "com.example.locationtracker.app-mergeDebugResources-71:/values-zh-rTW/values-zh-rTW.xml",
             "map": [
                 {
                     "source": "C:\\Users\\swp\\.gradle\\caches\\transforms-4\\ee13e295512db04b1ddc41d284294a6d\\transformed\\foundation-release\\res\\values-zh-rTW\\values-zh-rTW.xml",
@@ -69,6 +69,23 @@
                         "startOffsets": "6110,6545,16700,16839,17789,18377,18456",
                         "endColumns": "65,80,69,119,167,78,75",
                         "endOffsets": "6171,6621,16765,16954,17952,18451,18527"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\swp\\.gradle\\caches\\transforms-4\\5ab53c1487403011b21d5191add2915e\\transformed\\zxing-android-embedded-4.3.0\\res\\values-zh-rTW\\values-zh-rTW.xml",
+                    "from": {
+                        "startLines": "2,3,4,5",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,104,151,244",
+                        "endColumns": "48,46,92,69",
+                        "endOffsets": "99,146,239,309"
+                    },
+                    "to": {
+                        "startLines": "219,220,221,222",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "18532,18581,18628,18721",
+                        "endColumns": "48,46,92,69",
+                        "endOffsets": "18576,18623,18716,18786"
                     }
                 },
                 {

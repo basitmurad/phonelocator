@@ -77,4 +77,6 @@ dependencies {
     annotationProcessor(libs.compiler)
 
     // Add ZXing dependency
+
+    implementation ("com.journeyapps:zxing-android-embedded:4.3.0")
 }
