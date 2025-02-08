@@ -1,358 +1,358 @@
 [
     {
-        "merged": "com.example.locationtracker.app-debug-73:/drawable_whatsapp.png.flat",
-        "source": "com.example.locationtracker.app-main-75:/drawable/whatsapp.png"
+        "merged": "com.example.locationtracker.app-debug-72:/drawable_baseline_photo_camera_24.xml.flat",
+        "source": "com.example.locationtracker.app-main-74:/drawable/baseline_photo_camera_24.xml"
     },
     {
-        "merged": "com.example.locationtracker.app-debug-73:/drawable_baseline_home_24.xml.flat",
-        "source": "com.example.locationtracker.app-main-75:/drawable/baseline_home_24.xml"
+        "merged": "com.example.locationtracker.app-debug-72:/layout_dialog_rating.xml.flat",
+        "source": "com.example.locationtracker.app-main-74:/layout/dialog_rating.xml"
     },
     {
-        "merged": "com.example.locationtracker.app-debug-73:/drawable_logo2.png.flat",
-        "source": "com.example.locationtracker.app-main-75:/drawable/logo2.png"
+        "merged": "com.example.locationtracker.app-debug-72:/layout_fragment_profile.xml.flat",
+        "source": "com.example.locationtracker.app-main-74:/layout/fragment_profile.xml"
     },
     {
-        "merged": "com.example.locationtracker.app-debug-73:/layout_activity_language.xml.flat",
-        "source": "com.example.locationtracker.app-main-75:/layout/activity_language.xml"
+        "merged": "com.example.locationtracker.app-debug-72:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.locationtracker.app-main-74:/mipmap-xxhdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "com.example.locationtracker.app-debug-73:/drawable_dialoge_back.xml.flat",
-        "source": "com.example.locationtracker.app-main-75:/drawable/dialoge_back.xml"
+        "merged": "com.example.locationtracker.app-debug-72:/drawable_baseline_perm_device_information_24.xml.flat",
+        "source": "com.example.locationtracker.app-main-74:/drawable/baseline_perm_device_information_24.xml"
     },
     {
-        "merged": "com.example.locationtracker.app-debug-73:/layout_confirm_dialog_layout.xml.flat",
-        "source": "com.example.locationtracker.app-main-75:/layout/confirm_dialog_layout.xml"
+        "merged": "com.example.locationtracker.app-debug-72:/drawable_dialoge_back.xml.flat",
+        "source": "com.example.locationtracker.app-main-74:/drawable/dialoge_back.xml"
     },
     {
-        "merged": "com.example.locationtracker.app-debug-73:/drawable_bi_facebook.png.flat",
-        "source": "com.example.locationtracker.app-main-75:/drawable/bi_facebook.png"
+        "merged": "com.example.locationtracker.app-debug-72:/layout_custom_motion_tracking_dialog.xml.flat",
+        "source": "com.example.locationtracker.app-main-74:/layout/custom_motion_tracking_dialog.xml"
     },
     {
-        "merged": "com.example.locationtracker.app-debug-73:/layout_activity_main.xml.flat",
-        "source": "com.example.locationtracker.app-main-75:/layout/activity_main.xml"
+        "merged": "com.example.locationtracker.app-debug-72:/font_psemibold.ttf.flat",
+        "source": "com.example.locationtracker.app-main-74:/font/psemibold.ttf"
     },
     {
-        "merged": "com.example.locationtracker.app-debug-73:/drawable_back_buttom.xml.flat",
-        "source": "com.example.locationtracker.app-main-75:/drawable/back_buttom.xml"
+        "merged": "com.example.locationtracker.app-debug-72:/drawable_baseline_battery_2_bar_24.xml.flat",
+        "source": "com.example.locationtracker.app-main-74:/drawable/baseline_battery_2_bar_24.xml"
     },
     {
-        "merged": "com.example.locationtracker.app-debug-73:/drawable_howuse.png.flat",
-        "source": "com.example.locationtracker.app-main-75:/drawable/howuse.png"
+        "merged": "com.example.locationtracker.app-debug-72:/layout_fragment_device.xml.flat",
+        "source": "com.example.locationtracker.app-main-74:/layout/fragment_device.xml"
     },
     {
-        "merged": "com.example.locationtracker.app-debug-73:/drawable_share.png.flat",
-        "source": "com.example.locationtracker.app-main-75:/drawable/share.png"
+        "merged": "com.example.locationtracker.app-debug-72:/layout_fragment_home.xml.flat",
+        "source": "com.example.locationtracker.app-main-74:/layout/fragment_home.xml"
     },
     {
-        "merged": "com.example.locationtracker.app-debug-73:/layout_custom_motion_tracking_dialog.xml.flat",
-        "source": "com.example.locationtracker.app-main-75:/layout/custom_motion_tracking_dialog.xml"
+        "merged": "com.example.locationtracker.app-debug-72:/layout_dialog_success.xml.flat",
+        "source": "com.example.locationtracker.app-main-74:/layout/dialog_success.xml"
     },
     {
-        "merged": "com.example.locationtracker.app-debug-73:/layout_item_language.xml.flat",
-        "source": "com.example.locationtracker.app-main-75:/layout/item_language.xml"
+        "merged": "com.example.locationtracker.app-debug-72:/drawable_notifications.png.flat",
+        "source": "com.example.locationtracker.app-main-74:/drawable/notifications.png"
     },
     {
-        "merged": "com.example.locationtracker.app-debug-73:/drawable_stroke_back.xml.flat",
-        "source": "com.example.locationtracker.app-main-75:/drawable/stroke_back.xml"
+        "merged": "com.example.locationtracker.app-debug-72:/layout_dialog_custom.xml.flat",
+        "source": "com.example.locationtracker.app-main-74:/layout/dialog_custom.xml"
     },
     {
-        "merged": "com.example.locationtracker.app-debug-73:/font_pregular.ttf.flat",
-        "source": "com.example.locationtracker.app-main-75:/font/pregular.ttf"
+        "merged": "com.example.locationtracker.app-debug-72:/drawable_baseline_battery_charging_full_24.xml.flat",
+        "source": "com.example.locationtracker.app-main-74:/drawable/baseline_battery_charging_full_24.xml"
     },
     {
-        "merged": "com.example.locationtracker.app-debug-73:/mipmap-xxxhdpi_ic_launcher.webp.flat",
-        "source": "com.example.locationtracker.app-main-75:/mipmap-xxxhdpi/ic_launcher.webp"
+        "merged": "com.example.locationtracker.app-debug-72:/drawable_baseline_battery_3_bar_24.xml.flat",
+        "source": "com.example.locationtracker.app-main-74:/drawable/baseline_battery_3_bar_24.xml"
     },
     {
-        "merged": "com.example.locationtracker.app-debug-73:/drawable_baseline_battery_6_bar_24.xml.flat",
-        "source": "com.example.locationtracker.app-main-75:/drawable/baseline_battery_6_bar_24.xml"
+        "merged": "com.example.locationtracker.app-debug-72:/drawable_whatsapp.png.flat",
+        "source": "com.example.locationtracker.app-main-74:/drawable/whatsapp.png"
     },
     {
-        "merged": "com.example.locationtracker.app-debug-73:/layout_connect_device_layout.xml.flat",
-        "source": "com.example.locationtracker.app-main-75:/layout/connect_device_layout.xml"
+        "merged": "com.example.locationtracker.app-debug-72:/drawable_baseline_battery_4_bar_24.xml.flat",
+        "source": "com.example.locationtracker.app-main-74:/drawable/baseline_battery_4_bar_24.xml"
     },
     {
-        "merged": "com.example.locationtracker.app-debug-73:/layout_activity_show_detail.xml.flat",
-        "source": "com.example.locationtracker.app-main-75:/layout/activity_show_detail.xml"
+        "merged": "com.example.locationtracker.app-debug-72:/layout_device_name_layout.xml.flat",
+        "source": "com.example.locationtracker.app-main-74:/layout/device_name_layout.xml"
     },
     {
-        "merged": "com.example.locationtracker.app-debug-73:/mipmap-anydpi-v26_ic_launcher.xml.flat",
-        "source": "com.example.locationtracker.app-main-75:/mipmap-anydpi-v26/ic_launcher.xml"
+        "merged": "com.example.locationtracker.app-debug-72:/xml_data_extraction_rules.xml.flat",
+        "source": "com.example.locationtracker.app-main-74:/xml/data_extraction_rules.xml"
     },
     {
-        "merged": "com.example.locationtracker.app-debug-73:/mipmap-xhdpi_ic_launcher_round.webp.flat",
-        "source": "com.example.locationtracker.app-main-75:/mipmap-xhdpi/ic_launcher_round.webp"
+        "merged": "com.example.locationtracker.app-debug-72:/drawable_instagram.png.flat",
+        "source": "com.example.locationtracker.app-main-74:/drawable/instagram.png"
     },
     {
-        "merged": "com.example.locationtracker.app-debug-73:/layout_activity_permission.xml.flat",
-        "source": "com.example.locationtracker.app-main-75:/layout/activity_permission.xml"
+        "merged": "com.example.locationtracker.app-debug-72:/font_pmedium.ttf.flat",
+        "source": "com.example.locationtracker.app-main-74:/font/pmedium.ttf"
     },
     {
-        "merged": "com.example.locationtracker.app-debug-73:/mipmap-hdpi_ic_launcher.webp.flat",
-        "source": "com.example.locationtracker.app-main-75:/mipmap-hdpi/ic_launcher.webp"
+        "merged": "com.example.locationtracker.app-debug-72:/drawable_back_editext.xml.flat",
+        "source": "com.example.locationtracker.app-main-74:/drawable/back_editext.xml"
     },
     {
-        "merged": "com.example.locationtracker.app-debug-73:/layout_dialog_success.xml.flat",
-        "source": "com.example.locationtracker.app-main-75:/layout/dialog_success.xml"
+        "merged": "com.example.locationtracker.app-debug-72:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.locationtracker.app-main-74:/mipmap-xxxhdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "com.example.locationtracker.app-debug-73:/layout_activity_device_name.xml.flat",
-        "source": "com.example.locationtracker.app-main-75:/layout/activity_device_name.xml"
-    },
-    {
-        "merged": "com.example.locationtracker.app-debug-73:/drawable_color_selector.xml.flat",
-        "source": "com.example.locationtracker.app-main-75:/drawable/color_selector.xml"
-    },
-    {
-        "merged": "com.example.locationtracker.app-debug-73:/layout_fragment_profile.xml.flat",
-        "source": "com.example.locationtracker.app-main-75:/layout/fragment_profile.xml"
-    },
-    {
-        "merged": "com.example.locationtracker.app-debug-73:/drawable_logo.png.flat",
-        "source": "com.example.locationtracker.app-main-75:/drawable/logo.png"
-    },
-    {
-        "merged": "com.example.locationtracker.app-debug-73:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
-        "source": "com.example.locationtracker.app-main-75:/mipmap-xxxhdpi/ic_launcher_round.webp"
-    },
-    {
-        "merged": "com.example.locationtracker.app-debug-73:/layout_activity_get_start.xml.flat",
-        "source": "com.example.locationtracker.app-main-75:/layout/activity_get_start.xml"
-    },
-    {
-        "merged": "com.example.locationtracker.app-debug-73:/drawable_ic_launcher_background.xml.flat",
-        "source": "com.example.locationtracker.app-main-75:/drawable/ic_launcher_background.xml"
-    },
-    {
-        "merged": "com.example.locationtracker.app-debug-73:/mipmap-xxhdpi_ic_launcher.webp.flat",
-        "source": "com.example.locationtracker.app-main-75:/mipmap-xxhdpi/ic_launcher.webp"
-    },
-    {
-        "merged": "com.example.locationtracker.app-debug-73:/mipmap-hdpi_ic_launcher_round.webp.flat",
-        "source": "com.example.locationtracker.app-main-75:/mipmap-hdpi/ic_launcher_round.webp"
-    },
-    {
-        "merged": "com.example.locationtracker.app-debug-73:/menu_bottom_nav_menu.xml.flat",
-        "source": "com.example.locationtracker.app-main-75:/menu/bottom_nav_menu.xml"
-    },
-    {
-        "merged": "com.example.locationtracker.app-debug-73:/layout_activity_splash.xml.flat",
-        "source": "com.example.locationtracker.app-main-75:/layout/activity_splash.xml"
-    },
-    {
-        "merged": "com.example.locationtracker.app-debug-73:/drawable_linkdln.png.flat",
-        "source": "com.example.locationtracker.app-main-75:/drawable/linkdln.png"
-    },
-    {
-        "merged": "com.example.locationtracker.app-debug-73:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
-        "source": "com.example.locationtracker.app-main-75:/mipmap-anydpi-v26/ic_launcher_round.xml"
-    },
-    {
-        "merged": "com.example.locationtracker.app-debug-73:/drawable_baseline_battery_charging_full_24.xml.flat",
-        "source": "com.example.locationtracker.app-main-75:/drawable/baseline_battery_charging_full_24.xml"
-    },
-    {
-        "merged": "com.example.locationtracker.app-debug-73:/xml_data_extraction_rules.xml.flat",
-        "source": "com.example.locationtracker.app-main-75:/xml/data_extraction_rules.xml"
-    },
-    {
-        "merged": "com.example.locationtracker.app-debug-73:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
-        "source": "com.example.locationtracker.app-main-75:/mipmap-xxhdpi/ic_launcher_round.webp"
-    },
-    {
-        "merged": "com.example.locationtracker.app-debug-73:/font_pextrabold.ttf.flat",
-        "source": "com.example.locationtracker.app-main-75:/font/pextrabold.ttf"
-    },
-    {
-        "merged": "com.example.locationtracker.app-debug-73:/drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
+        "merged": "com.example.locationtracker.app-debug-72:/drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
         "source": "com.example.locationtracker.app-pngs-68:/drawable-anydpi-v24/ic_launcher_foreground.xml"
     },
     {
-        "merged": "com.example.locationtracker.app-debug-73:/drawable_baseline_battery_0_bar_24.xml.flat",
-        "source": "com.example.locationtracker.app-main-75:/drawable/baseline_battery_0_bar_24.xml"
+        "merged": "com.example.locationtracker.app-debug-72:/drawable_cross.png.flat",
+        "source": "com.example.locationtracker.app-main-74:/drawable/cross.png"
     },
     {
-        "merged": "com.example.locationtracker.app-debug-73:/drawable_baseline_person_24.xml.flat",
-        "source": "com.example.locationtracker.app-main-75:/drawable/baseline_person_24.xml"
+        "merged": "com.example.locationtracker.app-debug-72:/layout_activity_home.xml.flat",
+        "source": "com.example.locationtracker.app-main-74:/layout/activity_home.xml"
     },
     {
-        "merged": "com.example.locationtracker.app-debug-73:/font_psemibold.ttf.flat",
-        "source": "com.example.locationtracker.app-main-75:/font/psemibold.ttf"
+        "merged": "com.example.locationtracker.app-debug-72:/layout_activity_permission.xml.flat",
+        "source": "com.example.locationtracker.app-main-74:/layout/activity_permission.xml"
     },
     {
-        "merged": "com.example.locationtracker.app-debug-73:/drawable_baseline_perm_device_information_24.xml.flat",
-        "source": "com.example.locationtracker.app-main-75:/drawable/baseline_perm_device_information_24.xml"
+        "merged": "com.example.locationtracker.app-debug-72:/mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.locationtracker.app-main-74:/mipmap-hdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "com.example.locationtracker.app-debug-73:/drawable_baseline_cast_connected_24.xml.flat",
-        "source": "com.example.locationtracker.app-main-75:/drawable/baseline_cast_connected_24.xml"
+        "merged": "com.example.locationtracker.app-debug-72:/drawable_bi_facebook.png.flat",
+        "source": "com.example.locationtracker.app-main-74:/drawable/bi_facebook.png"
     },
     {
-        "merged": "com.example.locationtracker.app-debug-73:/layout_device_name_layout.xml.flat",
-        "source": "com.example.locationtracker.app-main-75:/layout/device_name_layout.xml"
+        "merged": "com.example.locationtracker.app-debug-72:/drawable_circle_background.xml.flat",
+        "source": "com.example.locationtracker.app-main-74:/drawable/circle_background.xml"
     },
     {
-        "merged": "com.example.locationtracker.app-debug-73:/drawable_lock.png.flat",
-        "source": "com.example.locationtracker.app-main-75:/drawable/lock.png"
+        "merged": "com.example.locationtracker.app-debug-72:/layout_activity_show_device_detail.xml.flat",
+        "source": "com.example.locationtracker.app-main-74:/layout/activity_show_device_detail.xml"
     },
     {
-        "merged": "com.example.locationtracker.app-debug-73:/layout_dialog_rating.xml.flat",
-        "source": "com.example.locationtracker.app-main-75:/layout/dialog_rating.xml"
+        "merged": "com.example.locationtracker.app-debug-72:/drawable_logo2.png.flat",
+        "source": "com.example.locationtracker.app-main-74:/drawable/logo2.png"
     },
     {
-        "merged": "com.example.locationtracker.app-debug-73:/drawable_baseline_battery_std_24.xml.flat",
-        "source": "com.example.locationtracker.app-main-75:/drawable/baseline_battery_std_24.xml"
+        "merged": "com.example.locationtracker.app-debug-72:/layout_activity_splash.xml.flat",
+        "source": "com.example.locationtracker.app-main-74:/layout/activity_splash.xml"
     },
     {
-        "merged": "com.example.locationtracker.app-debug-73:/mipmap-xhdpi_ic_launcher.webp.flat",
-        "source": "com.example.locationtracker.app-main-75:/mipmap-xhdpi/ic_launcher.webp"
+        "merged": "com.example.locationtracker.app-debug-72:/drawable_lock.png.flat",
+        "source": "com.example.locationtracker.app-main-74:/drawable/lock.png"
     },
     {
-        "merged": "com.example.locationtracker.app-debug-73:/layout_fragment_home.xml.flat",
-        "source": "com.example.locationtracker.app-main-75:/layout/fragment_home.xml"
+        "merged": "com.example.locationtracker.app-debug-72:/drawable_stroke_back.xml.flat",
+        "source": "com.example.locationtracker.app-main-74:/drawable/stroke_back.xml"
     },
     {
-        "merged": "com.example.locationtracker.app-debug-73:/layout_fragment_connect.xml.flat",
-        "source": "com.example.locationtracker.app-main-75:/layout/fragment_connect.xml"
+        "merged": "com.example.locationtracker.app-debug-72:/layout_item_language.xml.flat",
+        "source": "com.example.locationtracker.app-main-74:/layout/item_language.xml"
     },
     {
-        "merged": "com.example.locationtracker.app-debug-73:/drawable_baseline_battery_5_bar_24.xml.flat",
-        "source": "com.example.locationtracker.app-main-75:/drawable/baseline_battery_5_bar_24.xml"
+        "merged": "com.example.locationtracker.app-debug-72:/drawable_baseline_add_24.xml.flat",
+        "source": "com.example.locationtracker.app-main-74:/drawable/baseline_add_24.xml"
     },
     {
-        "merged": "com.example.locationtracker.app-debug-73:/drawable_rateus.png.flat",
-        "source": "com.example.locationtracker.app-main-75:/drawable/rateus.png"
+        "merged": "com.example.locationtracker.app-debug-72:/drawable_baseline_person_24.xml.flat",
+        "source": "com.example.locationtracker.app-main-74:/drawable/baseline_person_24.xml"
     },
     {
-        "merged": "com.example.locationtracker.app-debug-73:/drawable_baseline_battery_1_bar_24.xml.flat",
-        "source": "com.example.locationtracker.app-main-75:/drawable/baseline_battery_1_bar_24.xml"
+        "merged": "com.example.locationtracker.app-debug-72:/drawable_baseline_battery_1_bar_24.xml.flat",
+        "source": "com.example.locationtracker.app-main-74:/drawable/baseline_battery_1_bar_24.xml"
     },
     {
-        "merged": "com.example.locationtracker.app-debug-73:/drawable_language.png.flat",
-        "source": "com.example.locationtracker.app-main-75:/drawable/language.png"
+        "merged": "com.example.locationtracker.app-debug-72:/drawable_baseline_arrow_back_24.xml.flat",
+        "source": "com.example.locationtracker.app-main-74:/drawable/baseline_arrow_back_24.xml"
     },
     {
-        "merged": "com.example.locationtracker.app-debug-73:/drawable_cross.png.flat",
-        "source": "com.example.locationtracker.app-main-75:/drawable/cross.png"
+        "merged": "com.example.locationtracker.app-debug-72:/drawable_share.png.flat",
+        "source": "com.example.locationtracker.app-main-74:/drawable/share.png"
     },
     {
-        "merged": "com.example.locationtracker.app-debug-73:/mipmap-mdpi_ic_launcher.webp.flat",
-        "source": "com.example.locationtracker.app-main-75:/mipmap-mdpi/ic_launcher.webp"
+        "merged": "com.example.locationtracker.app-debug-72:/drawable_baseline_arrow_forward_ios_24.xml.flat",
+        "source": "com.example.locationtracker.app-main-74:/drawable/baseline_arrow_forward_ios_24.xml"
     },
     {
-        "merged": "com.example.locationtracker.app-debug-73:/layout_dialog_generic_disabled.xml.flat",
-        "source": "com.example.locationtracker.app-main-75:/layout/dialog_generic_disabled.xml"
+        "merged": "com.example.locationtracker.app-debug-72:/font_pregular.ttf.flat",
+        "source": "com.example.locationtracker.app-main-74:/font/pregular.ttf"
     },
     {
-        "merged": "com.example.locationtracker.app-debug-73:/drawable_baseline_battery_2_bar_24.xml.flat",
-        "source": "com.example.locationtracker.app-main-75:/drawable/baseline_battery_2_bar_24.xml"
+        "merged": "com.example.locationtracker.app-debug-72:/mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "com.example.locationtracker.app-main-74:/mipmap-xhdpi/ic_launcher.webp"
     },
     {
-        "merged": "com.example.locationtracker.app-debug-73:/layout_bottom_sheet_permissions.xml.flat",
-        "source": "com.example.locationtracker.app-main-75:/layout/bottom_sheet_permissions.xml"
+        "merged": "com.example.locationtracker.app-debug-72:/font_pbold.ttf.flat",
+        "source": "com.example.locationtracker.app-main-74:/font/pbold.ttf"
     },
     {
-        "merged": "com.example.locationtracker.app-debug-73:/layout_activity_main2.xml.flat",
-        "source": "com.example.locationtracker.app-main-75:/layout/activity_main2.xml"
+        "merged": "com.example.locationtracker.app-debug-72:/menu_bottom_nav_menu.xml.flat",
+        "source": "com.example.locationtracker.app-main-74:/menu/bottom_nav_menu.xml"
     },
     {
-        "merged": "com.example.locationtracker.app-debug-73:/drawable_circle_background.xml.flat",
-        "source": "com.example.locationtracker.app-main-75:/drawable/circle_background.xml"
+        "merged": "com.example.locationtracker.app-debug-72:/layout_device_list_layout.xml.flat",
+        "source": "com.example.locationtracker.app-main-74:/layout/device_list_layout.xml"
     },
     {
-        "merged": "com.example.locationtracker.app-debug-73:/drawable_baseline_photo_camera_24.xml.flat",
-        "source": "com.example.locationtracker.app-main-75:/drawable/baseline_photo_camera_24.xml"
+        "merged": "com.example.locationtracker.app-debug-72:/drawable_baseline_battery_6_bar_24.xml.flat",
+        "source": "com.example.locationtracker.app-main-74:/drawable/baseline_battery_6_bar_24.xml"
     },
     {
-        "merged": "com.example.locationtracker.app-debug-73:/drawable_baseline_battery_3_bar_24.xml.flat",
-        "source": "com.example.locationtracker.app-main-75:/drawable/baseline_battery_3_bar_24.xml"
+        "merged": "com.example.locationtracker.app-debug-72:/xml_backup_rules.xml.flat",
+        "source": "com.example.locationtracker.app-main-74:/xml/backup_rules.xml"
     },
     {
-        "merged": "com.example.locationtracker.app-debug-73:/drawable_back_editext.xml.flat",
-        "source": "com.example.locationtracker.app-main-75:/drawable/back_editext.xml"
+        "merged": "com.example.locationtracker.app-debug-72:/drawable_iconoir_message.png.flat",
+        "source": "com.example.locationtracker.app-main-74:/drawable/iconoir_message.png"
     },
     {
-        "merged": "com.example.locationtracker.app-debug-73:/drawable_baseline_arrow_forward_ios_24.xml.flat",
-        "source": "com.example.locationtracker.app-main-75:/drawable/baseline_arrow_forward_ios_24.xml"
+        "merged": "com.example.locationtracker.app-debug-72:/mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "com.example.locationtracker.app-main-74:/mipmap-hdpi/ic_launcher.webp"
     },
     {
-        "merged": "com.example.locationtracker.app-debug-73:/drawable_baseline_edit_24.xml.flat",
-        "source": "com.example.locationtracker.app-main-75:/drawable/baseline_edit_24.xml"
+        "merged": "com.example.locationtracker.app-debug-72:/drawable_rateus.png.flat",
+        "source": "com.example.locationtracker.app-main-74:/drawable/rateus.png"
     },
     {
-        "merged": "com.example.locationtracker.app-debug-73:/drawable_iconoir_message.png.flat",
-        "source": "com.example.locationtracker.app-main-75:/drawable/iconoir_message.png"
+        "merged": "com.example.locationtracker.app-debug-72:/layout_activity_main2.xml.flat",
+        "source": "com.example.locationtracker.app-main-74:/layout/activity_main2.xml"
     },
     {
-        "merged": "com.example.locationtracker.app-debug-73:/drawable_baseline_arrow_back_24.xml.flat",
-        "source": "com.example.locationtracker.app-main-75:/drawable/baseline_arrow_back_24.xml"
+        "merged": "com.example.locationtracker.app-debug-72:/layout_activity_get_start.xml.flat",
+        "source": "com.example.locationtracker.app-main-74:/layout/activity_get_start.xml"
     },
     {
-        "merged": "com.example.locationtracker.app-debug-73:/mipmap-mdpi_ic_launcher_round.webp.flat",
-        "source": "com.example.locationtracker.app-main-75:/mipmap-mdpi/ic_launcher_round.webp"
+        "merged": "com.example.locationtracker.app-debug-72:/layout_activity_show_detail.xml.flat",
+        "source": "com.example.locationtracker.app-main-74:/layout/activity_show_detail.xml"
     },
     {
-        "merged": "com.example.locationtracker.app-debug-73:/layout_fragment_device.xml.flat",
-        "source": "com.example.locationtracker.app-main-75:/layout/fragment_device.xml"
+        "merged": "com.example.locationtracker.app-debug-72:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "com.example.locationtracker.app-main-74:/mipmap-anydpi-v26/ic_launcher.xml"
     },
     {
-        "merged": "com.example.locationtracker.app-debug-73:/drawable_baseline_battery_4_bar_24.xml.flat",
-        "source": "com.example.locationtracker.app-main-75:/drawable/baseline_battery_4_bar_24.xml"
+        "merged": "com.example.locationtracker.app-debug-72:/mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "com.example.locationtracker.app-main-74:/mipmap-xxxhdpi/ic_launcher.webp"
     },
     {
-        "merged": "com.example.locationtracker.app-debug-73:/drawable_startimage.png.flat",
-        "source": "com.example.locationtracker.app-main-75:/drawable/startimage.png"
+        "merged": "com.example.locationtracker.app-debug-72:/layout_dialog_generic_disabled.xml.flat",
+        "source": "com.example.locationtracker.app-main-74:/layout/dialog_generic_disabled.xml"
     },
     {
-        "merged": "com.example.locationtracker.app-debug-73:/layout_activity_home.xml.flat",
-        "source": "com.example.locationtracker.app-main-75:/layout/activity_home.xml"
+        "merged": "com.example.locationtracker.app-debug-72:/drawable_language.png.flat",
+        "source": "com.example.locationtracker.app-main-74:/drawable/language.png"
     },
     {
-        "merged": "com.example.locationtracker.app-debug-73:/drawable_baseline_add_24.xml.flat",
-        "source": "com.example.locationtracker.app-main-75:/drawable/baseline_add_24.xml"
+        "merged": "com.example.locationtracker.app-debug-72:/layout_activity_profile.xml.flat",
+        "source": "com.example.locationtracker.app-main-74:/layout/activity_profile.xml"
     },
     {
-        "merged": "com.example.locationtracker.app-debug-73:/layout_device_list_layout.xml.flat",
-        "source": "com.example.locationtracker.app-main-75:/layout/device_list_layout.xml"
+        "merged": "com.example.locationtracker.app-debug-72:/drawable_baseline_battery_std_24.xml.flat",
+        "source": "com.example.locationtracker.app-main-74:/drawable/baseline_battery_std_24.xml"
     },
     {
-        "merged": "com.example.locationtracker.app-debug-73:/font_pbold.ttf.flat",
-        "source": "com.example.locationtracker.app-main-75:/font/pbold.ttf"
+        "merged": "com.example.locationtracker.app-debug-72:/drawable_logo.png.flat",
+        "source": "com.example.locationtracker.app-main-74:/drawable/logo.png"
     },
     {
-        "merged": "com.example.locationtracker.app-debug-73:/xml_backup_rules.xml.flat",
-        "source": "com.example.locationtracker.app-main-75:/xml/backup_rules.xml"
+        "merged": "com.example.locationtracker.app-debug-72:/layout_fragment_connect.xml.flat",
+        "source": "com.example.locationtracker.app-main-74:/layout/fragment_connect.xml"
     },
     {
-        "merged": "com.example.locationtracker.app-debug-73:/font_pmedium.ttf.flat",
-        "source": "com.example.locationtracker.app-main-75:/font/pmedium.ttf"
+        "merged": "com.example.locationtracker.app-debug-72:/layout_bottom_sheet_permissions.xml.flat",
+        "source": "com.example.locationtracker.app-main-74:/layout/bottom_sheet_permissions.xml"
     },
     {
-        "merged": "com.example.locationtracker.app-debug-73:/layout_activity_profile.xml.flat",
-        "source": "com.example.locationtracker.app-main-75:/layout/activity_profile.xml"
+        "merged": "com.example.locationtracker.app-debug-72:/font_pblack.ttf.flat",
+        "source": "com.example.locationtracker.app-main-74:/font/pblack.ttf"
     },
     {
-        "merged": "com.example.locationtracker.app-debug-73:/layout_activity_privacy_policy.xml.flat",
-        "source": "com.example.locationtracker.app-main-75:/layout/activity_privacy_policy.xml"
+        "merged": "com.example.locationtracker.app-debug-72:/drawable_back_buttom.xml.flat",
+        "source": "com.example.locationtracker.app-main-74:/drawable/back_buttom.xml"
     },
     {
-        "merged": "com.example.locationtracker.app-debug-73:/layout_activity_show_device_detail.xml.flat",
-        "source": "com.example.locationtracker.app-main-75:/layout/activity_show_device_detail.xml"
+        "merged": "com.example.locationtracker.app-debug-72:/layout_activity_device_name.xml.flat",
+        "source": "com.example.locationtracker.app-main-74:/layout/activity_device_name.xml"
     },
     {
-        "merged": "com.example.locationtracker.app-debug-73:/font_pblack.ttf.flat",
-        "source": "com.example.locationtracker.app-main-75:/font/pblack.ttf"
+        "merged": "com.example.locationtracker.app-debug-72:/drawable_baseline_cast_connected_24.xml.flat",
+        "source": "com.example.locationtracker.app-main-74:/drawable/baseline_cast_connected_24.xml"
     },
     {
-        "merged": "com.example.locationtracker.app-debug-73:/drawable_notifications.png.flat",
-        "source": "com.example.locationtracker.app-main-75:/drawable/notifications.png"
+        "merged": "com.example.locationtracker.app-debug-72:/mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.locationtracker.app-main-74:/mipmap-xhdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "com.example.locationtracker.app-debug-73:/drawable_instagram.png.flat",
-        "source": "com.example.locationtracker.app-main-75:/drawable/instagram.png"
+        "merged": "com.example.locationtracker.app-debug-72:/font_pextrabold.ttf.flat",
+        "source": "com.example.locationtracker.app-main-74:/font/pextrabold.ttf"
     },
     {
-        "merged": "com.example.locationtracker.app-debug-73:/layout_dialog_custom.xml.flat",
-        "source": "com.example.locationtracker.app-main-75:/layout/dialog_custom.xml"
+        "merged": "com.example.locationtracker.app-debug-72:/layout_confirm_dialog_layout.xml.flat",
+        "source": "com.example.locationtracker.app-main-74:/layout/confirm_dialog_layout.xml"
+    },
+    {
+        "merged": "com.example.locationtracker.app-debug-72:/mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "com.example.locationtracker.app-main-74:/mipmap-xxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.locationtracker.app-debug-72:/layout_activity_language.xml.flat",
+        "source": "com.example.locationtracker.app-main-74:/layout/activity_language.xml"
+    },
+    {
+        "merged": "com.example.locationtracker.app-debug-72:/mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.locationtracker.app-main-74:/mipmap-mdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.locationtracker.app-debug-72:/drawable_baseline_battery_0_bar_24.xml.flat",
+        "source": "com.example.locationtracker.app-main-74:/drawable/baseline_battery_0_bar_24.xml"
+    },
+    {
+        "merged": "com.example.locationtracker.app-debug-72:/layout_connect_device_layout.xml.flat",
+        "source": "com.example.locationtracker.app-main-74:/layout/connect_device_layout.xml"
+    },
+    {
+        "merged": "com.example.locationtracker.app-debug-72:/drawable_baseline_home_24.xml.flat",
+        "source": "com.example.locationtracker.app-main-74:/drawable/baseline_home_24.xml"
+    },
+    {
+        "merged": "com.example.locationtracker.app-debug-72:/drawable_baseline_battery_5_bar_24.xml.flat",
+        "source": "com.example.locationtracker.app-main-74:/drawable/baseline_battery_5_bar_24.xml"
+    },
+    {
+        "merged": "com.example.locationtracker.app-debug-72:/mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "com.example.locationtracker.app-main-74:/mipmap-mdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.locationtracker.app-debug-72:/drawable_ic_launcher_background.xml.flat",
+        "source": "com.example.locationtracker.app-main-74:/drawable/ic_launcher_background.xml"
+    },
+    {
+        "merged": "com.example.locationtracker.app-debug-72:/drawable_linkdln.png.flat",
+        "source": "com.example.locationtracker.app-main-74:/drawable/linkdln.png"
+    },
+    {
+        "merged": "com.example.locationtracker.app-debug-72:/drawable_baseline_edit_24.xml.flat",
+        "source": "com.example.locationtracker.app-main-74:/drawable/baseline_edit_24.xml"
+    },
+    {
+        "merged": "com.example.locationtracker.app-debug-72:/drawable_howuse.png.flat",
+        "source": "com.example.locationtracker.app-main-74:/drawable/howuse.png"
+    },
+    {
+        "merged": "com.example.locationtracker.app-debug-72:/layout_activity_privacy_policy.xml.flat",
+        "source": "com.example.locationtracker.app-main-74:/layout/activity_privacy_policy.xml"
+    },
+    {
+        "merged": "com.example.locationtracker.app-debug-72:/layout_activity_main.xml.flat",
+        "source": "com.example.locationtracker.app-main-74:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.example.locationtracker.app-debug-72:/drawable_color_selector.xml.flat",
+        "source": "com.example.locationtracker.app-main-74:/drawable/color_selector.xml"
+    },
+    {
+        "merged": "com.example.locationtracker.app-debug-72:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "com.example.locationtracker.app-main-74:/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "com.example.locationtracker.app-debug-72:/drawable_startimage.png.flat",
+        "source": "com.example.locationtracker.app-main-74:/drawable/startimage.png"
     }
 ]

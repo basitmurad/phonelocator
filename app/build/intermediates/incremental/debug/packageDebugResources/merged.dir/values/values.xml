@@ -39,15 +39,9 @@
     <string name="enter_your_display_name" ns1:ignore="MissingTranslation">Enter your display name</string>
     <string name="feed_back" ns1:ignore="MissingTranslation">Feedback</string>
     <string name="feedback" ns1:ignore="MissingTranslation">Feedback</string>
-    <string name="firebase_database_url" translatable="false">https://location-tracker-7e82f-default-rtdb.firebaseio.com</string>
     <string name="fri_13_dec_2024" ns1:ignore="MissingTranslation">Fri, 13 Dec, 2024</string>
-    <string name="gcm_defaultSenderId" translatable="false">404165638948</string>
     <string name="get_alerts_and_stay_connected_enjoy_peace_of_mind_knowing_your_child_is_safe" ns1:ignore="MissingTranslation">Get alerts, and stay connected. Enjoy peace of mind knowing your child is safe.</string>
     <string name="go_to_settings" ns1:ignore="MissingTranslation">Go to Settings</string>
-    <string name="google_api_key" translatable="false">AIzaSyCZesojbbGzwTWIWO0hYx2EMOFxRIPPHvU</string>
-    <string name="google_app_id" translatable="false">1:404165638948:android:e12fe561339598e53011b1</string>
-    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyCZesojbbGzwTWIWO0hYx2EMOFxRIPPHvU</string>
-    <string name="google_storage_bucket" translatable="false">location-tracker-7e82f.firebasestorage.app</string>
     <string name="great" ns1:ignore="MissingTranslation">Great!</string>
     <string name="hello_blank_fragment" ns1:ignore="MissingTranslation">Hello blank fragment</string>
     <string name="home" ns1:ignore="MissingTranslation">Home</string>
@@ -77,7 +71,6 @@
     <string name="please_grant_the_following_permissions" ns1:ignore="MissingTranslation">Please grant the following permissions:</string>
     <string name="privacy_policy" ns1:ignore="MissingTranslation">Privacy Policy</string>
     <string name="profile" translatable="false">Profile</string>
-    <string name="project_id" translatable="false">location-tracker-7e82f</string>
     <string name="protected_app" ns1:ignore="MissingTranslation">Protected App</string>
     <string name="rate_us" ns1:ignore="MissingTranslation">Rate US</string>
     <string name="scan">Scan</string>

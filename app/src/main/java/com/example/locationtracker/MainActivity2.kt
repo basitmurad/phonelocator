@@ -15,6 +15,9 @@ import com.example.locationtracker.models.AddDeviceResponse
 import com.example.locationtracker.models.ConnectionDetails
 import com.example.locationtracker.models.ConnectionResponse
 import com.example.locationtracker.models.DeviceProfileResponse
+import com.example.locationtracker.models.LocationHistoryResponse
+import com.example.locationtracker.models.LocationRequest
+import com.example.locationtracker.models.LocationResponse
 
 
 import retrofit2.Call
@@ -37,11 +40,26 @@ class MainActivity2 : AppCompatActivity() {
 
         val connectionId = "9347080e93f705da"
 
-        fetchConnections("9347080e93f705da")
+//        fetchConnections("66666")
 
 //        fetchConnections("b29db941246f0f51")
 
-//        fetchConnections("9347080e93f705da")
+        fetchConnections("9347080e93f705da")
+
+
+        val newLocation = LocationRequest(
+            deviceId = "66666",
+            lat = "148.35",
+            lng = "459.242",
+            batteryPercentage = 60,
+            date = "2025-02-03T00:00:00.000Z",
+            time = "2:31:07 a.m."
+        )
+
+
+
+        addLocation(newLocation)
+
     }
 
 
@@ -106,9 +124,9 @@ class MainActivity2 : AppCompatActivity() {
                     val connections = response.body()
                     if (!connections.isNullOrEmpty()) {
                         for (connection in connections) {
-                            Log.d("API_RESPONSE", "Device ID: ${connection.deviceId}")
-                            Log.d("API_RESPONSE", "Connected Device ID: ${connection.connectionId._id}")
-                            Log.d("API_RESPONSE", "Connected Device Name: ${connection.connectionId.deviceName}")
+                            Log.d("API_RESPONSE", "Device ID: ${connection}")
+//                            Log.d("API_RESPONSE", "Connected Device ID: ${connection.connectionId._id}")
+//                            Log.d("API_RESPONSE", "Connected Device Name: ${connection.connectionId.deviceName}")
                         }
                     } else {
                         Log.e("API_RESPONSE", "No connections found for this device.")
@@ -124,32 +142,56 @@ class MainActivity2 : AppCompatActivity() {
         })
     }
 
-//    fun fetchConnections(deviceId: String) {
-//        apiService.getConnections(deviceId).enqueue(object : Callback<List<ConnectionDetails>> {
-//            override fun onResponse(
-//                call: Call<List<ConnectionDetails>>,
-//                response: Response<List<ConnectionDetails>>
-//            ) {
-//                if (response.isSuccessful) {
-//                    val connections = response.body()
-//                    if (!connections.isNullOrEmpty()) {
-//                        for (connection in connections) {
-//                            Log.d("API_RESPONSE", "Device ID: ${connection}")
-//
-//                        }
-//                    } else {
-//                        Log.e("API_RESPONSE", "No connections found for this device.")
-//                    }
-//                } else {
-//                    Log.e("API_RESPONSE", "HTTP Error: ${response.code()} - ${response.errorBody()?.string()}")
-//                }
-//            }
-//
-//            override fun onFailure(call: Call<List<ConnectionDetails>>, t: Throwable) {
-//                Log.e("API_RESPONSE", "Network Error: ${t.message}")
-//            }
-//        })
-//    }
+
+    fun addLocation(locationRequest: LocationRequest) {
+        RetrofitClient.apiService.addLocation(locationRequest).enqueue(object : Callback<LocationResponse> {
+            override fun onResponse(call: Call<LocationResponse>, response: Response<LocationResponse>) {
+                if (response.isSuccessful) {
+                    Log.d("Location", "Success: ${response.body()?.message}")
+                } else {
+                    Log.e("Location", "Error: ${response.errorBody()?.string()}")
+                }
+            }
+
+            override fun onFailure(call: Call<LocationResponse>, t: Throwable) {
+                Log.e("Location", "Failure: ${t.message}")
+            }
+        })
+    }
+
+    // Get Location History
+    fun getLocationHistory(connectionId: String) {
+        RetrofitClient.apiService.getLocationHistory(connectionId).enqueue(object : Callback<LocationHistoryResponse> {
+            override fun onResponse(call: Call<LocationHistoryResponse>, response: Response<LocationHistoryResponse>) {
+                if (response.isSuccessful) {
+                    Log.d("Location History", "Received: ${response.body()?.locations}")
+                } else {
+                    Log.e("Location History", "Error: ${response.errorBody()?.string()}")
+                }
+            }
+
+            override fun onFailure(call: Call<LocationHistoryResponse>, t: Throwable) {
+                Log.e("Location History", "Failure: ${t.message}")
+            }
+        })
+    }
+
+    // Get Recent Locations
+    fun getRecentLocations(connectionId: String) {
+        RetrofitClient.apiService.getRecentLocations(connectionId).enqueue(object : Callback<LocationHistoryResponse> {
+            override fun onResponse(call: Call<LocationHistoryResponse>, response: Response<LocationHistoryResponse>) {
+                if (response.isSuccessful) {
+                    Log.d("Recent Locations", "Received: ${response.body()?.locations}")
+                } else {
+                    Log.e("Recent Locations", "Error: ${response.errorBody()?.string()}")
+                }
+            }
+
+            override fun onFailure(call: Call<LocationHistoryResponse>, t: Throwable) {
+                Log.e("Recent Locations", "Failure: ${t.message}")
+            }
+        })
+    }
 
 
 }

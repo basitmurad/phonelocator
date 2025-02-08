@@ -58,6 +58,7 @@
             android:name=".screens.SplashActivity"
             android:exported="true">
 
+
         </activity>
         <activity
             android:name=".screens.PrivacyPolicyActivity"

@@ -48,13 +48,25 @@ data class ConnectionResponse(
 data class ConnectionDetails(
     val _id: String,
     val deviceId: String,
-    val connectionId: ConnectedDevice,  // ✅ Change from String to an Object
+    val connectionId: String?, // Change from ConnectedDevice to String?
     val createdAt: String,
     val updatedAt: String,
     val __v: Int
 )
 
-data class ConnectedDevice(  // ✅ New class for connectionId object
+//data class ConnectionDetails(
+//    val _id: String,
+//    val deviceId: String,
+//    val connectionId: ConnectedDevice,
+//    val createdAt: String,
+//    val updatedAt: String,
+//    val __v: Int
+//)
+//
+
+
+
+data class ConnectedDevice(
     val _id: String,
     val deviceId: String,
     val deviceName: String,

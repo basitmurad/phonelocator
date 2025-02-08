@@ -73,6 +73,7 @@ class ConnectFragment : Fragment() {
         }
     }
 
+    @SuppressLint("SourceLockedOrientationActivity")
     private fun startQRScanner() {
         requireActivity().requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT // Force portrait mode
 
@@ -86,7 +87,7 @@ class ConnectFragment : Fragment() {
     }
 
     private fun extractIdFromUrl(url: String): String {
-        return url.substringAfterLast("=") // ✅ Extracts everything after the last '='
+        return url.substringAfterLast("=")
     }
 
 
@@ -114,12 +115,12 @@ class ConnectFragment : Fragment() {
         editText = view.findViewById(R.id.editText12)
 
         appCompatButton2.setOnClickListener {
-            val  connectionID = editText.text.toString().trim()
-            if (connectionID.isEmpty()){ Toast.makeText(requireContext(), "Please enter a code", Toast.LENGTH_SHORT).show()
+            val  parentID = editText.text.toString().trim()
+            if (parentID.isEmpty()){ Toast.makeText(requireContext(), "Please enter a code", Toast.LENGTH_SHORT).show()
 
             }
             else{
-                fetchDeviceProfile(connectionID)
+                fetchDeviceProfile(parentID)
             }
 
         }
@@ -135,7 +136,7 @@ class ConnectFragment : Fragment() {
 
 
     @RequiresApi(Build.VERSION_CODES.O)
-    private fun openDialog(deviceName: String, connectionID: String) {
+    private fun openDialog(deviceName: String, parentID: String) {
         val dialogView =
             LayoutInflater.from(requireContext()).inflate(R.layout.confirm_dialog_layout, null)
         val dialogBuilder =
@@ -152,19 +153,19 @@ class ConnectFragment : Fragment() {
                 return@setOnClickListener
             }
 
-            val currentLatLng = this.currentLatLng
+//            val currentLatLng = this.currentLatLng
 
             val currentUserDeviceId = userHelpers.getAndroidId()
             val currentTime = userHelpers.getCurrentTime()
             val currentDate = userHelpers.getCurrentDate()
             val batteryPercentage = userHelpers.getBatteryPercentage()
 
-            println("Data us $currentUserDeviceId and $connectionID")
+            println("Data us $currentUserDeviceId and $parentID")
 
-            Log.d("data is " , " current user id$currentUserDeviceId and connectioID is $connectionID")
+            Log.d("data is " , " current user id$currentUserDeviceId and parentID is $parentID")
 
 
-            createConnection(currentUserDeviceId, connectionID)
+            createConnection(parentID, currentUserDeviceId)
             alertDialog.dismiss()
         }
 
@@ -230,12 +231,12 @@ class ConnectFragment : Fragment() {
                         val profile = deviceProfileResponse.profile
                         if (profile != null) {
                             val deviceName = profile.deviceName
-                            val connectionID = profile.deviceId
+                            val parentID = profile.deviceId
 
                             Log.d("DeviceProfile", "Device Name: $deviceName")
 
                             // Open dialog with retrieved device name and ID
-                            openDialog(deviceName,connectionID )
+                            openDialog(deviceName,parentID )
                         } else {
                             Toast.makeText(requireContext(), "Device profile not found", Toast.LENGTH_SHORT).show()
                         }
@@ -256,9 +257,9 @@ class ConnectFragment : Fragment() {
     }
 
 
-    private fun createConnection(deviceId: String, connectionId: String) {
+    private fun createConnection(parentID: String, childID: String) {
         // Prepare the request body
-        val connectionRequest = ConnectionRequest(deviceId, connectionId)
+        val connectionRequest = ConnectionRequest(childID, parentID)
 
         // Call the API
         RetrofitClient.apiService.createConnection(connectionRequest)
